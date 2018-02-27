@@ -19,7 +19,8 @@
         <owl:versionInfo xml:lang="en">0.0</owl:versionInfo>
         <rdfs:seeAlso xml:lang="en">http://metaclip.predictia.es/</rdfs:seeAlso>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...).</dc:description>
-        <cpannotationschema:hasAuthor xml:lang="en">Predictia</cpannotationschema:hasAuthor>
+        <dc:creator xml:lang="en">Predictia</dc:creator>
+        <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
     </owl:Ontology>
     
 
