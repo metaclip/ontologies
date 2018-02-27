@@ -2,7 +2,7 @@
 
 # METACLIP Project overview
 
-The objective of _METAdata for CLImate Products_ (METACLIP) is to encode the needed metadata to ensure the traceability and reproducibility of any kind climate product (data files, plots, maps...), thus requiring a comprehensive framework to track the operations undertaken through often complex data workflows. According to the terminology used in the project, the main elements in a climate data workflow are:
+The objective of _METAdata for CLImate Products_ (METACLIP) is to encode the metadata required to ensure the traceability and reproducibility of any kind climate product (data files, plots, maps...), thus requiring a comprehensive framework to track the operations undertaken through often complex data workflows. According to the terminology used in the project, the main elements in a climate data workflow are:
 
  1. _Data sources_ . The provenance of the input data need to be clearly identified (source, version, model documentation etc.). These applies to any type of data source (observations, operative/retrospective forecasts, reanalysis, climate projections...). Links to [[doc](http://metaclip.predictia.es/datasource/doc/)][[OWL file](http://metaclip.predictia.es/datasource/datasource.owl)][[Visual schema](https://docs.google.com/presentation/d/1CQyxVIj501N7VylMR9i_T_XwFDId6MDNvpPnuaLXgnI/present#slide=id.p)]
  2. _Transformations_. Any operations transforming the original data source that do not entail a second dataset (may entail a different _subset_ of the same dataset though; e.g. temporal/spatial aggregation, ensemble means, spatial interpolation/regridding, calculation of climate indices and anomalies ...). Links to [[doc](http://metaclip.predictia.es/datasource/doc/)][[OWL file](http://metaclip.predictia.es/datasource/datasource.owl)][[Visual schema](https://docs.google.com/presentation/d/1CQyxVIj501N7VylMR9i_T_XwFDId6MDNvpPnuaLXgnI/present#slide=id.p)]
@@ -18,7 +18,7 @@ The main blocks of the climate data workflow (represented in the figure below) a
 <img src="http://meteo.unican.es/work/QA4Seas/workflow_schema6.png" alt="" width="950" height="550">
 -->
 **Example Figure**. *Schematic representation of a data workflow to generate a verification map (Area under the ROC Curve, based on tercile categories) of a seasonal forecasting system (ECMWF System-4) of mean JJA global temperature. The verifying reference is the ECMWF ERA-Interim reanalysis. All the necessary metadata for the reconstruction of the figure is encoded in RDF (Resource Description Framework) and embedded in the final outcome (in this case a jpeg file, but any other type may serve as well). See [this demo](http://demo.predictia.es/qa4seas/metadata/) for a graphical representation of the metadata schema associated with this figure.*  
-![](http://metaclip.predictia.es/workflow_schema.png)
+![](http://metaclip.predictia.es/workflow_schema3.png)
 
 ***
 
