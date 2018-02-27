@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://metaclip.predictia.es/calibration/calibration.owl#"
+     xml:base="http://metaclip.predictia.es/calibration/calibration.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:calibration="http://metaclip.predictia.es/calibration/calibration.owl#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://metaclip.predictia.es/calibration/calibration.owl">
+        <owl:imports rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#withDataset -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#withDataset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#withReanalysis -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#withReanalysis">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:48:56Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#withReference -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#withReference">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#hasCharacter -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#hasCharacter">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>deterministic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>stochastic</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:07:28Z</dc:date>
+        <rdfs:comment xml:lang="en">Probabilistic nature of the adjustment approach. Two possible disjoint values: stochastic or deterministic</rdfs:comment>
+        <rdfs:label xml:lang="en">Calibration method character</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#isMultiSite -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#isMultiSite">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:52:15Z</dc:date>
+        <dc:description xml:lang="en">A data property of the downscaling method that determines whether the method is able to reproduce the spatial structure of the observations in the downscaled model outputs</dc:description>
+        <rdfs:label xml:lang="en">Is the method suitable for multi-site downscaling?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#isMultiVariable -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#isMultiVariable">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:50:50Z</dc:date>
+        <dc:description xml:lang="en">A data property of the downscaling method that determines whether the method is able to preserve the relationship between different observed variables in the downscaled model outputs</dc:description>
+        <rdfs:label xml:lang="en">Is the method suitable for multi-variable downscaling?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#Analogs -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#Analogs">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-MOS"/>
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#CCA"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:45:57Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#BiasAdjustment -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#BiasAdjustment">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:12:22Z</dc:date>
+        <dc:description xml:lang="en">Bias adjustment techniques adjust the raw model output distribution towards the observed one to ensure distributional resemblance to the local climatology. The simplest techniques adjust the mean/variance of the distribution (e.g. local scaling), while more complex (parametric or empirical) quantile mapping techniques adjust the whole distribution.</dc:description>
+        <rdfs:comment xml:lang="en">The key difference of this class with ESD-MOS is that bias adjustment has a limited capability for downscaling (i.e., unsuitable to bring local scale variability into the adjusted results), as it does not establish a temporal connection between model variables and observations)</rdfs:comment>
+        <rdfs:label xml:lang="en">Bias adjustment technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#CCA -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#CCA">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-MOS"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:45:57Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#Calibration -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#Calibration">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:04:51Z</dc:date>
+        <dc:description xml:lang="en">Adjustment techniques are a broad family of empirical methods aiming at the statistical transformation of a climate model output using as reference one or several variables from a second dataset.</dc:description>
+        <rdfs:isDefinedBy xml:lang="en">http://www.value-cost.eu</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">A step entailing an adjustment of a climate model output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#ESD -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ESD">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:25:32Z</dc:date>
+        <dc:description xml:lang="en">A family of Model Output Adjustment techniques based on statistical models linking suitable informative model outputs (predictors, typically middle tropospheric variables) to the local observed predictand of interest over a particular domain, working at a daily to seasonal scale. These models are first trained using model and observed data for a representrative historical reanalysis/hindcast period, and later applied to new (e.g. predicted) GCM/RCM data to obtain the downscaled local predictions.</dc:description>
+        <rdfs:label xml:lang="en">Empirical Statistical Downscaling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#ESD-MOS -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ESD-MOS">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD"/>
+        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:12:22Z</dc:date>
+        <dc:description xml:lang="en">Under the Model Output Statistics (MOS) approach, model outputs from the GCM/RCM are directly used for model calibration, thus correcting systematic biases against observations.</dc:description>
+        <rdfs:label xml:lang="en">Empirical Statistical Downscaling under the MOS approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:12:22Z</dc:date>
+        <dc:description xml:lang="en">Under the Perfect-prog (PP) approach, quasi-observations from a reanalysis are used in the model calibration phase based on their temporal (e.g. daily or seasonal) correspondence with observations in the historical trainig period.</dc:description>
+        <rdfs:label xml:lang="en">Empirical Statistical Downscaling under the Perfect Prog approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#EnsembleRecalibration -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#EnsembleRecalibration">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#Calibration"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:12:22Z</dc:date>
+        <dc:description xml:lang="en">Broadly speaking, the main goal of Ensemble Recalibration techniques is producing reliable probability forecasts by directly modifying the ensemble predictions (ensemble re-calibration) or derived products such as tercile probabilities (probability re-calibration).</dc:description>
+        <rdfs:label xml:lang="en">Ensemble recalibration methods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#LinearScaling -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#LinearScaling">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#BiasAdjustment"/>
+        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#QQMapping"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:45:30Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#ProbabilityScaling -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ProbabilityScaling">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#EnsembleRecalibration"/>
+        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#VarianceInflation"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:44:40Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#QQMapping -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#QQMapping">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#BiasAdjustment"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:45:30Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#TransferFunctions -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#TransferFunctions">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:48:01Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#VarianceInflation -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#VarianceInflation">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#EnsembleRecalibration"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:44:40Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/calibration/calibration.owl#WeatherTyping -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#WeatherTyping">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T17:48:01Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#Analogs"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#TransferFunctions"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#WeatherTyping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#BiasAdjustment"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ESD-MOS"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#ESD-PP"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/calibration/calibration.owl#EnsembleRecalibration"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
