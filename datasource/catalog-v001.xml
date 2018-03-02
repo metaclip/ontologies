@@ -2,6 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.w3.org/2000/01/rdf-schema#" uri="https://www.w3.org/2000/01/rdf-schema#"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1519925555131" name="http://metaclip.predictia.es/datasource/datasource.owl" uri="datasource.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519980254123" name="http://metaclip.predictia.es/datasource/datasource.owl" uri="datasource.owl"/>
     </group>
 </catalog>

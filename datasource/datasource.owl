@@ -16,7 +16,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <owl:versionInfo xml:lang="en">0.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
         <rdfs:seeAlso xml:lang="en">http://metaclip.predictia.es/</rdfs:seeAlso>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...).</dc:description>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
@@ -459,7 +459,7 @@
             </rdfs:Datatype>
         </rdfs:range>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
-        <rdfs:comment xml:lang="en">A synthetic overview of the aspects described by the Climatie Index. Circulation indices are synthetic descriptors of circulation patterns, for instance North Atlantic Oscillation (NAO, uses mean sea-level pressure as input) or El Niño Southern Oscillation (ENSO, based on sea-surface temperature anomalies). Indices of extremes are used to characterize extreme climate conditions (e.g. the number of icing days, defined as the anual count of days when daily maximum temperature is below 0 degC). Other categories exist, so a third miscellaneous category is considered for this property (e.g. heating degree days).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A synthetic overview of the aspects described by the Climate Index. Circulation indices are synthetic descriptors of circulation patterns, for instance North Atlantic Oscillation (NAO, uses mean sea-level pressure as input) or El Niño Southern Oscillation (ENSO, based on sea-surface temperature anomalies). Indices of extremes are used to characterize extreme climate conditions (e.g. the number of icing days, defined as the anual count of days when daily maximum temperature is below 0 degC). Other categories exist, so a third miscellaneous category is considered for this property (e.g. heating degree days).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -910,7 +910,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Climatology">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
+        <rdfs:isDefinedBy xml:lang="en">http://www.euporias.eu/taxonomy/term/16</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climatology</rdfs:label>
+        <prov:definition xml:lang="en">The normal state of climate such as a base line over the normal period. Climatology is often taken as the mean value for a given month over, for example, 1961-1990</prov:definition>
     </owl:Class>
     
 
@@ -1097,8 +1099,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#PCA">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T20:35:46Z</dc:date>
+        <dc:description xml:lang="en">Regression analysis to determine from a set of independent variables (predictors) those contributing most to the explained variance</dc:description>
         <rdfs:label xml:lang="en">Principal Component Analysis</rdfs:label>
     </owl:Class>
     
@@ -1230,6 +1233,7 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Regridding">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
+        <dc:creator xml:lang="en">Predictia</dc:creator>
         <dc:description xml:lang="en">Regridding is the process of interpolating from one grid resolution to a different grid resolution. This could involve temporal, vertical or spatial (&apos;horizontal&apos;) interpolations. However, most commonly, regridding refers to spatial interpolation.</dc:description>
         <rdfs:label xml:lang="en">Regridding</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/regridding-overview</rdfs:seeAlso>
@@ -1337,7 +1341,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Step -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Step">
-        <rdfs:label xml:lang="en">A step in the data workflow</rdfs:label>
+        <rdfs:label xml:lang="en">Step</rdfs:label>
     </owl:Class>
     
 
