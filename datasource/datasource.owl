@@ -36,6 +36,41 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#indexType -->
+
+    <owl:AnnotationProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#indexType">
+        <dc:creator>Predictia</dc:creator>
+        <dc:description xml:lang="en">The index type is an attempt to provide a synthetic overview of the aspects described by the Climate Index at hand. &quot;Circulation&quot; indices are synthetic descriptors of circulation patterns, for instance North Atlantic Oscillation (NAO, uses mean sea-level pressure as input) or El Niño Southern Oscillation (ENSO, based on sea-surface temperature anomalies). Indices of &quot;extremes&quot; are used to characterize extreme climate conditions (e.g. the number of icing days, defined as the anual count of days when daily maximum temperature is below 0 degC). &quot;Other&quot; categories exist, so a third miscellaneous category is considered for this property (e.g. heating degree days).</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#inputECV -->
+
+    <owl:AnnotationProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#inputECV">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:17:38Z</dc:date>
+        <rdfs:comment xml:lang="en">Annotates the input Essential Climate Variable(s) required for index calculation</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#thresholdType -->
+
+    <owl:AnnotationProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#thresholdType">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:16:14Z</dc:date>
+        <rdfs:comment xml:lang="en">This entity is aimed at the description of the types of threshold used for climate index definition. &quot;Absolute&quot; thresholds refer to absolute quantities, while &quot;relative&quot; thresholds are based on percentiles (and thus are relative to a given sample). In case no threshold is used for a certain climate index, the category &quot;none&quot; can optionally be used.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -246,10 +281,10 @@
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-10T14:18:43Z</dc:date>
-        <dc:description xml:lang="en">The input for a Transformation: it can be either a DatasetSubset or a previous transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</dc:description>
-        <rdfs:label xml:lang="en">Input of a Transformation</rdfs:label>
+        <rdfs:comment xml:lang="en">The input for a Transformation: it can be either a DatasetSubset or a previous transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transformation Input</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -427,102 +462,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <dc:description xml:lang="en">Horizontal resolution of Y coordinates</dc:description>
         <rdfs:label xml:lang="en">Horizontal Y resolution</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasIndexType -->
-
-    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasIndexType">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Circulation</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Extremes</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Other</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
-        <rdfs:comment xml:lang="en">A synthetic overview of the aspects described by the Climate Index. Circulation indices are synthetic descriptors of circulation patterns, for instance North Atlantic Oscillation (NAO, uses mean sea-level pressure as input) or El Niño Southern Oscillation (ENSO, based on sea-surface temperature anomalies). Indices of extremes are used to characterize extreme climate conditions (e.g. the number of icing days, defined as the anual count of days when daily maximum temperature is below 0 degC). Other categories exist, so a third miscellaneous category is considered for this property (e.g. heating degree days).</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasInputECV -->
-
-    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasInputECV">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>geopotential height</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>multi-variable</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>other</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>precipitation</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>sea-level pressure</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>sea-surface temperature</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>temperature</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>wind</rdf:first>
-                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
-        <rdfs:comment xml:lang="en">The input Essential Climate Variable(s) required for index calculation</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -858,6 +797,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CDD">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:26:14Z</dc:date>
         <dc:description xml:lang="en">Maximum length of dry spell, maximum number of consecutive days with RR &lt; 1mm</dc:description>
@@ -872,6 +814,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CSDI">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Cold spell duration index: Annual count of days with at least 6 consecutive days when TN &lt; 10th percentile</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -885,6 +830,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CWD">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:26:14Z</dc:date>
         <dc:description xml:lang="en">Maximum length of wet spell, maximum number of consecutive days with RR ≥ 1mm</dc:description>
@@ -899,6 +847,7 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
+        <indexType xml:lang="en"></indexType>
         <dc:description xml:lang="en">A climate index is a simple diagnostic quantity that is used to characterize an aspect of a geophysical system such as a circulation pattern</dc:description>
         <rdfs:label xml:lang="en">Climate Index</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/overview-climate-indices</rdfs:seeAlso>
@@ -931,6 +880,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#DTR">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (minimum), temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:19:24Z</dc:date>
         <dc:description xml:lang="en">Daily temperature range: Monthly mean difference between TX and TN</dc:description>
@@ -998,6 +950,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#FD">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Number of frost days: Annual count of days when TN (daily minimum temperature) &lt; 0 degC</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1011,6 +966,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#GSL">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (mean)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Growing season length: Annual (1st Jan to 31st Dec in Northern Hemisphere (NH), 1st July to 30th June in Southern Hemisphere (SH)) count between first span of at least 6 days with daily mean temperature TG &gt; 5 degC and first span after July 1st (Jan 1st in SH) of 6 days with TG &lt; 5 degC</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1024,6 +982,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ID">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Number of icing days: Annual count of days when TX (daily maximum temperature) &lt; 0 degC</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1086,6 +1047,21 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#NAO -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#NAO">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+        <indexType xml:lang="en">circulation</indexType>
+        <inputECV xml:lang="en">sea-level pressure</inputECV>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T17:05:32Z</dc:date>
+        <rdfs:isDefinedBy xml:lang="en">https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based</rdfs:isDefinedBy>
+        <rdfs:seeAlso xml:lang="en">Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M., 2003. An overview of the North Atlantic Oscillation, in: Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M. (Eds.), Geophysical Monograph Series. American Geophysical Union, Washington, D. C., pp. 1–35.</rdfs:seeAlso>
+        <prov:definition xml:lang="en">The principal component (PC)-based indices of the North Atlantic Oscillation (NAO) are the time series of the leading Empirical Orthogonal Function (EOF) of SLP anomalies over the Atlantic sector, 20°-80°N, 90°W-40°E</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#ObservationalDataset -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ObservationalDataset">
@@ -1111,6 +1087,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#PRCPTOT">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:29:44Z</dc:date>
         <dc:description xml:lang="en">Annual total precipitation in wet days</dc:description>
@@ -1160,6 +1139,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#R10mm">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:24:07Z</dc:date>
         <dc:description xml:lang="en">Annual count of days when PRCP≥ 10mm</dc:description>
@@ -1174,6 +1156,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#R20mm">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:24:07Z</dc:date>
         <dc:description xml:lang="en">Annual count of days when PRCP ≥ 20mm</dc:description>
@@ -1188,6 +1173,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#R95pTOT">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:27:58Z</dc:date>
         <dc:description xml:lang="en">Annual total PRCP when RR &gt; 95p</dc:description>
@@ -1202,6 +1190,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#R99pTOT">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:28:50Z</dc:date>
         <dc:description xml:lang="en">Annual total PRCP when RR &gt; 99p</dc:description>
@@ -1245,6 +1236,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Rnnmm">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:24:07Z</dc:date>
         <dc:description xml:lang="en">Annual count of days when PRCP≥ nnmm, nn is a user defined threshold</dc:description>
@@ -1259,6 +1253,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Rx1day">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:20:39Z</dc:date>
         <dc:description xml:lang="en">Monthly maximum 1-day precipitation</dc:description>
@@ -1273,6 +1270,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Rx5day">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:20:39Z</dc:date>
         <dc:description xml:lang="en">Monthly maximum consecutive 5-day precipitation</dc:description>
@@ -1287,6 +1287,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SDII">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T17:22:47Z</dc:date>
         <dc:description xml:lang="en">Simple pricipitation intensity index</dc:description>
@@ -1301,6 +1304,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SU">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Number of summer days: Annual count of days when TX (daily maximum temperature) &gt; 25 degC</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1350,6 +1356,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TN10p">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Percentage of days when TN &lt; 10th percentile</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1363,6 +1372,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TN90p">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Percentage of days when TN &gt; 90th percentile</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1376,6 +1388,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TNn">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Monthly minimum value of daily minimum temperature</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1389,6 +1404,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TNx">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Monthly maximum value of daily minimum temperature</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1402,6 +1420,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TR">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">other</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Number of tropical nights: Annual count of days when TN (daily minimum temperature) &gt; 20 degC</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1415,6 +1436,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TX10p">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Percentage of days when TX &lt; 10th percentile</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1428,6 +1452,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TX90p">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Percentage of days when TX &gt; 90th percentile:</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1441,6 +1468,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TXn">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Monthly minimum value of daily maximum temperature</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1454,6 +1484,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TXx">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Monthly maximum value of daily maximum temperature</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
@@ -1534,6 +1567,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#WSDI">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI"/>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
         <dc:description xml:lang="en">Warm spell duration index: Annual count of days with at least 6 consecutive days when TX &gt; 90th percentile</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
