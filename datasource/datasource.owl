@@ -171,6 +171,17 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasENSORegion -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasENSORegion">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSO"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:27:17Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasHorizontalExtent -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasHorizontalExtent">
@@ -952,6 +963,27 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSO -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:26:26Z</dc:date>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:24:58Z</dc:date>
+    </owl:Class>
+    
+
+
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI">
@@ -1597,6 +1629,64 @@
         <rdfs:label xml:lang="en">WSDI</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSO1plus2 -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO1plus2">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:22:45Z</dc:date>
+        <dc:description xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.  This index tends to have the largest variance of the Niño SST indices</dc:description>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+        <prov:definition xml:lang="en">POLYGON((-90 -10, -80 -10, -80 0, -90 0))</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSO3 -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO3">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:22:28Z</dc:date>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSO3dot4 -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO3dot4">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:14:44Z</dc:date>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ENSO4 -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO4">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:22:36Z</dc:date>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
     
 
 
