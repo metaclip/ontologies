@@ -847,7 +847,6 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
-        <indexType xml:lang="en"></indexType>
         <dc:description xml:lang="en">A climate index is a simple diagnostic quantity that is used to characterize an aspect of a geophysical system such as a circulation pattern</dc:description>
         <rdfs:label xml:lang="en">Climate Index</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/overview-climate-indices</rdfs:seeAlso>
