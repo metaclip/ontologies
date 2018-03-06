@@ -104,6 +104,12 @@
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
     <!-- http://www.w3.org/ns/prov#endedAtTime -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime">
