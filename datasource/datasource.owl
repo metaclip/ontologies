@@ -196,7 +196,7 @@
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasArgumentValue">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ArgumentValue"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:24:14Z</dc:date>
         <rdfs:comment xml:lang="en">A property representing the Value taken by an Argument</rdfs:comment>
     </owl:ObjectProperty>
@@ -276,7 +276,7 @@
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasTemporalResolution">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Variable"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#TemporalResolution"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-29T12:29:42Z</dc:date>
         <rdfs:label xml:lang="en">Temporal resolution of a Variable</rdfs:label>
     </owl:ObjectProperty>
@@ -536,7 +536,7 @@
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Project"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#VariableStandardDefinition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:10:21Z</dc:date>
         <dc:description xml:lang="en">A URL pointing to a description of the entity</dc:description>
         <rdfs:label xml:lang="en">Reference URL</rdfs:label>
@@ -641,7 +641,7 @@
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withExplainedVariance">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#PCA"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T08:03:01Z</dc:date>
         <dc:description xml:lang="en">Percentage of total variance explained by the retained PCs</dc:description>
         <rdfs:label xml:lang="en">withExplainedVariance</rdfs:label>
@@ -654,7 +654,7 @@
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withNPCs">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#PCA"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T08:00:36Z</dc:date>
         <dc:description xml:lang="en">Number of principal components/EOFs retained in the transformation step</dc:description>
         <rdfs:label xml:lang="en">Number of PCs</rdfs:label>
@@ -728,7 +728,7 @@
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#xmax">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:description xml:lang="en">Easternmost gridcell coordinate of the domain</dc:description>
         <rdfs:label xml:lang="en">xmax</rdfs:label>
     </owl:DatatypeProperty>
@@ -740,7 +740,7 @@
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#xmin">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <terms:contributor xml:lang="en">Westernmost gridcell coordinate of the domain</terms:contributor>
         <rdfs:label xml:lang="en">xmin</rdfs:label>
     </owl:DatatypeProperty>
@@ -752,7 +752,7 @@
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ymax">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:description xml:lang="en">Northernmost gridcell coordinate of the domain</dc:description>
         <rdfs:label xml:lang="en">ymax</rdfs:label>
     </owl:DatatypeProperty>
@@ -765,7 +765,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:description xml:lang="en">Southernmost gridcell coordinate of the domain</dc:description>
         <rdfs:label xml:lang="en">ymin</rdfs:label>
     </owl:DatatypeProperty>
@@ -929,7 +929,7 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ETCCDI">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:description xml:lang="en">http://etccdi.pacificclimate.org/indices.shtml</dc:description>
         <rdfs:comment xml:lang="en">The Expert Team on Climate Change Detection and Indices (ETCCDI) has ellaborated a set of 27 core indices aimed at capturing changes in climate extremes and in selected climate impact indicators deemed relevant to other disciplines.</rdfs:comment>
         <rdfs:label xml:lang="en">ETCCDI core index</rdfs:label>
@@ -942,7 +942,7 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Initialization">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dimension"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:29:31Z</dc:date>
         <dc:description xml:lang="en">Initialization is the process of entering observation data into the model to generate initial conditions</dc:description>
         <rdfs:label xml:lang="en">Initialization</rdfs:label>
