@@ -240,6 +240,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasProject -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasProject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadActivity"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Project"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
@@ -330,6 +331,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#withInput -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
@@ -367,25 +369,6 @@
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hadActivity -->
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/prov#hadActivity">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Project"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
     </rdf:Description>
     
 
@@ -532,6 +515,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasLongName -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasLongName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
@@ -544,6 +528,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasMainURL -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasMainURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#VariableStandardDefinition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
@@ -567,6 +552,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasName -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -579,6 +565,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasProjection -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasProjection">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
@@ -591,6 +578,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasShortName -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasShortName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
@@ -826,6 +814,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Argument -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Argument">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">A command argument is an item of information provided to a program when it is started. A program can have many command-line arguments that identify sources or destinations of information, or that alter the operation of the program.</dc:description>
         <rdfs:label xml:lang="en">Command Argument</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Command-line_interface#Arguments</rdfs:seeAlso>
@@ -836,6 +825,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#ArgumentValue -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ArgumentValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label xml:lang="en">Argument Value</rdfs:label>
     </owl:Class>
     
@@ -866,6 +856,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Command -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Command">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">A Command is a directive to a computer program acting as an interpreter of some kind, in order to perform a specific task</dc:description>
         <rdfs:label xml:lang="en">Command</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Command_(computing)</rdfs:seeAlso>
@@ -905,6 +896,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Dimension -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Dimension">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">A Dimension is used to define the array shape of a Variable.</dc:description>
         <rdfs:isDefinedBy xml:lang="en">A Dataset Dimension</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Dimension</rdfs:label>
@@ -1086,6 +1078,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Realization -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Realization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label xml:lang="en">Realization</rdfs:label>
     </owl:Class>
     
@@ -1148,6 +1141,8 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Step -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Step">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
+        <rdfs:comment xml:lang="en">A step within the climate data workflow</rdfs:comment>
         <rdfs:label xml:lang="en">Step</rdfs:label>
     </owl:Class>
     
@@ -1156,7 +1151,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#TemporalInstant -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TemporalInstant">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Start"/>
         <rdfs:label xml:lang="en">Initialization time</rdfs:label>
     </owl:Class>
     
@@ -1165,6 +1160,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#TemporalPeriod -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TemporalPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">Define a temporal period as the ellapsed time between start and end time stamps</dc:description>
         <rdfs:label xml:lang="en">Temporal period</rdfs:label>
     </owl:Class>
@@ -1174,6 +1170,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#TemporalResolution -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#TemporalResolution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">Describes the time resolution of the variable</dc:description>
         <rdfs:label xml:lang="en">Time resolution</rdfs:label>
     </owl:Class>
@@ -1204,6 +1201,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#Variable -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">Characterization of a Geophysical Variable</dc:description>
         <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
