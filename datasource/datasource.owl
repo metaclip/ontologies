@@ -370,7 +370,7 @@
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-10T14:18:43Z</dc:date>
-        <rdfs:comment xml:lang="en">The input for a Transformation: it can be either a DatasetSubset or a previous transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The input of a Transformation: it can be either a DatasetSubset or a previous Transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</rdfs:comment>
         <rdfs:label xml:lang="en">Transformation Input</rdfs:label>
     </owl:ObjectProperty>
     
