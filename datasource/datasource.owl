@@ -159,7 +159,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#fromDataset -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#fromDataset">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadPrimarySource"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
@@ -232,6 +232,7 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasENSOregion -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasENSOregion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSO"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ENSOregion"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
@@ -341,12 +342,30 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#withCommand -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadActivity"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
+                    <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:09:32Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#withInput -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withInput">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-10T14:18:43Z</dc:date>
         <rdfs:comment xml:lang="en">The input for a Transformation: it can be either a DatasetSubset or a previous transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</rdfs:comment>
@@ -359,7 +378,6 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withReference">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#AnomalyCalculation"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <dc:description xml:lang="en">A DatasetSubset encompassing a reference period used to calculate the &apos;average climate&apos;</dc:description>
         <rdfs:label xml:lang="en">Reference subset for anomaly calculation</rdfs:label>
     </owl:ObjectProperty>
@@ -857,7 +875,7 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Command">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <dc:description xml:lang="en">A Command is a directive to a computer program acting as an interpreter of some kind, in order to perform a specific task</dc:description>
+        <dc:description xml:lang="en">A Command is a directive to a computer program (prov:SoftwareAgent) acting as an interpreter of some kind, in order to perform a specific task</dc:description>
         <rdfs:label xml:lang="en">Command</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Command_(computing)</rdfs:seeAlso>
     </owl:Class>
@@ -1132,8 +1150,9 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Step">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
-        <rdfs:comment xml:lang="en">A step within the climate data workflow</rdfs:comment>
-        <rdfs:label xml:lang="en">Step</rdfs:label>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T10:15:51Z</dc:date>
+        <rdfs:comment xml:lang="en">A step within the data workflow. Conceived as an Abstract class. The more specific forms of ds:Step (i.e., ds:DatasetSubset, ds:Aggregation etc.) should be asserted if they apply.</rdfs:comment>
     </owl:Class>
     
 
@@ -1172,6 +1191,7 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Transformation">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <dc:description xml:lang="en">A transformation of data implies the application of a deterministic mathematical function to each point in a data set (that is, each data point z_i is replaced with the transformed value y_i = f(z_i), where f is a function. Examples of transformations are scaling and/or centering. In a different sense, a data transformation converts a set of data values from the data format of a source data system into the data format of a destination data system e.g. regridding, data aggregation...</dc:description>
+        <rdfs:comment xml:lang="en">The more specific subclasses of ds:Transformation (i.e. ds:ClimateIndex, ds:Aggregation etc.) should be asserted if they apply</rdfs:comment>
         <rdfs:label xml:lang="en">Transformation</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Data_transformation</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Data_transformation_(statistics)</rdfs:seeAlso>
