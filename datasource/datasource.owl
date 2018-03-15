@@ -14,7 +14,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ds="http://metaclip.predictia.es/datasource/datasource.owl#">
     <owl:Ontology rdf:about="http://metaclip.predictia.es/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl/0.1"/>
+        <owl:versionIRI rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl/0.1/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
