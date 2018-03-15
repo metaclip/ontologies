@@ -15,6 +15,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl">
+        <owl:versionIRI rdf:resource="http://metaclip.predictia.es/graphical_output/0.1/graphical_output.owl"/>
         <owl:imports rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:title xml:lang="en">The Graphical Product Vocabulary from METACLIP</dc:title>
@@ -46,6 +47,30 @@
     
 
 
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartLayer -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartLayer">
+        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Chart"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T10:32:05Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T10:03:31Z</dc:date>
+        <rdfs:comment xml:lang="en">Establishes a link between :GraphicalProduct and the layers it is formed by. Its subproperties should be applied depending on the Range and Domain subclasses (e.g. :hasMapLayer, :hasTextAnnotation).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapExtent -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapExtent">
@@ -59,6 +84,7 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer">
+        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
@@ -69,7 +95,16 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMask -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMask">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask"/>
         <dc:creator>Predictia</dc:creator>
     </owl:ObjectProperty>
@@ -79,6 +114,7 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation">
+        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
         <dc:creator>Predictia</dc:creator>
@@ -333,7 +369,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
         <dc:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-25T15:50:12Z</dc:date>
-        <rdfs:comment xml:lang="en">A graphical product can be any form of graphical representation of the climate information derived from a ds:Step. This includes either plots showing the relation between two or more variables, or spatially explicit displays (maps). This class should not be explicitly instantiated, and the usage of its subclasses is recommended.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A graphical product can be any form of graphical representation of the climate information derived from a ds:Step. This includes either plots showing the relation between two or more variables, or spatially explicit displays (maps). This class should not be explicitly instantiated, and the usage of its subclasses (:Chart, :Map) is recommended.</rdfs:comment>
     </owl:Class>
     
 
@@ -343,7 +379,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Predictia</dc:creator>
-        <rdfs:comment xml:lang="en">Layers are groups of graphical or textual features (points, lines, polygons, legends, floating text, chart titles...) containing relevant information useful to understand the nature of the graphical product and/or its main characteristics. A particular case are masks, that can be considered as special layers whose aim is hiding non-relevant information contained in other layers underneath. GraphicalProducts are constituted by groups of layers.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A :GraphicalProduct entity is constituted by groups of layers. Layers are graphical or textual features (points, lines, polygons, legends, floating text, chart titles...) containing relevant information useful to understand the nature of the graphical product and/or its main characteristics.</rdfs:comment>
     </owl:Class>
     
 
@@ -416,7 +452,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask -->
 
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask">
-        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Masks are layers whose aim is hiding non-relevant information contained in other layers underneath.</rdfs:comment>
     </owl:Class>
