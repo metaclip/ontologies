@@ -50,23 +50,11 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartLayer -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartLayer">
-        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Chart"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T10:32:05Z</dc:date>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer -->
-
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T10:03:31Z</dc:date>
-        <rdfs:comment xml:lang="en">Establishes a link between :GraphicalProduct and the layers it is formed by. Its subproperties should be applied depending on the Range and Domain subclasses (e.g. :hasMapLayer, :hasTextAnnotation).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -84,7 +72,7 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer">
-        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
@@ -96,27 +84,19 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMask">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask"/>
         <dc:creator>Predictia</dc:creator>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation -->
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextLayer -->
 
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation">
-        <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayer"/>
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextLayer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextLayer"/>
         <dc:creator>Predictia</dc:creator>
     </owl:ObjectProperty>
     
@@ -126,15 +106,6 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasUncertainty">
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
         <dc:creator>Predictia</dc:creator>
     </owl:ObjectProperty>
@@ -258,7 +229,7 @@
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotationType -->
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotationType">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">A generic description of the nature of the annotation</dc:description>
@@ -497,9 +468,9 @@ are produced following an ensemble approach, considering  a  number of simulatio
     
 
 
-    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation -->
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextLayer -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation">
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextLayer">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
         <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">Text annotations are textual elements in the graphical product. It can be a title, a subtitle, a legend, a number... or any other textual element within the plotting area not belonging to :ChartAxis</dc:description>
