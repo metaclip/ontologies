@@ -210,9 +210,9 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hadExperiment">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulationDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcastDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulation"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcast"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Experiment"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T12:45:12Z</dc:date>
@@ -250,11 +250,11 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hadSimulationModel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulationDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ReanalysisDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcastDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecastDataset"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulation"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Reanalysis"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcast"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecast"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#GCM"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#RCM"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
@@ -1131,9 +1131,9 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulationDataset -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulation -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulationDataset">
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#MultiDecadalSimulation">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-30T10:56:20Z</dc:date>
@@ -1226,9 +1226,9 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ReanalysisDataset -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#Reanalysis -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ReanalysisDataset">
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Reanalysis">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
         <dc:creator xml:lang="en">Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Reanalysis is a scientific method for developing a comprehensive record of how weather and climate are changing over time. In it, observations and a numerical model that simulates one or more aspects of the Earth system are combined objectively to generate a synthesized estimate of the state of the system. A reanalysis typically extends over several decades or longer, and covers the entire globe from the Earth’s surface to well above the stratosphere.</rdfs:comment>
@@ -1250,20 +1250,20 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcastDataset -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcast -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcastDataset">
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcast">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
-        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset"/>
+        <owl:disjointWith rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast"/>
         <dc:creator xml:lang="en">Predictia</dc:creator>
         <rdfs:label>Retrospective seasonal forecast</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset">
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
         <dc:creator xml:lang="en">Predictia</dc:creator>
         <rdfs:label>Operative seasonal forecast</rdfs:label>
@@ -1271,9 +1271,9 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecastDataset -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecast -->
 
-    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecastDataset">
+    <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ShortRangeForecast">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dataset"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T12:53:56Z</dc:date>
@@ -1477,19 +1477,6 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#CERFACS-CNRM -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CERFACS-CNRM">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-31T18:15:30Z</dc:date>
-        <rdfs:label xml:lang="en">CNRM-CERFACS</rdfs:label>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CERFACS"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CNRM"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#CLMcom -->
 
     <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CLMcom">
@@ -1613,6 +1600,19 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T09:50:21Z</dc:date>
         <rdfs:comment xml:lang="en">Commonwealth Scientific and Industrial Research Organisation</rdfs:comment>
         <rdfs:label xml:lang="en">CSIRO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#CSIRO-Mk3.6.0 -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#CSIRO-Mk3.6.0">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#GCM"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T09:29:22Z</dc:date>
+        <rdfs:comment xml:lang="en">CSIRO-Mk3.6.0</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.atmos-chem-phys.net/12/6377/2012/acp-12-6377-2012.html</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://www.bom.gov.au/amoj/docs/2013/jeffrey_hres.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -1986,19 +1986,6 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#IPSL-INERIS -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#IPSL-INERIS">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-31T18:05:23Z</dc:date>
-        <rdfs:label xml:lang="en">IPSL-INERIS</rdfs:label>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#INERIS"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#IPSL"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#ISIMIP -->
 
     <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ISIMIP">
@@ -2083,18 +2070,6 @@
         <rdfs:comment xml:lang="en">Max Planck Institute - Computational Methods in Systems and Control Theory Research Group</rdfs:comment>
         <rdfs:label xml:lang="en">MPI-CSC</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.mpi-magdeburg.mpg.de/csc</rdfs:seeAlso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#MPI-CSC-MPI-M -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#MPI-CSC-MPI-M">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T08:54:21Z</dc:date>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MPI-CSC"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#MPI-M"/>
     </owl:NamedIndividual>
     
 
@@ -2224,6 +2199,19 @@
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PRCPTOT</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#QCCCE -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#QCCCE">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T09:27:41Z</dc:date>
+        <rdfs:comment xml:lang="en">Queensland Climate Change Centre of Excellence</rdfs:comment>
+        <rdfs:label xml:lang="en">QCCCE</rdfs:label>
+        <prov:specializationOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CSIRO"/>
     </owl:NamedIndividual>
     
 
@@ -2429,6 +2417,7 @@
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T09:25:13Z</dc:date>
+        <rdfs:comment xml:lang="en">The :SMG research group is formed by professors and researchers from the University of Cantabria (UC, Dept. of Applied Mathematics and Computer Science) and the National Research Council (CSIC, Instituto de Física de Cantabria IFCA), conducting research in topics related to weather forecast, climate research, data mining and high-performance computing, and spatiotemporal chaotic systems</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">http://meteo.unican.es</rdfs:seeAlso>
         <prov:definition xml:lang="en">Santander Meteorology Group</prov:definition>
     </owl:NamedIndividual>
@@ -2443,42 +2432,6 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T09:56:06Z</dc:date>
         <rdfs:comment xml:lang="en">Swedish Meteorological and Hydrological Institute</rdfs:comment>
         <rdfs:label xml:lang="en">SMHI</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CCCma -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CCCma">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T08:59:06Z</dc:date>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CCCMA"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SMHI"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CNRM-CERFACS -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CNRM-CERFACS">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T09:01:17Z</dc:date>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CERFACS-CNRM"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SMHI"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CSIRO -->
-
-    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SMHI-CSIRO">
-        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ModellingCenter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T09:09:10Z</dc:date>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#CSIRO"/>
-        <prov:component rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SMHI"/>
     </owl:NamedIndividual>
     
 
@@ -2821,9 +2774,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ObservationalDataset"/>
-            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ReanalysisDataset"/>
-            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcastDataset"/>
-            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalDataset"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Reanalysis"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalHindcast"/>
+            <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SeasonalOperationalForecast"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
