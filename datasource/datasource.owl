@@ -18,11 +18,11 @@
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/</rdfs:seeAlso>
-        <owl:versionInfo xml:lang="en">0.3</owl:versionInfo>
+        <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...).</dc:description>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
-        <dc:creator xml:lang="en">Predictia</dc:creator>
     </owl:Ontology>
     
 
@@ -1050,8 +1050,8 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Climatology">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
-        <rdfs:isDefinedBy xml:lang="en">http://www.euporias.eu/taxonomy/term/16</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climatology</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.euporias.eu/taxonomy/term/16</rdfs:seeAlso>
         <prov:definition xml:lang="en">The normal state of climate such as a base line over the normal period. Climatology is often taken as the mean value for a given month over, for example, 1961-1990</prov:definition>
     </owl:Class>
     
