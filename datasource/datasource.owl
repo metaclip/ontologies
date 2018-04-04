@@ -159,10 +159,12 @@
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#fromPackage -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#fromPackage">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
-        <rdfs:label xml:lang="en">Software Package Provenance</rdfs:label>
+        <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">This property associates a specific :Command (prov:Activity) with a software :Package (prov:SoftwareAgent)</rdfs:comment>
+        <rdfs:label>fromPackage</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -176,6 +178,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:31Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of an :Aggregation from a previous :Step</rdfs:comment>
+        <rdfs:label>hadAggregation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Aggregation"/>
     </owl:ObjectProperty>
     
@@ -190,7 +193,21 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:52:33Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of an :Anomaly from a previous :Step</rdfs:comment>
+        <rdfs:label>hadAnomalyCalculation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Anomaly"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hadArgumentValue -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hadArgumentValue">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ArgumentValue"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:24:14Z</dc:date>
+        <rdfs:comment xml:lang="en">A property representing the :ArgumentValue taken by an :Argument</rdfs:comment>
+        <rdfs:label>hadArgumentValue</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -204,6 +221,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:00:12Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of an :ClimateIndex from a previous :Step</rdfs:comment>
+        <rdfs:label>hadClimateIndexCalculation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
     </owl:ObjectProperty>
     
@@ -218,7 +236,22 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:00:57Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of a :Climatology from a previous :Step</rdfs:comment>
+        <rdfs:label>hadClimatology</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Climatology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hadCommandCall -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hadCommandCall">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadActivity"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:09:32Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links a fiven :Step within the data workflow with the :Command activity generating it</rdfs:comment>
+        <rdfs:label>hadCommandCall</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -246,6 +279,8 @@
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T15:40:35Z</dc:date>
+        <rdfs:comment xml:lang="en">This property describes a :DatasetSubset derivation. This can happen from a :Dataset entity to produce a new :DatasetSubset, or from any other :Step within the data workflow from which a specific subsetting operation is performed (e.g., a :ClimateIndex might be temporally or spatially subsetted for further analysis or graphical representation).</rdfs:comment>
+        <rdfs:label>hadDatasetSubset</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -258,6 +293,8 @@
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#GCM"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T17:33:02Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links an :RCM Sofware agent with the driving GCM providing the boundary conditions</rdfs:comment>
+        <rdfs:label>hadDrivingGCM</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -272,6 +309,8 @@
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Experiment"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T12:45:12Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links a :Dataset that was generated by a simulation model (:GCM or :RCM) with an :Experiment</rdfs:comment>
+        <rdfs:label>hadExperiment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -298,6 +337,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:01:31Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of a :PCA from a previous :Step</rdfs:comment>
+        <rdfs:label>hadPCA</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#PCA"/>
     </owl:ObjectProperty>
     
@@ -312,6 +352,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-30T11:07:19Z</dc:date>
         <rdfs:comment xml:lang="en">Establishes the Project to which the Dataset is adscribed</rdfs:comment>
+        <rdfs:label>hadProject</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -325,6 +366,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:04:25Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of a :Regridding from a previous :Step</rdfs:comment>
+        <rdfs:label>hadRegridding</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Regridding"/>
     </owl:ObjectProperty>
     
@@ -356,29 +398,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:19Z</dc:date>
         <rdfs:comment xml:lang="en">This property describes any :Transformation experienced throughout the data workflow, leading to a derivation from one :Step into another. For instance, a :DatasetSubset may be aggregated or subsequently subsetted. Because :Transformation is a generic :Step, the more specific subproperties should be used when applicable (e.g. :hadRegridding, :hadAnomalyCalculation etc.)</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasArgument -->
-
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasArgument">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
-        <rdfs:comment xml:lang="en">hasArgument property</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#hasArgumentValue -->
-
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasArgumentValue">
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ArgumentValue"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:24:14Z</dc:date>
-        <rdfs:comment xml:lang="en">A property representing the Value taken by an Argument</rdfs:comment>
+        <rdfs:label>hadTransformation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -496,36 +516,14 @@
     
 
 
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#withCommand -->
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#usedArgument -->
 
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withCommand">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadActivity"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
-                    <rdf:Description rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:09:32Z</dc:date>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://metaclip.predictia.es/datasource/datasource.owl#withInput -->
-
-    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#withInput">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-10T14:18:43Z</dc:date>
-        <rdfs:comment xml:lang="en">The input of a Transformation: it can be either a DatasetSubset or a previous Transformation. For example, an anomaly requires a DatasetSubset as input, ant then a second Transformation (e.g. a PCA on the anomaly) can be performed on the Anomaly transformation.</rdfs:comment>
-        <rdfs:label xml:lang="en">Transformation Input</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#usedArgument">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Command"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Argument"/>
+        <rdfs:comment xml:lang="en">Object property linking a :Command with its :Argument</rdfs:comment>
+        <rdfs:label>usedArgument</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -653,13 +651,14 @@
 
     <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#hasCellMethod">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Aggregation"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Climatology"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Dimension"/>
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#TemporalResolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:description xml:lang="en">When data that is representative of cells can be described by simple statistical methods, those methods can be indicated using the cell_methods attribute</dc:description>
+        <rdfs:comment xml:lang="en">A specific cell method is specified in the case of :Dimension, when this is asserted in the context of an :Aggregation step</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">cell method</rdfs:label>
+        <rdfs:label>hasCellMethod</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1125,8 +1124,10 @@
 
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#ENSO">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#ClimateIndex"/>
+        <inputECV xml:lang="en">Sea surface temperature</inputECV>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:26:26Z</dc:date>
+        <rdfs:comment xml:lang="en">Historically “El Niño” referred to the appearance of unusually warm water off the coast of Peru near Christmastime (Niño is Spanish and refers to “the boy Christ child”). Today it describes broader changes that occur across the Pacific basin. Oceanic and atmospheric conditions in the tropical Pacific fluctuate somewhat irregularly between warm El Niño phases and cold phases in which surface waters cool across the tropical Pacific. These cooling events are called “La Niña” (“the girl” in Spanish). The most intense phase of each event typically lasts about a year. El Niño is linked to major changes in the atmosphere known as the Southern Oscillation (SO). The whole phenomenon is known as the El Niño Southern Oscillation (ENSO)</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
     </owl:Class>
     
@@ -1138,6 +1139,8 @@
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:24:58Z</dc:date>
+        <rdfs:comment xml:lang="en">These are :SpatialExtent class features used to represent specific domains upon which the ENSO phenomenon is characterized</rdfs:comment>
+        <rdfs:label>ENSOregion</rdfs:label>
     </owl:Class>
     
 
@@ -1385,8 +1388,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <terms:creator>Predictia</terms:creator>
-        <rdfs:comment xml:lang="en">Definition of the spatial boundaries of a DatasetSubset or Transformation</rdfs:comment>
-        <rdfs:label xml:lang="en">Spatial extent</rdfs:label>
+        <rdfs:comment xml:lang="en">Definition of the spatial boundaries of a :DatasetSubset or :Transformation</rdfs:comment>
+        <rdfs:label xml:lang="en">SpatialExtent</rdfs:label>
     </owl:Class>
     
 
