@@ -37,6 +37,22 @@
     
 
 
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hadGraphicalRepresentation -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hadGraphicalRepresentation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Transformation"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-04T15:35:28Z</dc:date>
+        <rdfs:comment xml:lang="en">The :hadGraphicalRepresentation property relates a given set of data, as produced by a ds:Step, with a :GraphicalProduct aimed at its visual representation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hadGraphicalRepresentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxis -->
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxis">
@@ -65,6 +81,9 @@
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">This object property Links a :Map graphical product with the horizontal :SpatialExtent represented by the map.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>hasMapExtent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -264,6 +283,7 @@
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">A graphical representation of the data. It usually involves the comparison of one variable or parameter against other variable(s), parameter(s) or dimensions (e.g., against time in time series plots)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -274,6 +294,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Because :ChartAxis is a broad class, its most specific subclasses (e.g. :TimeChartAxis, :ProbabilityChartAxis, etc.) should be used when applicable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -283,6 +304,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
         <rdfs:comment xml:lang="en">Because :ChartLayer is a broad class, its most specific subclasses (e.g. :ChartLines, :ChartPolygons, etc.) should be used when applicable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ChartLayer</rdfs:label>
     </owl:Class>
     
 
@@ -292,6 +315,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLines">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ChartLines</rdfs:label>
     </owl:Class>
     
 
@@ -301,6 +326,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPoints">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ChartPoints</rdfs:label>
     </owl:Class>
     
 
@@ -310,6 +337,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPolygons">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ChartPolygons</rdfs:label>
     </owl:Class>
     
 
@@ -319,6 +348,8 @@
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartRaster">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ChartRaster</rdfs:label>
     </owl:Class>
     
 
@@ -330,6 +361,7 @@
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Due to the nonlinear character of the climatic system, seasonal forecasts 
 are produced following an ensemble approach, considering  a  number of simulations with, e.g. perturbed or lagged initial conditions. The result of this ensemble prediction approach (Palmer 2004 &lt;DOI:10.1175/BAMS-85-6-853&gt;, Doblas-Reyes et al. 2013 &lt;DOI:10.1002/wcc.217&gt;) is probabilistic in nature, and have an initial condition uncertainty. Furthermore, model predictions are not sensitive only to the initial conditions, but also to model formulations (Palmer and Anderson 1994 &lt;DOI:10.1002/qj.49712051802&gt;), and therefore model uncertainty is another source of uncertainty intrinsic to the forecasting system, stemming from internal parameterizations used to describe the effects of subgrid scale processes (Palmer 2001 &lt;DOI:10.1002/qj.49712757202&gt;). To date, model uncertainty cannot be  clearly  separated  from  the  initial condition uncertainty due to a lack of analytical solutions to this aim (Doblas-Reyes et al. 2013). The resulting uncertainty is typically presented as a model spread, either in graphical form (e.g., time series for different members) and/or presenting some form of summary statistic (range, interquartile range, variance...).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -341,6 +373,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <dc:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-25T15:50:12Z</dc:date>
         <rdfs:comment xml:lang="en">A graphical product can be any form of graphical representation of the climate information derived from a ds:Step. This includes either plots showing the relation between two or more variables, or spatially explicit displays (maps). This class should not be explicitly instantiated, and the usage of its subclasses (:Chart, :Map) is recommended.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -351,6 +384,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">A :GraphicalProduct entity is constituted by groups of layers. Layers are graphical or textual features (points, lines, polygons, legends, floating text, chart titles...) containing relevant information useful to understand the nature of the graphical product and/or its main characteristics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>Layer</rdfs:label>
     </owl:Class>
     
 
@@ -360,6 +395,9 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MagnitudeChartAxis">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">A :ChartAxis expressing the units of an (unspecified) magnitude, that is not spatial, neither temporal, nor a probability</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MagnitudeChartAxis</rdfs:label>
     </owl:Class>
     
 
@@ -370,6 +408,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">A geographically explicit graphical representation of the data</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -380,6 +419,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Because :MapLayer is a broad class, its most specific subclasses (e.g. :MapLines, :MapPolygons, etc.) should be used when applicable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MapLayer</rdfs:label>
     </owl:Class>
     
 
@@ -389,6 +430,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLines">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MapLines</rdfs:label>
     </owl:Class>
     
 
@@ -398,6 +441,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPoints">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MapPoints</rdfs:label>
     </owl:Class>
     
 
@@ -407,6 +452,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPolygons">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MapPolygons</rdfs:label>
     </owl:Class>
     
 
@@ -416,6 +463,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapRaster">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>MapRaster</rdfs:label>
     </owl:Class>
     
 
@@ -426,6 +475,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Masks are layers whose aim is hiding non-relevant information contained in other layers underneath.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -436,6 +486,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">A source of uncertainty in the verification/validation EQC products arises from the reference observations used.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -445,6 +496,9 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ProbabilityChartAxis">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">A :ChartAxis expressing probability</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>ProbabilityChartAxis</rdfs:label>
     </owl:Class>
     
 
@@ -455,6 +509,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">Sampling uncertainty is associated with EQC products. It appears when different members are sampled and is often represented by map stippling indicating significant points</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -464,6 +519,9 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#SpatialChartAxis">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">A :ChartAxis with spatial/geographical units</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>SpatialChartAxis</rdfs:label>
     </owl:Class>
     
 
@@ -474,6 +532,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
         <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">Text annotations are textual elements in the graphical product. It can be a title, a subtitle, a legend, a number... or any other textual element within the plotting area not belonging to :ChartAxis</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>TextLayer</rdfs:label>
     </owl:Class>
     
 
@@ -483,6 +543,9 @@ are produced following an ensemble approach, considering  a  number of simulatio
     <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TimeChartAxis">
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
         <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">A :ChartAxis with time units</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
+        <rdfs:label>TimeChartAxis</rdfs:label>
     </owl:Class>
     
 
@@ -493,6 +556,7 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
         <dc:creator>Predictia</dc:creator>
         <rdfs:comment xml:lang="en">The most important data transformation that introduces another level of uncertainty in the uncertainty chain is the statistical post-processing  (adjustment/recalibration, statistcal downscaling) of the predictions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -503,7 +567,8 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">A state of incomplete knowledge that can result from a lack of information or from disagreement about what is known or even knowable. It may have many types of sources, from imprecision in the data to ambiguously defined concepts or terminology, or uncertain projections of human behaviour (IPCC 2014). The Uncertainty class aims at the description of uncertainty types in graphical climate  products and how it is communicated.</dc:description>
-        <rdfs:comment xml:lang="en">The different uncertainty types are defined in QA4Seas MIlestone 4.3 &lt;https://earth.bsc.es/qa4seas/wiki/lib/exe/fetch.php?media=wiki:c3s_51_lot3_qa4seas_m4.3_strategies_communicating_uncertainty_v1.pdf&gt;</rdfs:comment>
+        <rdfs:comment xml:lang="en">The different uncertainty types are defined in QA4Seas Milestone 4.3 &lt;https://earth.bsc.es/qa4seas/wiki/lib/exe/fetch.php?media=wiki:c3s_51_lot3_qa4seas_m4.3_strategies_communicating_uncertainty_v1.pdf&gt;, in the context of seasonal forecasting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
     </owl:Class>
 </rdf:RDF>
 
