@@ -2,6 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Entered Import Resolution" name="http://metaclip.predictia.es/datasource/datasource.owl/0.1" uri="file:/home/juaco/workspace/metaclip/datasource/datasource.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1522921330449" name="http://metaclip.predictia.es/graphical_output/graphical_output.owl" uri="graphical_output.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523271023060" name="http://metaclip.predictia.es/graphical_output/graphical_output.owl" uri="graphical_output.owl"/>
     </group>
 </catalog>

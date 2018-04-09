@@ -81,7 +81,7 @@
         <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
         <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
         <dc:creator>Predictia</dc:creator>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">This object property Links a :Map graphical product with the horizontal :SpatialExtent represented by the map.</rdfs:comment>
+        <rdfs:comment>This object property Links a :Map graphical product with the horizontal :SpatialExtent represented by the map.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/graphical_output/graphical_output.owl</rdfs:isDefinedBy>
         <rdfs:label>hasMapExtent</rdfs:label>
     </owl:ObjectProperty>
