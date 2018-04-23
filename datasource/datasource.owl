@@ -91,6 +91,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
@@ -1707,7 +1713,7 @@
         <dc:description xml:lang="en">Maximum length of dry spell, maximum number of consecutive days with RR &lt; 1mm</dc:description>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CDD</rdfs:label>
-        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
     </owl:NamedIndividual>
     
 
@@ -2931,14 +2937,40 @@
     
 
 
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#climate4R.climdex -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#climate4R.climdex">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-23T10:57:56Z</dc:date>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/climate4R.climdex</dc:source>
+        <rdfs:comment xml:lang="en">This R package is a wrapper of the climdex.pcic package implementing the 27 core ETCCDI Climate Indices &lt;http://etccdi.pacificclimate.org/list_27_indices.shtml&gt; in the framework of climate4R</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://metaclip.predictia.es/datasource/datasource.owl#downscaleR -->
 
     <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#downscaleR">
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T11:18:59Z</dc:date>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/downscaleR</dc:source>
         <rdfs:comment xml:lang="en">An R package for empirical-statistical downscaling focusing on daily data and covering the most popular approaches (bias correction, Model Output Statistics, Perfect Prognosis) and techniques.</rdfs:comment>
-        <rdfs:seeAlso xml:lang="en">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://metaclip.predictia.es/datasource/datasource.owl#easyVerification -->
+
+    <owl:NamedIndividual rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#easyVerification">
+        <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-23T11:12:59Z</dc:date>
+        <dc:description xml:lang="en">Set of tools to simplify application of atomic forecast verification metrics for (comparative) verification of ensemble forecasts to large data sets. The forecast metrics are imported from the &apos;SpecsVerification&apos; package, and additional forecast metrics are provided with this package. Alternatively, new user-defined forecast scores can be implemented using the example scores provided and applied using the functionality of this package.</dc:description>
+        <dc:source xml:lang="en">https://github.com/cran/easyVerification</dc:source>
     </owl:NamedIndividual>
     
 
@@ -2949,6 +2981,7 @@
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-29T17:52:41Z</dc:date>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR</dc:source>
         <rdfs:comment xml:lang="en">loadeR is an R package enabling transparent, user-friendly access to local and remote climate datasets compliant with Unidata&apos;s Common Data Model, through the exploitation of the NetCDF-Java API utilities</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2961,7 +2994,9 @@
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-29T17:57:35Z</dc:date>
-        <rdfs:seeAlso xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</rdfs:seeAlso>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR.ECOMS</dc:source>
+        <rdfs:comment xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://meteo.unican.es/ecoms-udg</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">https://www.sciencedirect.com/science/article/pii/S2405880717300079?via%3Dihub</rdfs:seeAlso>
         <prov:specializationOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#loadeR"/>
     </owl:NamedIndividual>
@@ -2974,6 +3009,7 @@
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T11:09:01Z</dc:date>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/transformeR</dc:source>
         <rdfs:comment xml:lang="en">An R package for climate data manipulation and transformation, including subsetting, regridding, and data conversion.</rdfs:comment>
         <rdfs:label xml:lang="en">transformeR</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
@@ -2987,9 +3023,11 @@
         <rdf:type rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Package"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T11:14:21Z</dc:date>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/visualizeR</dc:source>
         <rdfs:comment xml:lang="en">An R package for climate data visualization, with special focus on ensemble forecasting and uncertainty communication. It includes functions for visualizing climatological, forecast and evaluation products, and combinations of them.</rdfs:comment>
         <rdfs:label xml:lang="en">visualizeR</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2017.09.008</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
