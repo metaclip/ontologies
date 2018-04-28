@@ -572,6 +572,8 @@
 
     <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/datasource/datasource.owl#wasEnsembleMember">
         <rdfs:subPropertyOf rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#wasMemberOf"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Ensemble"/>
         <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T14:15:53Z</dc:date>
         <rdfs:comment xml:lang="en">Link a :Dataset or a subsequent :Step derivation with an :Ensemble of which it is member</rdfs:comment>
@@ -1259,7 +1261,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T11:14:46Z</dc:date>
-        <rdfs:comment xml:lang="en">The :MultiDatasetEnsemble class is aimed at the characterization of groups of datasets that have been joined to form an ensemble prior to the next :Step in the data workflow. This ensemble does not refer to different members from the same dataset (e.g., as typically in :SeasonalHindcast datasets), but to a new class that is a subclass of prov:Collection, formed by two or more distinct :Datasets, or (more often) subsequent :Steps after them, like for instance collections of :DatasetSubsets or transformed :DatasetSubsets.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The :Ensemble class is aimed at the characterization of groups of datasets that have been joined to form an ensemble prior to the next :Step in the data workflow. This ensemble does not refer to different members from the same dataset (e.g., as typically in :SeasonalHindcast datasets), but to a new class that is a subclass of prov:Collection, formed by two or more distinct :Datasets, or (more often) subsequent :Steps after them, like for instance collections of :DatasetSubsets or transformed :DatasetSubsets.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://metaclip.predictia.es/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>Ensemble</rdfs:label>
     </owl:Class>
