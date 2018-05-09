@@ -2,12 +2,15 @@
 <rdf:RDF xmlns="http://metaclip.predictia.es/graphical_output/graphical_output.owl#"
      xml:base="http://metaclip.predictia.es/graphical_output/graphical_output.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:go="http://metaclip.predictia.es/graphical_output/graphical_output.owl#"
+     xmlns:clim_prov="http://www.semanticweb.org/predictia/ontologies/2017/5/clim_prov#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:go="http://metaclip.predictia.es/verification/graphical_output.owl#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cal="http://metaclip.predictia.es/calibration/calibration.owl#"
      xmlns:ds="http://metaclip.predictia.es/datasource/datasource.owl#"
+     xmlns:veri="http://metaclip.predictia.es/verification/verification.owl#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -16,7 +19,9 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl">
         <owl:versionIRI rdf:resource="http://metaclip.predictia.es/graphical_output/0.1/graphical_output.owl"/>
+        <owl:imports rdf:resource="http://metaclip.predictia.es/verification/0.0/verification.owl"/>
         <owl:imports rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl"/>
+        <owl:imports rdf:resource="http://metaclip.predictia.es/calibration/calibration.owl"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:title xml:lang="en">The Graphical Product Vocabulary from METACLIP</dc:title>
         <rdfs:seeAlso xml:lang="en">http://metaclip.predictia.es</rdfs:seeAlso>
