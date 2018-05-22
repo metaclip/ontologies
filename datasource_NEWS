@@ -1,0 +1,24 @@
+# datasource ontology changelog
+
+## v0.0 (July 2017)
+ * First ontology version
+
+## v0.1 (September 2017)
+ * Major restructuring of main classes
+ * Multiple entities have been renamed
+
+## v0.2 (17 December 2017)
+ * Extension to PROV-O
+ * Version used for Deliverable 4.1 of QA4Seas project
+
+## v0.3 (Feb 2018)
+ * Addition of new classes, object properties and further refinement of PROV-O extension
+ * Introduction of individual instances for ds:Experiment, ds:Project, ds:ClimateIndex etc.
+
+## v0.4 (12 May 2018)
+ * Define ds:ClimateIndexCalculation as ds:Step and move ds:ClimateIndex as prov:Entity
+ * Other annotation changes and metadata description improvements
+ * Version used in the poster at Santander Bias correction workshop <http://www.climate-bias-correction.org/>
+
+
+

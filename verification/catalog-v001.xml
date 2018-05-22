@@ -8,6 +8,6 @@
     <uri id="User Entered Import Resolution" name="http://metaclip.predictia.es/datasource/datasource.owl" uri="verification.owl"/>
     <uri id="User Entered Import Resolution" name="http://metaclip.predictia.es/calibration/calibration.owl" uri="verification.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1523870996478" name="http://metaclip.predictia.es/verification/verification.owl" uri="verification.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1526123374557" name="http://metaclip.predictia.es/verification/verification.owl" uri="verification.owl"/>
     </group>
 </catalog>
