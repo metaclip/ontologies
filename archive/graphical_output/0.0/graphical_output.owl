@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://metaclip.predictia.es/verification/graphical_output.owl#"
+     xml:base="http://metaclip.predictia.es/verification/graphical_output.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl">
+        <owl:imports rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxis -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxis">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapExtent -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapExtent">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#SpatialExtent"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMapLayer">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMask -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasMask">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotation">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasUncertainty -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasUncertainty">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#withInput -->
+
+    <owl:ObjectProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#withInput">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <rdfs:range rdf:resource="http://metaclip.predictia.es/datasource/datasource.owl#Step"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisMaxValue">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisMinValue -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisMinValue">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisScale -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisScale">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisType -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisType">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasChartAxisUnits">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasForecastSystemUncertaintyType -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasForecastSystemUncertaintyType">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ForecastSystemUncertainty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasIneqOperator -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasIneqOperator">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayerDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasLayerDescription">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:description xml:lang="en">A generic description of the nature of the layer</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasProductType -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasProductType">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <rdfs:isDefinedBy xml:lang="en">Graphical Product Types are Defined in QA4Seas Milestone 4.3</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasProjection -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasProjection">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <rdfs:isDefinedBy xml:lang="en">Projection is given by EPSG code &lt;http://spatialreference.org/&gt;</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotationType -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasTextAnnotationType">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:description xml:lang="en">A generic description of the nature of the annotation</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasThresholdValue -->
+
+    <owl:DatatypeProperty rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#hasThresholdValue">
+        <rdfs:domain rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Chart -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Chart">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLines -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLines">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPoints -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPoints">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPolygons -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartPolygons">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartRaster -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartRaster">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ForecastSystemUncertainty -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ForecastSystemUncertainty">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquin Bedia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-25T14:37:11Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-25T15:50:12Z</dc:date>
+        <dc:description xml:lang="en">Either a plot showing the relation between two or more variables, or a map displaying their distribution in space</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MagnitudeChartAxis -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MagnitudeChartAxis">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Map">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#GraphicalProduct"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Layer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLines -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLines">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPoints -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPoints">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPolygons -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapPolygons">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapRaster -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapRaster">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#MapLayer"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Mask">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ObservationalUncertainty -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ObservationalUncertainty">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#ProbabilityChartAxis -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ProbabilityChartAxis">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#SamplingUncertainty -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#SamplingUncertainty">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#SpatialChartAxis -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#SpatialChartAxis">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TextAnnotation">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:description xml:lang="en">A text element in the graphical product. It can be a title, a subtitle, a legend or any other textual element within the plotting area</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#TimeChartAxis -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TimeChartAxis">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#ChartAxis"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#TransformationUncertainty -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#TransformationUncertainty">
+        <rdfs:subClassOf rdf:resource="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty -->
+
+    <owl:Class rdf:about="http://metaclip.predictia.es/graphical_output/graphical_output.owl#Uncertainty">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:description xml:lang="en">A state of incomplete knowledge that can result from a lack of information or from disagreement about what is known or even knowable. It may have many types of sources, from imprecision in the data to ambiguously defined concepts or terminology,  or uncertain projections of human behaviour (IPCC 2014)</dc:description>
+        <rdfs:isDefinedBy xml:lang="en">The different uncertainty types are defined in QA4Seas MIlestone 4.3 &lt;https://earth.bsc.es/qa4seas/wiki/lib/exe/fetch.php?media=wiki:c3s_51_lot3_qa4seas_m4.3_strategies_communicating_uncertainty_v1.pdf&gt;</rdfs:isDefinedBy>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
