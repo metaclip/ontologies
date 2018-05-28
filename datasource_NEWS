@@ -15,10 +15,13 @@
  * Addition of new classes, object properties and further refinement of PROV-O extension
  * Introduction of individual instances for ds:Experiment, ds:Project, ds:ClimateIndex etc.
 
-## v0.4 (12 May 2018)
+## v0.4 (24 May 2018)
  * Define ds:ClimateIndexCalculation as ds:Step and move ds:ClimateIndex as prov:Entity
  * Other annotation changes and metadata description improvements
  * Version used in the poster at Santander Bias correction workshop <http://www.climate-bias-correction.org/>
+ * Version used to the paper submitted to Environmental Modelling and Software (24 May 2018): "METACLIP: A semantic provenance framework for climate products"
 
-
+## v0.5 (devel)
+ * New ontology IRIs, moved to the new metaclip.org domain
+ * Add C3S seasonal forecasting systems
 

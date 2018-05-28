@@ -1,0 +1,12 @@
+# calibration ontology changelog
+
+## v0.0 (24 May 2018)
+ * First ontology version
+ * Version used in the poster at Santander Bias correction workshop <http://www.climate-bias-correction.org/>
+ * Version used in the supplementary material of the paper submitted to Environmental Modelling and Software (24 May 2018): "METACLIP: A semantic provenance framework for climate products"
+
+## v0.1 (28 May 2018)
+ * Updated ontology URI. <http://metaclip.org> domain
+
+
+
