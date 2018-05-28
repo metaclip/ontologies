@@ -6,7 +6,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:cal="http://www.metaclip.org/calibration/calibration.owl#"
      xmlns:ds="http://www.metaclip.org/datasource/datasource.owl#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,10 +15,10 @@
      xmlns:calibration="http://www.metaclip.org/calibration/calibration.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/calibration/calibration.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.1/calibration.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.2/calibration.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
         <dc:description xml:lang="en">The calibration ontology is aimed at the creation of a conceptual framework to describe the different statistical calibration techniques and procedures used in climate data analysis. In particular, the calibration ontology deals with bias correction, perfect-prog, ensemble recalibration and similar statistical post-processing techniques that rely on an observed reference and a calibration dataset to undertake an adjustment of climate model outputs. The vocabulary is constructed following the naming conventions and techniques followed in several international initiatives, such as the Action COST VALUE and EURO-CORDEX.</dc:description>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:creator>Predictia</dc:creator>
         <dc:title xml:lang="en">The Calibration Vocabulary of METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
@@ -370,9 +369,9 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#BC">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#ParametricBiasCorrection"/>
         <dc:description xml:lang="en">Parametric bias correction method using the optimum among five theoretical distributions (Gamma, Weibull, classical Gumbel, reversed Gumbel and log-logistic, all of them with four parameters) for each station on a monthly basis (Monjo et al. 2014, &lt;https://doi.org/10.1007/s00704-013-1008-8&gt;).</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:comment xml:lang="en">The method is described for precipitation only</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>BC</rdfs:label>
@@ -385,10 +384,10 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#CDFt">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#NPQuantileMapping"/>
         <dc:description xml:lang="en">The CDFt approach links the local-scale CDF of the variable of interest to the associated large-scale CDF through a &apos;quantile–quantile&apos; approach performed between the future large- and local-scale CDFs (and not between present CDFs as in the classical :QuantileMapping methods. To do so, the future local-scale CDF is first estimated based on the assumption of a mathematical transformation to link the evolution of the large-scale CDF to the evolution of the local-scale one. Hence, CDFt is a variant of quantile–quantile but CDFt accounts for the CDF changes from the calibration to the projection (or future) time periods (Vrac et al. 2012, &lt;https://doi.org/10.5194/nhess-12-2769-2012&gt;).</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</calibration:hasSeasonality>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</hasSeasonality>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>CDFt</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/nhess-12-2769-2012</rdfs:seeAlso>
@@ -401,10 +400,10 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#EQM">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#NPQuantileMapping"/>
         <dc:description xml:lang="en">Implementation of empirical quantile mapping (:EQM) adjusting 99 percentiles and linearly interpolating inside this range every two consecutive percentiles; outside this range a constant extrapolation (using the correction obtained for the 1st or 99th percentile) is applied (Déqué et al. 2007 &lt;https://doi.org/10.1016/j.gloplacha.2006.11.030&gt;). In the case of the precipitation, when the predicted dry frequency is larger than the observed one the frequency adaptation proposed by &lt;Themeßl et al. 2010, https://doi.org/10.1007/s10584-011-0224-4&gt;.</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</calibration:hasSeasonality>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</hasSeasonality>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy xml:lang="en">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">EQM</rdfs:label>
     </owl:NamedIndividual>
@@ -416,9 +415,9 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#EQM-WIC658">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#NPQuantileMapping"/>
         <dc:description xml:lang="en">Implementation of the empirical quantile mapping method (Déqué, 2007 &lt;https://doi.org/10.1016/j.gloplacha.2006.11.030&gt;) sorting the values into bins with adjustable width (e.g.: 0.1) and applying a linear interpolation between two percentiles (bins); out of range values are adjusted using constant extrapolation (using the correction obtained for the minimum or maximum). In order to cope with the seasonal cycle, a 31-day moving window centred on every calendar day is used to calibrate the method &lt;see Wilcke et al. 2013, https://doi.org/10.1007/s10584-013-0845-x&gt;</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>EQM-WIC658</rdfs:label>
     </owl:NamedIndividual>
@@ -430,10 +429,10 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#EQMs">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#NPQuantileMapping"/>
         <dc:description xml:lang="en">This method is similar to :EQM. However, In order to explicitly model the seasonal cycle, the variant EQMs considers a 31-day moving window centred on every calendar day to calibrate the method</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-day moving window</calibration:hasSeasonality>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-day moving window</hasSeasonality>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>EQMs</rdfs:label>
         <prov:specializationOf rdf:resource="http://www.metaclip.org/calibration/calibration.owl#EQM"/>
@@ -447,10 +446,10 @@
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#PQuantileMapping"/>
         <dc:description>GPQM</dc:description>
         <dc:description xml:lang="en">Gamma/Gaussian parametric quantile mapping (GQM) to approximate the empirical distribution of precipitation intensity/temperature. In the case of the precipitation, the frequency adaptation proposed by Themeßl et al. 2012 &lt;https://doi.org/10.1007/s10584-011-0224-4&gt; is previously applied to calibrate precipitation occurrence (a 1 mm threshold is used). The generalized Pareto quantile mapping (GPQM) version considers a generalized Pareto to adjust separately the extremes values (over the 95th percentile) as in Gutjahr and Heinemann 2013 &lt;https://doi.org/10.1007/s00704-013-0834-z&gt;</dc:description>
-        <calibration:hasProbCharacter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deterministic</calibration:hasProbCharacter>
-        <calibration:hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:hasSeasonality>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deterministic</hasProbCharacter>
+        <hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasSeasonality>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>GPQM</rdfs:label>
         <prov:sharesDefinitionWith rdf:resource="http://www.metaclip.org/calibration/calibration.owl#GQM"/>
@@ -463,10 +462,10 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#GQM">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#PQuantileMapping"/>
         <dc:description xml:lang="en">Gamma/Gaussian parametric quantile mapping (GQM) to approximate the empirical distribution of precipitation intensity/temperature. In the case of the precipitation, the frequency adaptation proposed by Themeßl et al. 2012 &lt;https://doi.org/10.1007/s10584-011-0224-4&gt; is previously applied to calibrate precipitation occurrence (a 1 mm threshold is used). The generalized Pareto quantile mapping (GPQM) version considers a generalized Pareto to adjust separately the extremes values (over the 95th percentile) as in Gutjahr and Heinemann 2013 &lt;https://doi.org/10.1007/s00704-013-0834-z&gt;</dc:description>
-        <calibration:hasProbCharacter xml:lang="en">deterministic</calibration:hasProbCharacter>
-        <calibration:hasSeasonality xml:lang="en">none</calibration:hasSeasonality>
-        <calibration:isMultiSite xml:lang="en">false</calibration:isMultiSite>
-        <calibration:isMultiVariable xml:lang="en"></calibration:isMultiVariable>
+        <hasProbCharacter xml:lang="en">deterministic</hasProbCharacter>
+        <hasSeasonality xml:lang="en">none</hasSeasonality>
+        <isMultiSite xml:lang="en">false</isMultiSite>
+        <isMultiVariable xml:lang="en"></isMultiVariable>
         <rdfs:isDefinedBy xml:lang="en">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>GQM</rdfs:label>
         <prov:sharesDefinitionWith rdf:resource="http://www.metaclip.org/calibration/calibration.owl#GPQM"/>
@@ -479,9 +478,9 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#ISI-MIP">
         <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#ParametricBiasCorrection"/>
         <dc:description xml:lang="en">The trend preserving ISI-MIP method proposed by Hempel, Frieler, Warszawski, Schewe and Piontek (2013, &lt;https://doi.org/10.5194/esd-4-219-2013&gt;) in the framework of the Inter-Sectoral Impact Model Intercomparison Project (ISI-MIP). This method works in a two-step approach. First, the monthly mean is adjusted with a linear/multiplicative scaling and, then, the resulting daily anomalies are corrected by means of a parametric (Gaussian/exponential) quantile mapping, for temperatures/precipitation, respectively. In the case of precipitation also a frequency adjustment is included for both the monthly and daily components. This method has been designed to simultaneously adjust groups of variables (precipitation-snow, temperatures, wind speed and components).</dc:description>
-        <calibration:hasProbCharacter>deterministic</calibration:hasProbCharacter>
-        <calibration:isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiSite>
-        <calibration:isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</calibration:isMultiVariable>
+        <hasProbCharacter>deterministic</hasProbCharacter>
+        <isMultiSite rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiSite>
+        <isMultiVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMultiVariable>
         <rdfs:isDefinedBy xml:lang="en">https://doi.org/10.1002/joc.5462</rdfs:isDefinedBy>
         <rdfs:label>ISI-MIP</rdfs:label>
     </owl:NamedIndividual>
