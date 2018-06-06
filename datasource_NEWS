@@ -23,5 +23,8 @@
 
 ## v0.5 (devel)
  * New ontology IRIs, moved to the new metaclip.org domain
- * Add C3S seasonal forecasting systems
+ * Add C3S seasonal forecasting systems (instances of :GCM)
+ * Add new individuals for ObservationalDataset (WFDEI, E-OBS)
+ * Updated annotations
+ * Add wasInternallyCalledBy object property
 
