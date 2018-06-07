@@ -21,7 +21,7 @@
  * Version used in the poster at Santander Bias correction workshop <http://www.climate-bias-correction.org/>
  * Version used to the paper submitted to Environmental Modelling and Software (24 May 2018): "METACLIP: A semantic provenance framework for climate products"
 
-## v0.5 (devel)
+## v0.5 (7 Jun 2018)
  * New ontology IRIs, moved to the new metaclip.org domain
  * Add C3S seasonal forecasting systems (instances of :GCM)
  * Add new individuals for ObservationalDataset (WFDEI, E-OBS)
