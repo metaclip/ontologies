@@ -14,11 +14,11 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.5/datasource.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.6/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
         <dc:creator>Predictia</dc:creator>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...).</dc:description>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
@@ -1390,7 +1390,7 @@
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
-        <dc:description xml:lang="en">Observational datasets are constructed upon observations of the real world. In some occasions, these observations are post-processed and/or combined with other sources of information to generate the final product, that is used a representation of the true climate record (e.g. for validation purposes or for historical reconstructions).</dc:description>
+        <dc:description xml:lang="en">Observational datasets are constructed upon observations of the real world. In some occasions, these observations are post-processed and/or combined with other sources of information to generate the final product, that is used a representation of the &quot;true&quot; climate record (e.g. for validation purposes or for historical reconstructions).</dc:description>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>ObservationalDataset</rdfs:label>
     </owl:Class>
@@ -1904,7 +1904,7 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EC-EARTH">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:label xml:lang="en">EC-EARTH</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://www.ec-earth.org/</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ec-earth.org/</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -1914,7 +1914,7 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EC-EARTH-Consortium">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
         <rdfs:label xml:lang="en">EC-EARTH-Consortium</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">http://www.ec-earth.org/</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ec-earth.org/</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -2049,7 +2049,7 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GCFS_2.0">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:label>GCFS_v2</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">General Information &lt;https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">General Information &lt;https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html&gt;</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/display/C3SS/Description+of+DWD+C3S+contribution&gt;</rdfs:seeAlso>
     </owl:NamedIndividual>
     
