@@ -18,11 +18,11 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/graphical_output/graphical_output.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/graphical_output/0.2/graphical_output.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/graphical_output/0.3/graphical_output.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/calibration/calibration.owl"/>
-        <owl:imports rdf:resource="http://www.metaclip.org/verification/0.0/verification.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.metaclip.org/verification/0.1/verification.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
         <dc:title xml:lang="en">The Graphical Product Vocabulary from METACLIP</dc:title>
         <dc:creator xml:lang="en">Predictia</dc:creator>
         <dc:description xml:lang="en">The Graphical Output Ontology provides a description of graphical climate products (charts, maps...), including a description of uncertainty communication. It has two main components: i) The graphical product description and ii) the description of the uncertainty types communicated by the different graphical elements of the product. There are specific concepts to describe the types of uncertainty and how this is communicated within the product. It extends the ds:Step class from METACLIP&apos;s Data Source Ontology introducing the generation of the graphical product as an additional step within the climate data workflow.</dc:description>
