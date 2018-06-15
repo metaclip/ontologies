@@ -1,0 +1,2960 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.metaclip.org/datasource/datasource.owl#"
+     xml:base="http://www.metaclip.org/datasource/datasource.owl"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:datasource="http://www.metaclip.org/datasource/datasource.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.5/datasource.owl"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <dc:creator>Predictia</dc:creator>
+        <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...).</dc:description>
+        <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#indexType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#indexType">
+        <dc:creator>Predictia</dc:creator>
+        <dc:description xml:lang="en">The index type is an attempt to provide a synthetic overview of the aspects described by the Climate Index at hand. &quot;Circulation&quot; indices are synthetic descriptors of circulation patterns, for instance North Atlantic Oscillation (NAO, uses mean sea-level pressure as input) or El Niño Southern Oscillation (ENSO, based on sea-surface temperature anomalies). Indices of &quot;extremes&quot; are used to characterize extreme climate conditions (e.g. the number of icing days, defined as the anual count of days when daily maximum temperature is below 0 degC). &quot;Other&quot; categories exist, so a third miscellaneous category is considered for this property (e.g. heating degree days).</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#inputECV -->
+
+    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#inputECV">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:17:38Z</dc:date>
+        <rdfs:comment xml:lang="en">Annotates the input Essential Climate Variable(s) required for index calculation</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#thresholdType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#thresholdType">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:16:14Z</dc:date>
+        <rdfs:comment xml:lang="en">This entity is aimed at the description of the types of threshold used for climate index definition. &quot;Absolute&quot; thresholds refer to absolute quantities, while &quot;relative&quot; thresholds are based on percentiles (and thus are relative to a given sample). In case no threshold is used for a certain climate index, the category &quot;none&quot; can optionally be used.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#endedAtTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generatedAtTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#generatedAtTime">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalInstant"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#startedAtTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalInstant"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#alongDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#alongDimension">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Aggregation"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <dc:description xml:lang="en">Designation of a dataset dimension along which an operation (e.g. a transformation) is performed</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Along Dimension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#fromPackage -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#fromPackage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Command"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:creator>Predictia</dc:creator>
+        <rdfs:comment xml:lang="en">This property associates a specific :Command (prov:Activity) with a software :Package (prov:SoftwareAgent)</rdfs:comment>
+        <rdfs:label>fromPackage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadAggregation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadAggregation">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Aggregation"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:31Z</dc:date>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of an :Aggregation from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadAggregation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Aggregation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadAnomalyCalculation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadAnomalyCalculation">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Anomaly"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:52:33Z</dc:date>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of an :Anomaly from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadAnomalyCalculation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Anomaly"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadArgumentValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadArgumentValue">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Argument"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ArgumentValue"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:24:14Z</dc:date>
+        <rdfs:comment xml:lang="en">A property representing the :ArgumentValue taken by an :Argument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadArgumentValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadClimateIndexCalculation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadClimateIndexCalculation">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndexCalculation"/>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of an :ClimateIndex from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadClimateIndexCalculation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadClimatology -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadClimatology">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Climatology"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:00:57Z</dc:date>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of a :Climatology from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadClimatology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Climatology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadCommandCall -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadCommandCall">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadActivity"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Command"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:09:32Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links a fiven :Step within the data workflow with the :Command activity generating it</rdfs:comment>
+        <rdfs:label>hadCommandCall</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadDataProvider -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadDataProvider">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-29T16:18:02Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links a Dataset with an organization providing the data (DataProvider)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadDatasetSubset -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadDatasetSubset">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadDerivation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T15:40:35Z</dc:date>
+        <rdfs:comment xml:lang="en">This property describes a :DatasetSubset derivation. This can happen from a :Dataset entity to produce a new :DatasetSubset, or from any other :Step within the data workflow from which a specific subsetting operation is performed (e.g., a :ClimateIndex might be temporally or spatially subsetted for further analysis or graphical representation).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadDatasetSubset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadDerivation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadDerivation">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T12:29:56Z</dc:date>
+        <rdfs:comment xml:lang="en">This property has been defined as an inverse of prov:wasDerivedFrom, in order to preserve the chronological sequence of steps wthin the climate data workflow</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadDerivation</rdfs:label>
+        <prov:inverse>prov:wasDerivedFrom</prov:inverse>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadDrivingGCM -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadDrivingGCM">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T17:33:02Z</dc:date>
+        <rdfs:comment xml:lang="en">This property links an :RCM Sofware agent with the driving GCM providing the boundary conditions</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadDrivingGCM</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadExperiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadExperiment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <rdfs:comment xml:lang="en">This property links a :Dataset that was generated by a simulation model (:GCM or :RCM) with an :Experiment</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadExperiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadModellingCenter -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadModellingCenter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T13:12:48Z</dc:date>
+        <rdfs:comment xml:lang="en">Assign the responsibility of the Dataset to a specific ModellingCenter</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadPCA -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadPCA">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#PCA"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:01:31Z</dc:date>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of a :PCA from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadPCA</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#PCA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadProject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-30T11:07:19Z</dc:date>
+        <rdfs:comment xml:lang="en">Establishes the Project to which the Dataset is adscribed</rdfs:comment>
+        <rdfs:label>hadProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadRegridding -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadRegridding">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadTransformation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:04:25Z</dc:date>
+        <rdfs:comment xml:lang="en">An object property to express the derivation of a :Regridding from a previous :Step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadRegridding</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadSimulationModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadSimulationModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Reanalysis"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ShortRangeForecast"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T17:39:35Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadTransformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadTransformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadDerivation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:19Z</dc:date>
+        <rdfs:comment xml:lang="en">This property describes any :Transformation experienced throughout the data workflow, leading to a derivation from one :Step into another. For instance, a :DatasetSubset may be aggregated or subsequently subsetted. Because :Transformation is a generic :Step, the more specific subproperties should be used when applicable (e.g. :hadRegridding, :hadAnomalyCalculation etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadTransformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasENSOregion -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasENSOregion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:27:17Z</dc:date>
+        <rdfs:comment xml:lang="en">The numbers of the Niño 1,2,3, and 4 regions correspond with the labels assigned to ship tracks that crossed these regions.  Data from these tracks enabled the historic records of El Niño to be carried back in time to 1949, as discussed in a classic study by Rasmusson and Carpenter (1982)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasHorizontalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasHorizontalExtent">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:comment xml:lang="en">Horizontal position may be expressed directly in geographic coordinates (latitude and longitude) for global models or in a map projection planar coordinates for regional models.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Horizontal position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasInitializationTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasInitializationTime">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Realization"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalInstant"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Initialization time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasRealization -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasRealization">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Realization"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Realizations included in the dataset subset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasStandardDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasStandardDefinition">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#VariableStandardDefinition"/>
+        <dc:description xml:lang="en">A standard definition of the variable provided by an authoritative entity (CF, ECMWF tables...)</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Standard Definition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasTemporalResolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasTemporalResolution">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalResolution"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-29T12:29:42Z</dc:date>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Temporal resolution of a Variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasValidTemporalPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasValidTemporalPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Property of a dataset subset defining the time interval encompassed by the validation times.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasVariable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Variable of the :DatasetSubset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasVersion">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetVersion"/>
+        <rdfs:comment xml:lang="en">A version tag</rdfs:comment>
+        <rdfs:label xml:lang="en">Version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasVerticalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasVerticalExtent">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Vertical level definition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#usedArgument -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#usedArgument">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Command"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Argument"/>
+        <rdfs:comment xml:lang="en">Object property linking a :Command with its :Argument</rdfs:comment>
+        <rdfs:label>usedArgument</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#wasEnsembleMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#wasEnsembleMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#wasMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Ensemble"/>
+        <dc:creator>Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T14:15:53Z</dc:date>
+        <rdfs:comment xml:lang="en">Link a :Dataset or a subsequent :Step derivation with an :Ensemble of which it is member</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>wasEnsembleMember</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#wasInternallyCalledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#wasInternallyCalledBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInformedBy"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Command"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Command"/>
+        <rdfs:comment xml:lang="en">This object property relates Command A, explicitly called by the user, with a second Command B acting internally as a result of Commad A call. Therefore, this object property is designed to account for internal functions whose output is relevant for the description of the climate product generation</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>wasInternallyCalledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#wasMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#wasMemberOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T14:15:20Z</dc:date>
+        <rdfs:comment xml:lang="en">This property has been defined as an inverse of prov:hadMember, in order to preserve the chronological sequence of steps within the climate data workflow, so preprocessing steps for each member of the :Ensemble are recorded before forming it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>wasMemberOf</rdfs:label>
+        <prov:inverse rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withClimateIndex -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withClimateIndex">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndexCalculation"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <rdfs:label>withClimateIndex</rdfs:label>
+        <prov:definition xml:lang="en">Links a :ClimateIndexCalculation derivation with the speciifc :ClimateIndex entity</prov:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withReference -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withReference">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Anomaly"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <dc:description xml:lang="en">A climatology encompassing a reference period used to calculate the &apos;average climate&apos;</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Reference subset for anomaly calculation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withVersion">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Software Package Version property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#filterMonth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#filterMonth">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdf:first>
+                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <dc:description xml:lang="en">Month included in the validation period</dc:description>
+        <rdfs:comment xml:lang="en">Multiple validation months are used to define specific seasons</rdfs:comment>
+        <rdfs:label xml:lang="en">Validation Month</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasCellMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasCellMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Climatology"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalResolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">When data that is representative of cells can be described by simple statistical methods, those methods can be indicated using the cell_methods attribute</dc:description>
+        <rdfs:comment xml:lang="en">A specific cell method is specified in the case of :Dimension, when this is asserted in the context of an :Aggregation step</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods</rdfs:isDefinedBy>
+        <rdfs:label>hasCellMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasHorizontalResX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasHorizontalResX">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:description xml:lang="en">Horizontal Resolution of X coordinates</dc:description>
+        <rdfs:label>hasHorizontalResX</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasHorizontalResY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasHorizontalResY">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:description xml:lang="en">Horizontal resolution of Y coordinates</dc:description>
+        <rdfs:label>hasHorizontalResY</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasLongName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasLongName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Long name of the variable</dc:description>
+        <rdfs:label>hasLongName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasMainURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasMainURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#VariableStandardDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:10:21Z</dc:date>
+        <dc:description xml:lang="en">A URL pointing to the source of the entity</dc:description>
+        <rdfs:label>hasMainURL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasMember -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasMember">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Realization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>Predictia</dc:creator>
+        <rdfs:label>hasMember</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasProjection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasProjection">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:04:06Z</dc:date>
+        <rdfs:comment xml:lang="en">A map projection is a systematic transformation of the latitudes and longitudes of locations from the surface of a sphere or an ellipsoid into locations on a plane</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasRun -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasRun">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T11:48:10Z</dc:date>
+        <rdfs:comment xml:lang="en">A model run refers to one complete model calculation. There is usually a well established nomenclature for run definition. Model run is indicated as a xsd:string</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasShortName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasShortName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Short name of the variable, as encoded in the CDM object</dc:description>
+        <rdfs:label xml:lang="en">Shortname</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasSoftwareVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasSoftwareVersion">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T16:26:05Z</dc:date>
+        <rdfs:comment xml:lang="en">A software agent version</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasTimeFrame -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasTimeFrame">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Anomaly"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia IDS</dc:creator>
+        <dc:description xml:lang="en">The time frame used to compute the anomaly. Possible values are &quot;none&quot; (i.e., the whole period has been averaged and subtracted), &quot;monthly&quot; (i.e., the climatological mean is subtracted month by month) or &quot;daily&quot; (i.e., a daily climatology is subtrated to each day)</dc:description>
+        <rdfs:label xml:lang="en">Climatological period</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasTimeStep -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasTimeStep">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalResolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The time step is defined according to ISO 8601</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://en.wikipedia.org/wiki/ISO_8601#Durations</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Time Step Duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hasVerticalLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasVerticalLevel">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:description xml:lang="en">Vertical Level</dc:description>
+        <rdfs:label xml:lang="en">hasVerticalLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withDataType">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ArgumentValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">withDataype</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withExplainedVariance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withExplainedVariance">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#PCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T08:03:01Z</dc:date>
+        <dc:description xml:lang="en">Percentage of total variance explained by the retained PCs</dc:description>
+        <rdfs:label xml:lang="en">withExplainedVariance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withNPCs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withNPCs">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#PCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T08:00:36Z</dc:date>
+        <dc:description xml:lang="en">Number of principal components/EOFs retained in the transformation step</dc:description>
+        <rdfs:label xml:lang="en">Number of PCs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withRegriddingMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withRegriddingMethod">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Regridding"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>bilinear</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>cubic</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>nearest</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>none</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <dc:description xml:lang="en">The name of the method used for regridding (e.g. &apos;bilinear&apos;)</dc:description>
+        <rdfs:label xml:lang="en">Regridding method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withSimulationDomain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withSimulationDomain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T08:32:43Z</dc:date>
+        <rdfs:comment xml:lang="en">A description of the simulation domain of a :RCM simulation. A domain is a region for which the regional downscaling is taking place, for example the African domain in the :CORDEX experiment covers the whole of the African continent.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withUnits">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Units of a geophysical variable</dc:description>
+        <rdfs:label xml:lang="en">withUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#withVersionTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#withVersionTag">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#VariableStandardDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Version tag</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#xmax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#xmax">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Easternmost gridcell coordinate of the domain</dc:description>
+        <rdfs:label xml:lang="en">xmax</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#xmin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#xmin">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <terms:contributor xml:lang="en">Westernmost gridcell coordinate of the domain</terms:contributor>
+        <rdfs:label xml:lang="en">xmin</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ymax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#ymax">
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Northernmost gridcell coordinate of the domain</dc:description>
+        <rdfs:label xml:lang="en">ymax</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ymin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#ymin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:description xml:lang="en">Southernmost gridcell coordinate of the domain</dc:description>
+        <rdfs:label xml:lang="en">ymin</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#value -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#value">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Aggregation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Aggregation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:description xml:lang="en">An aggregate function is a function where the values of multiple rows (data array dimensions) are grouped together as input on certain criteria to form a single value of more significant meaning. Common aggregate functions include average, count, maximum, minimum, median...</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Aggregation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Aggregate_function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Anomaly -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Anomaly">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:description xml:lang="en">An :Anomaly is defined as the difference between the average climate over a period of several decades or more (see :Climatology), and the climate during a particular month or season</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anomaly</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://glossary.ametsoc.org/wiki/Climate_anomaly</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Argument -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Argument">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">A command argument is an item of information provided to a program when it is started. A program can have many command-line arguments that identify sources or destinations of information, or that alter the operation of the program.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Argument</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Command-line_interface#Arguments</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ArgumentValue -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ArgumentValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ArgumentValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ClimateIndex -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">A climate index is a simple diagnostic quantity that is used to characterize an aspect of a geophysical system such as a circulation pattern</dc:description>
+        <rdfs:comment xml:lang="en">The more specific subclassess should be asserted when relevant. Also, specific individual instances have been defined for some common climate indices widely used</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ClimateIndex</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/overview-climate-indices</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ClimateIndexCalculation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ClimateIndexCalculation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <rdfs:label>ClimateIndexCalculation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <prov:definition xml:lang="en">A :ClimateIndexCalculation is a :Transformation subclass entailing the calculation of a climate index. Climate Indices are described by the :ClimateIndex entity</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Climatology -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Climatology">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climatology</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.euporias.eu/taxonomy/term/16</rdfs:seeAlso>
+        <prov:definition xml:lang="en">The normal state of climate such as a base line over the normal period. Climatology is often taken as the mean value for a given month over, for example, 1961-1990</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Command -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Command">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dc:description xml:lang="en">A Command is a directive to a computer program (prov:SoftwareAgent) acting as an interpreter of some kind, in order to perform a specific task</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Command</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Command_(computing)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DataProvider -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#DataProvider">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Organization"/>
+        <rdfs:comment xml:lang="en">DataProviders are Agents (institutions or any other type of organizations) maintaining any type of infrastructure for the provision of climate data. These are not necessarily the institutions producing the data (ds:ModellingCenter), but rather those distributing (or re-distributing) the data (they might be the same, though). This class is envisaged to provide provence information about the primary source of the Dataset in the current application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>DataProvider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Dataset -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">The Dataset constitutes the primary source of the data workflow</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DatasetSubset -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <rdfs:comment xml:lang="en">A subset of a Dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>DatasetSubset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DatasetVersion -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#DatasetVersion">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>DatasetVersion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Dimension -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Dimension">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">A Dimension is used to define the array shape of a Variable.</dc:description>
+        <rdfs:isDefinedBy xml:lang="en">A Dataset Dimension</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Dimension</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.unidata.ucar.edu/software/thredds/v4.3/netcdf-java/v4.3/javadoc/ucar/nc2/Dimension.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSO -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <inputECV xml:lang="en">Sea surface temperature</inputECV>
+        <rdfs:comment xml:lang="en">Historically “El Niño” referred to the appearance of unusually warm water off the coast of Peru near Christmastime (Niño is Spanish and refers to “the boy Christ child”). Today it describes broader changes that occur across the Pacific basin. Oceanic and atmospheric conditions in the tropical Pacific fluctuate somewhat irregularly between warm El Niño phases and cold phases in which surface waters cool across the tropical Pacific. These cooling events are called “La Niña” (“the girl” in Spanish). The most intense phase of each event typically lasts about a year. El Niño is linked to major changes in the atmosphere known as the Southern Oscillation (SO). The whole phenomenon is known as the El Niño Southern Oscillation (ENSO)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ENSO</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSOregion -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSOregion">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent"/>
+        <rdfs:comment xml:lang="en">These are :SpatialExtent class features used to represent specific domains upon which the ENSO phenomenon is characterized</rdfs:comment>
+        <rdfs:label>ENSOregion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ETCCDI -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ETCCDI">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/indices.shtml</dc:description>
+        <rdfs:comment xml:lang="en">The Expert Team on Climate Change Detection and Indices (ETCCDI) has ellaborated a set of 27 core indices aimed at capturing changes in climate extremes and in selected climate impact indicators deemed relevant to other disciplines, described by the :ETCCDI subclass</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ETCCDI</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/chapter/10.1007/978-94-015-9265-9_2</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Ensemble -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Ensemble">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+        <rdfs:comment xml:lang="en">The :Ensemble class is aimed at the characterization of groups of datasets that have been joined to form an ensemble prior to the next :Step in the data workflow. This ensemble does not refer to different members from the same dataset (e.g., as typically in :SeasonalHindcast datasets), but to a new class that is a subclass of prov:Collection, formed by two or more distinct :Datasets, or (more often) subsequent :Steps after them, like for instance collections of :DatasetSubsets or transformed :DatasetSubsets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Ensemble</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Experiment -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Experiment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">An :Experiment is an activity aimed at addressing a specific scientific problem. In the climate context, different datasets (particularly model simulations, but also observations etc...) can be adscribed to specific experiments. Several predefined :Experiment individuals can be instantiated (this is preferred), for instance :RCP45 or :Evaluation experiments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GCM -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#GCM">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <owl:disjointWith rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:comment xml:lang="en">Global Climate Models or General Circulation Models (GCMs) are global, three-dimensional computer models of the climate system, used to solve a set of mathematical equations describing the laws of physics relevant to the atmospheric and oceanic circulation, the distribution of heat and the interaction between electromagnetic radiation and atmospheric gases and aerosols. They consist of different modules describing the atmosphere, oceans, sea-ice/snow and the land surface, and represent the world in terms of boxes stacked next to and on top of each other. Evolution of the model circulation is computed by time integration of those equations starting from an initial condition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>GCM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Initialization -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Initialization">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <dc:description xml:lang="en">Initialization is the process of entering observation data into the model to generate initial conditions</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Initialization</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Numerical_weather_prediction#Initialization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Latitude -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Latitude">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Latitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Longitude -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Longitude">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Longitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Member -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Member">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Member</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ensemble_forecasting</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ModellingCenter -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Organization"/>
+        <rdfs:comment xml:lang="en">The organization producing the Dataset, either by running and/or delivering the climate model simulations or carrying out any other type of data processing (interpolation, homogenization, assimilation, harmonization, distillation...) leading to a data product that is a primary source described by _ds:Dataset_.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:comment xml:lang="en">A Dataset containing multidecadal simulations. These are mainly used in climate change or paleoclimate studies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>MultiDecadalSimulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NAO -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#NAO">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <indexType xml:lang="en">circulation</indexType>
+        <inputECV xml:lang="en">sea-level pressure</inputECV>
+        <geosparql:asWKT xml:lang="en">POLYGON((-90 20, 40 20, 40 80, -90 80. -90 20))</geosparql:asWKT>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>NAO</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M., 2003. An overview of the North Atlantic Oscillation, in: Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M. (Eds.), Geophysical Monograph Series. American Geophysical Union, Washington, D. C., pp. 1–35.</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based</rdfs:seeAlso>
+        <prov:definition xml:lang="en">The principal component (PC)-based indices of the North Atlantic Oscillation (NAO) are the time series of the leading Empirical Orthogonal Function (EOF) of SLP anomalies over the Atlantic sector, 20°-80°N, 90°W-40°E</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <dc:description xml:lang="en">Observational datasets are constructed upon observations of the real world. In some occasions, these observations are post-processed and/or combined with other sources of information to generate the final product, that is used a representation of the true climate record (e.g. for validation purposes or for historical reconstructions).</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ObservationalDataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#PCA -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#PCA">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:description xml:lang="en">Regression analysis to determine from a set of independent variables (predictors) those contributing most to the explained variance</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Principal Component Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Package -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Package">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <dc:description xml:lang="en">A package is a distribution of software and data in archive files. Packages contain metadata, such as the software&apos;s name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, metadata is stored in a local package database.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Package</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Package_manager</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Project -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Project">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dc:description xml:lang="en">An (intercomparison) Project generating GCM/RCM simulations, observational datasets etc.</dc:description>
+        <rdfs:comment xml:lang="en">This Class aims at recording the necessary information to unequivocally identify a given data simulation with a specific project. For instance, A MultiDecadalSImulationDataset may belong to CMIP5 or CMIP3. Similarly, a SeasonalHindcastDataset may be adscribed to DEMETER.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCM -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCM">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:comment xml:lang="en">A Regional Climate Model. It is a numerical climate prediction model forced by specified lateral and ocean conditions from a general circulation model (GCM) or observation-based dataset (reanalysis) that simulates atmospheric and land surface processes, while accounting for high-resolution topographical data, land-sea contrasts, surface characteristics, and other components of the Earth-system. Since RCMs only cover a limited domain, the values at their boundaries must be specified explicitly, referred to as boundary conditions, by the results from a coarser GCM or reanalysis; RCMs are initialized with the initial conditions and driven along its lateral-atmospheric-boundaries and lower-surface boundaries with time-variable conditions. RCMs thus downscale global reanalysis or GCM runs to simulate climate variability with regional refinements.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>RCM</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://glossary.ametsoc.org/wiki/Regional_climate_model</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Realization -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Realization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Realization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Reanalysis -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Reanalysis">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:comment xml:lang="en">Reanalysis is a scientific method for developing a comprehensive record of how weather and climate are changing over time. In it, observations and a numerical model that simulates one or more aspects of the Earth system are combined objectively to generate a synthesized estimate of the state of the system. A reanalysis typically extends over several decades or longer, and covers the entire globe from the Earth’s surface to well above the stratosphere.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Reanalysis</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://reanalyses.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Regridding -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Regridding">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:description xml:lang="en">Regridding is the process of interpolating from one grid resolution to a different grid resolution. This could involve temporal, vertical or spatial (&apos;horizontal&apos;) interpolations. However, most commonly, regridding refers to spatial interpolation.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Regridding</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/regridding-overview</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <owl:disjointWith rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
+        <dc:description xml:lang="en">A seasonal hindcast (a.k.a. &apos;reforecast&apos;) is a forecast made for a period in the past using only information available before the beginning of the forecast. The hindcast can be used for verification purposes, helping to build trust (or not) on the forecasting system. Hindcasts typically encompass a relatively long period (i.e. 30 years or more) in order to provide more robust skill assessments.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>SeasonalHindcast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>SeasonalOperationalForecast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ShortRangeForecast -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ShortRangeForecast">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ShortRangeForecast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SpatialExtent -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#SpatialExtent">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:comment xml:lang="en">Definition of the spatial boundaries of a :DatasetSubset or :Transformation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SpatialExtent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Step -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Step">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
+        <rdfs:comment xml:lang="en">A step within the data workflow. Conceived as an Abstract class. The more specific forms of ds:Step (i.e., ds:DatasetSubset, ds:Aggregation etc.) should be asserted if they apply.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TemporalInstant -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#TemporalInstant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Start"/>
+        <rdfs:comment xml:lang="en">A specialization of prov:Start, most often used to define the start time of an :Initialization</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TemporalInstant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#TemporalPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">Define a temporal period as the ellapsed time between start and end time stamps</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>TemporalPeriod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TemporalResolution -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#TemporalResolution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">Describes the time resolution of the variable</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>TemporalResolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Transformation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <dc:description xml:lang="en">A transformation of data implies the application of a deterministic mathematical function to each point in a data set (that is, each data point z_i is replaced with the transformed value y_i = f(z_i), where f is a function. Examples of transformations are scaling and/or centering. In a different sense, a data transformation converts a set of data values from the data format of a source data system into the data format of a destination data system e.g. regridding, data aggregation...</dc:description>
+        <rdfs:comment xml:lang="en">The more specific subclasses of ds:Transformation (i.e. ds:ClimateIndex, ds:Aggregation etc.) should be asserted if they apply</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Transformation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Data_transformation</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Data_transformation_(statistics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ValidationTime -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ValidationTime">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>ValidationTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Variable -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">Characterization of a Geophysical Variable</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#VariableStandardDefinition -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#VariableStandardDefinition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dc:description xml:lang="en">Reference to a Standard Definition from a authoritative convention (e.g.: ECMWF Tables, CF Convention...)</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>VariableStandardDefinition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#A1B -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#A1B">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <rdfs:comment xml:lang="en">SRES Emission Scenario. Key assumptions: A future world of very rapid economic growth, low population growth and rapid introduction of new and more efficient technology. Major underlying themes are economic and cultural convergence and capacity building, with a substantial reduction in regional differences in per capita income. In this world, people pursue personal wealth rather than environmental quality</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.ipcc-data.org/sim/gcm_clim/SRES_TAR/ddc_sres_emissions.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#A2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#A2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <rdfs:comment xml:lang="en">SRES emission scenario. Key assumptions. A very heterogeneous world. The underlying theme is that of strengthening regional cultural identities, with an emphasis on family values and local traditions, high population growth, and less concern for rapid economic development.</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.ipcc-data.org/sim/gcm_clim/SRES_TAR/ddc_sres_emissions.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#C3S -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#C3S">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">Copernicus is the European Union’s earth observation programme</dc:description>
+        <rdfs:label xml:lang="en">C3S</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://climate.copernicus.eu</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CCCma -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CCCma">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <rdfs:comment xml:lang="en">Canadian Centre for Climate Modelling and Analysis</rdfs:comment>
+        <rdfs:label xml:lang="en">CCCma</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.canada.ca/en/environment-climate-change/services/climate-change/centre-modelling-analysis/models.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CCLM4-8-17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CCLM4-8-17">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label xml:lang="en">CCLM4-8-17</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.clm-community.eu/index.php?menuid=220</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CDD -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CDD">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Maximum length of dry spell, maximum number of consecutive days with RR &lt; 1mm</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CDD</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CERFACS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CERFACS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Centre Européen de Recherche et de Formation Avancée en Calcul Scientifique</dc:description>
+        <rdfs:label xml:lang="en">CERFACS</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://cerfacs.fr/en/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CLMcom -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CLMcom">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Climate Limited-area Modelling Community (CLM-Community)</dc:description>
+        <rdfs:label xml:lang="en">CLMcom</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.clm-community.eu/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CM5A-MR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CM5A-MR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">CM5A-MR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CMCC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CMCC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <rdfs:comment xml:lang="it">Centro Euromediterraneo sui Cambiamenti Climatici</rdfs:comment>
+        <rdfs:label xml:lang="en">CMCC</rdfs:label>
+        <rdfs:seeAlso xml:lang="de">https://www.cmcc.it/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CMCC-SPS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CMCC-SPS3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label>CMCC-SPS3</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/display/C3SS/Description+of+CMCC+C3S+contribution&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Technical model description &lt;https://www.cmcc.it/it/publications/rp0285-cmcc-sps3-the-cmcc-seasonal-prediction-system-3&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CMIP3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CMIP3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">Coupled Model Intercomparison Project Phase 3</dc:description>
+        <rdfs:seeAlso xml:lang="en">https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip3</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CMIP5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CMIP5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">Coupled Model Intercomparison Project Phase 5</dc:description>
+        <rdfs:label xml:lang="en">CMIP5</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://cmip.llnl.gov/cmip5/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CNRM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CNRM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Météo-France / Centre National de Recherches Météorologiques</dc:description>
+        <rdfs:label xml:lang="en">CNRM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CNRM-CM5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CNRM-CM5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">CNRM-CM5</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.umr-cnrm.fr/spip.php?article126&amp;lang=en</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CORDEX -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CORDEX">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">CORDEX is a World Climate Research Programme (WCRP) framework to evaluate regional climate model performance through a set of experiments aiming at producing regional climate projections</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://cordex.org/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CSDI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CSDI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Cold spell duration index: Annual count of days with at least 6 consecutive days when TN &lt; 10th percentile</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CSDI</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CSIRO -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CSIRO">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Commonwealth Scientific and Industrial Research Organisation</dc:description>
+        <rdfs:label xml:lang="en">CSIRO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CSIRO-Mk3.6.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CSIRO-Mk3.6.0">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">CSIRO-Mk3.6.0</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.atmos-chem-phys.net/12/6377/2012/acp-12-6377-2012.html</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://www.bom.gov.au/amoj/docs/2013/jeffrey_hres.pdf</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CWD -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CWD">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Maximum length of wet spell, maximum number of consecutive days with RR ≥ 1mm</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CWD</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#CanESM2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#CanESM2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">CanESM2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#DMI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Danish Meteorological Institute</dc:description>
+        <rdfs:label xml:lang="en">DMI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DTR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#DTR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Daily temperature range: Monthly mean difference between TX and TN</dc:description>
+        <inputECV xml:lang="en">temperature (minimum), temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">DTR</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#DWD -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#DWD">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="de">Deutscher Wetterdienst</dc:description>
+        <rdfs:label xml:lang="en">DWD</rdfs:label>
+        <rdfs:seeAlso xml:lang="de">https://www.dwd.de</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#E-OBS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#E-OBS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:description xml:lang="en">E-OBS is a daily gridded observational dataset for precipitation, temperature and sea level pressure in Europe. The datafiles contain gridded data for 5 elements (daily mean temperature TG, daily minimum temperature TN, daily maximum temperature TX, daily precipitation sum RR and daily averaged sea level pressure PP). They cover the area: 25N-75N x 40W-75E. The data files are in compressed NetCDF format. Data is made available on a 0.25 and 0.5 degree regular lat-lon grid, as well as on a 0.22 and 0.44 degree rotated pole grid.</dc:description>
+        <dc:source xml:lang="en">https://www.ecad.eu/download/ensembles/download.php</dc:source>
+        <rdfs:label xml:lang="en">E-OBS</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">The dataset and the methodology for its generation are presented by Haylock et al (2008) &lt;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2008JD010201&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#EC-EARTH -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EC-EARTH">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">EC-EARTH</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.ec-earth.org/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#EC-EARTH-Consortium -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EC-EARTH-Consortium">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <rdfs:label xml:lang="en">EC-EARTH-Consortium</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.ec-earth.org/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ECA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ECA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">European Climate Assessment</dc:description>
+        <rdfs:comment xml:lang="en">The European Climate Assessment &amp; Dataset (ECA&amp;D, &lt;www.ecad.eu&gt;) is the result of a collaboration between meteorological institutes and universities throughout Europe and the Meditteranean area, WMO Region VI. One of the partners is the MEDARE initiative which coordinates DARE  (Data Rescue projects and initiatives) activities across the Greater Mediterranean Region.</rdfs:comment>
+        <rdfs:label>ECA</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ecad.eu/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ECMWF -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ECMWF">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <rdfs:comment xml:lang="en">European Centre for Medium-Range Weather Forecasts</rdfs:comment>
+        <rdfs:label xml:lang="en">ECMWF</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.ecmwf.int/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSEMBLES -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSEMBLES">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The ENSEMBLES project (contract number GOCE-CT-2003-505539) is supported by the European Commission&apos;s 6th Framework Programme as a 5 year Integrated Project from 2004-2009 under the Thematic Sub-Priority &quot;Global Change and Ecosystems&quot;</dc:description>
+        <rdfs:label xml:lang="en">ENSEMBLES</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://ensembles-eu.metoffice.com/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSO1plus2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO1plus2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
+        <dc:description xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.  This index tends to have the largest variance of the Niño SST indices</dc:description>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-90 10, -80 -10, -80 0, -90 0, -90 10))</geosparql:asWKT>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSO3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
+        <dc:description xml:lang="en">This region was once the primary focus for monitoring and predicting El Niño, but researchers later learned that the key region for coupled ocean-atmosphere interactions for ENSO lies further west (Trenberth, 1997).  Hence, the Niño 3.4 and ONI became favored for defining El Niño and La Niña events</dc:description>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-150 -5, -90 -5, -90 5, -150 5, -150 -5))</geosparql:asWKT>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSO3dot4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO3dot4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
+        <dc:description xml:lang="en">The  Niño 3.4 anomalies may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.  The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La  Niña events are defined when the  Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more</dc:description>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ENSO4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
+        <dc:description xml:lang="en">The  Niño 4 index captures SST anomalies in the central equatorial Pacific.  This region tends to have less variance than the other Niño regions</dc:description>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((160 -5, -150 -5, -150 5, 160 5, 160 -5))</geosparql:asWKT>
+        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ERA-Interim -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ERA-Interim">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">ERA-Interim is a global atmospheric reanalysis from 1979, continuously updated in real time, produced by ds:ECMWF</dc:description>
+        <rdfs:label xml:lang="en">ERA-Interim</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ESGF -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ESGF">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <dc:description xml:lang="en">Earth System Grid Federation</dc:description>
+        <rdfs:comment xml:lang="en">The Earth System Grid Federation (ESGF) allows users to access, analyze, and visualize data using a globally federated collection of networks, computers, and software. Its architecture employs a system of geographically distributed peer nodes that are independently administered yet united by common federation protocols and application programming interfaces (APIs). The full ESGF infrastructure has now been adopted by multiple Earth science projects and allows access to petabytes of geophysical data, including the Coupled Model Intercomparison Project (CMIP). Data served by ESGF not only include model output (i.e., CMIP simulation runs) but also include observational data from satellites and instruments, reanalyses, and generated images. Metadata summarize basic information about the data for fast and easy data discovery.</rdfs:comment>
+        <rdfs:label xml:lang="en">ESGF</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/10.1175/BAMS-D-15-00132.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Evaluation">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">Evaluation experiment. Model is driven by reanalysis</dc:description>
+        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#FD -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#FD">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Number of frost days: Annual count of days when TN (daily minimum temperature) &lt; 0 degC</dc:description>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FD</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GCFS_2.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GCFS_2.0">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label>GCFS_v2</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">General Information &lt;https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/display/C3SS/Description+of+DWD+C3S+contribution&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GFDL -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GFDL">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Geophysical Fluid Dynamics Laboratory</dc:description>
+        <rdfs:label xml:lang="en">GFDL</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.gfdl.noaa.gov/jrl_gcm_gfdl/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GFDL-ESM2M -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GFDL-ESM2M">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">ESM2M</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.gfdl.noaa.gov/earth-system-model/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GSL -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GSL">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Growing season length: Annual (1st Jan to 31st Dec in Northern Hemisphere (NH), 1st July to 30th June in Southern Hemisphere (SH)) count between first span of at least 6 days with daily mean temperature TG &gt; 5 degC and first span after July 1st (Jan 1st in SH) of 6 days with TG &lt; 5 degC</dc:description>
+        <inputECV xml:lang="en">temperature (mean)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">GSL</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#GloSea5-GC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#GloSea5-GC2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">The UK Met Office Global Seasonal forecast system version 5 (GloSea5), using the Global Coupled configuration version 2</dc:description>
+        <rdfs:label>GloSea5-GC2</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">&lt;https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.2396&gt; for a description of the forecasting system</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">&lt;https://www.geosci-model-dev.net/8/1509/2015/gmd-8-1509-2015.html&gt; for a description of the model components making up the coupled configuration</rdfs:seeAlso>
+        <rdfs:seeAlso>Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/display/C3SS/Description+of+Met+Office+C3S+contribution&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#HADGEM2-ES -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#HADGEM2-ES">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">HADGEM2-ES</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.metoffice.gov.uk/research/modelling-systems/unified-model/climate-models/hadgem2</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#HIRHAM5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#HIRHAM5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label xml:lang="en">HIRHAM5</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.dmi.dk/fileadmin/Rapporter/TR/tr06-17.pdf</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Historical -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Historical">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">In the Historical experiment, simulations are based on GCM-driven simulations forced with data from CMIP5 historical experiments.</dc:description>
+        <rdfs:label>Historical</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ICHEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ICHEC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Irish Center for High End Computing</dc:description>
+        <rdfs:label xml:lang="en">ICHEC</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.ichec.ie/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ICTP -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ICTP">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Abdus Salam International Centre for Theoretical Physics</dc:description>
+        <rdfs:label xml:lang="en">ICTP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ID">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Number of icing days: Annual count of days when TX (daily maximum temperature) &lt; 0 degC</dc:description>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ID</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#INERIS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#INERIS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">French National Institute for Industrial Environment and Risks</dc:description>
+        <rdfs:label>INERIS</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.ineris.fr/en</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#IPSL -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#IPSL">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Institut Pierre-Simon Laplace</dc:description>
+        <rdfs:label xml:lang="en">IPSL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ISIMIP -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ISIMIP">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">Inter-Sectoral Impact Model Intercomparison Project</dc:description>
+        <rdfs:label>ISIMIP</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.geosci-model-dev.net/10/4321/2017/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#JAMSTEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#JAMSTEC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Japan Agency for Marine-Earth Science and Technology</dc:description>
+        <rdfs:label xml:lang="en">JAMSTEC</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.jamstec.go.jp/e/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#JMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#JMA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Japan Meteorological Agency</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://www.jma.go.jp/jma/indexe.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#KNMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#KNMI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Royal Netherlands Meteorological Institute</dc:description>
+        <rdfs:label xml:lang="en">KNMI</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://knmi.nl/over-het-knmi/about</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MIROC-ESM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MIROC-ESM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">Model for Interdisciplinary Research on Climate</dc:description>
+        <rdfs:label xml:lang="en">MIROC-ESM</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.geosci-model-dev.net/4/845/2011/gmd-4-845-2011.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MOHC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MOHC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Met Office Hadley Centre</dc:description>
+        <rdfs:label xml:lang="en">MOHC</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.metoffice.gov.uk/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MPI-CSC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MPI-CSC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Max Planck Institute - Computational Methods in Systems and Control Theory Research Group</dc:description>
+        <rdfs:label xml:lang="en">MPI-CSC</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.mpi-magdeburg.mpg.de/csc</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MPI-ESM-LR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MPI-ESM-LR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">MPI-ESM-LR</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.mpimet.mpg.de/en/science/models/mpi-esm/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MPI-ESM-MR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MPI-ESM-MR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">MPI-ESM-MR</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.mpimet.mpg.de/en/science/models/mpi-esm/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MPI-M -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#MPI-M">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Max Planck Institute for Meteorology</dc:description>
+        <rdfs:label xml:lang="en">MPI</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.mpimet.mpg.de/en/institute/organisation/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NASA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#NASA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">National Aeronautics and Space Administration</dc:description>
+        <rdfs:label xml:lang="en">NASA</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.nasa.gov/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NCC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#NCC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Norwegian Climate Center</dc:description>
+        <rdfs:label xml:lang="en">NCC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NCEP -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#NCEP">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">National Centers for Environmental Prediction</dc:description>
+        <rdfs:label xml:lang="en">NCEP</rdfs:label>
+        <prov:specializationOf xml:lang="en">National Oceanic and Atmospheric Administration (NOAA)</prov:specializationOf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NCEP-NCAR_Reanalysis1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#NCEP-NCAR_Reanalysis1">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">The NCEP/NCAR Reanalysis 1 project is using a state-of-the-art analysis/forecast system to perform data assimilation using past data from 1948 to the present.</dc:description>
+        <rdfs:label xml:lang="en">NCEP-Reanalysis1</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NORESM1-M -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#NORESM1-M">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label xml:lang="en">NORESM1-M</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://doi.org/10.5194/gmd-6-687-2013</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#PIK -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#PIK">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Potsdam Institute for Climate Impact Research</dc:description>
+        <rdfs:seeAlso xml:lang="en">https://www.pik-potsdam.de/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#PRCPTOT -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#PRCPTOT">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual total precipitation in wet days</dc:description>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">PRCPTOT</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#QCCCE -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#QCCCE">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Queensland Climate Change Centre of Excellence</dc:description>
+        <rdfs:label xml:lang="en">QCCCE</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CSIRO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#R10mm -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#R10mm">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual count of days when PRCP≥ 10mm</dc:description>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">R10mm</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#R20mm -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#R20mm">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual count of days when PRCP ≥ 20mm</dc:description>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">R20mm</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#R95pTOT -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#R95pTOT">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual total PRCP when RR &gt; 95p</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">R95pTOT</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#R99pTOT -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#R99pTOT">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual total PRCP when RR &gt; 99p</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">R99pTOT</rdfs:label>
+        <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RACMO22E -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RACMO22E">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label xml:lang="en">RACMO22E</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://bibliotheek.knmi.nl/knmipubTR/TR302.pdf</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCA4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCA4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label xml:lang="en">RCA4</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.smhi.se/en/research/research-departments/climate-research-rossby-centre2-552/rossby-centre-regional-atmospheric-model-rca4-1.16562</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCP26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCP26">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">RCP leading to a radiative forcing value of +2.6 W/m2 in the year 2100 relative to pre-industrial values</dc:description>
+        <rdfs:comment xml:lang="en">Representative Concentration Pathways (RCPs) are four greenhouse gas concentration (not emissions) trajectories adopted by the IPCC for its fifth Assessment Report (AR5) in 2014</rdfs:comment>
+        <rdfs:label>RCP26</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nature.com/articles/nature08823</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCP45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCP45">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">RCP leading to a radiative forcing value of +4.5 W/m2 in the year 2100 relative to pre-industrial values</dc:description>
+        <rdfs:comment xml:lang="en">Representative Concentration Pathways (RCPs) are four greenhouse gas concentration (not emissions) trajectories adopted by the IPCC for its fifth Assessment Report (AR5) in 2014</rdfs:comment>
+        <rdfs:label>RCP45</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nature.com/articles/nature08823</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCP60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCP60">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">RCP leading to a radiative forcing value of +6.0 W/m2 in the year 2100 relative to pre-industrial values</dc:description>
+        <rdfs:comment xml:lang="en">Representative Concentration Pathways (RCPs) are four greenhouse gas concentration (not emissions) trajectories adopted by the IPCC for its fifth Assessment Report (AR5) in 2014</rdfs:comment>
+        <rdfs:label>RCP60</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nature.com/articles/nature08823</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#RCP85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCP85">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <dc:description xml:lang="en">RCP leading to a radiative forcing value of +8.5 W/m2 in the year 2100 relative to pre-industrial values</dc:description>
+        <rdfs:comment xml:lang="en">Representative Concentration Pathways (RCPs) are four greenhouse gas concentration (not emissions) trajectories adopted by the IPCC for its fifth Assessment Report (AR5) in 2014</rdfs:comment>
+        <rdfs:label>RCP85</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nature.com/articles/nature08823</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#REMO2009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#REMO2009">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label xml:lang="en">REMO2009</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.remo-rcm.de/</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Rnnmm -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Rnnmm">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Annual count of days when PRCP≥ nnmm, nn is a user defined threshold</dc:description>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Rnnmm</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Rx1day -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Rx1day">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly maximum 1-day precipitation</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Rx1day</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Rx5day -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Rx5day">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly maximum consecutive 5-day precipitation</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Rx5day</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SDII -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#SDII">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Simple pricipitation intensity index</dc:description>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SDII</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SEAS5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#SEAS5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">The fifth generation of the ECMWF seasonal forecasting system, SEAS5, was introduced 1 November 2017, replacing System 4. SEAS5 includes updated versions of the atmospheric (IFS) and interactive ocean (NEMO) models and adds the interactive sea ice model LIM2.</dc:description>
+        <rdfs:label>SEAS5</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/display/C3SS/Description+of+ECMWF+C3S+contribution&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ecmwf.int/en/forecasts/documentation-and-support/long-range</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SMG -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#SMG">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Santander Meteorology Group</dc:description>
+        <rdfs:comment xml:lang="en">The :SMG research group is formed by professors and researchers from the University of Cantabria (UC, Dept. of Applied Mathematics and Computer Science) and the National Research Council (CSIC, Instituto de Física de Cantabria IFCA), conducting research in topics related to weather forecast, climate research, data mining and high-performance computing, and spatiotemporal chaotic systems</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://meteo.unican.es</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SMHI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#SMHI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">Swedish Meteorological and Hydrological Institute</dc:description>
+        <rdfs:label xml:lang="en">SMHI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#SU -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#SU">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Number of summer days: Annual count of days when TX (daily maximum temperature) &gt; 25 degC</dc:description>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SU</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#System5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#System5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">Météo-France system 5 seasonal forecasting system</dc:description>
+        <rdfs:label>System5</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Model description at the C3S site (private access) &lt;https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=95453627&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Technical model documentation &lt;http://www.umr-cnrm.fr/IMG/pdf/system5-technical.pdf&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TN10p -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TN10p">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Percentage of days when TN &lt; 10th percentile</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TN10p</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TN90p -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TN90p">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Percentage of days when TN &gt; 90th percentile</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TN90p</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TNn -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TNn">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly minimum value of daily minimum temperature</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TNn</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TNx -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TNx">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly maximum value of daily minimum temperature</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TNx</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Number of tropical nights: Annual count of days when TN (daily minimum temperature) &gt; 20 degC</dc:description>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TR</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TX10p -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TX10p">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Percentage of days when TX &lt; 10th percentile</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TX10p</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TX90p -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TX90p">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Percentage of days when TX &gt; 90th percentile:</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TX90p</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TXn -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TXn">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly minimum value of daily maximum temperature</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TXn</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#TXx -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#TXx">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Monthly maximum value of daily maximum temperature</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TXx</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#UDG -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#UDG">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <dc:description xml:lang="en">The User Data Gateway (UDG) is a climate data service hosted by University of Cantabria (http://meteo.unican.es/udg-wiki) consisting on two main components: (1) A THREDDS Data Server (TDS) and (2) the THREDDS Access Portal (TAP), which provide standard services for data access (e.g. OPeNDAP or the NetCDF Subset Service –NCSS–) and user management and authentication (based on data policies associated with virtual datasets), respectively. The UDG provides harmonized access to a variety of common datasets typically used in sectoral applications, including state-of-the-art global and regional climate projections such as those from the Coupled Model Intercomparison Project Phase 5 (CMIP5; Taylor et al., 2011a) and the COordinated Regional climate Downscaling EXperiment (CORDEX; Giorgi and Gutowski, 2015).</dc:description>
+        <rdfs:label>UDG</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://meteo.unican.es/udg-wiki</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WATCH -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WATCH">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The EU-WATCH Project</dc:description>
+        <rdfs:label>WATCH</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/abs/10.1175/JHM-D-11-024.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WFDEI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WFDEI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:description xml:lang="en">The WFDEI meteorological forcing data set has been generated using the same methodology as the widely used WATCH Forcing Data (WFD) by making use of the ERA‐Interim reanalysis data.</dc:description>
+        <rdfs:label>WFDEI</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">WFDEI generation methodology is described by Weedon et al (2014)
+&lt;https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014WR015638&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WRF -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WRF">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Weather Research and Forecasting Model</dc:description>
+        <rdfs:label xml:lang="en">WRF</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.mmm.ucar.edu/weather-research-and-forecasting-model</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WRF331F -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WRF331F">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label>WRF331F</rdfs:label>
+        <prov:wasRevisionOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#WRF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WSDI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WSDI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
+        <dc:description xml:lang="en">Warm spell duration index: Annual count of days with at least 6 consecutive days when TX &gt; 90th percentile</dc:description>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
+        <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">WSDI</rdfs:label>
+        <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#climate4R.climdex -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#climate4R.climdex">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">This R package is a wrapper of the climdex.pcic package implementing the 27 core ETCCDI Climate Indices &lt;http://etccdi.pacificclimate.org/list_27_indices.shtml&gt; in the framework of climate4R</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/climate4R.climdex</dc:source>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#downscaleR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#downscaleR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">An R package for empirical-statistical downscaling focusing on daily data and covering the most popular approaches (bias correction, Model Output Statistics, Perfect Prognosis) and techniques.</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/downscaleR</dc:source>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#easyVerification -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#easyVerification">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">Set of tools to simplify application of atomic forecast verification metrics for (comparative) verification of ensemble forecasts to large data sets. The forecast metrics are imported from the &apos;SpecsVerification&apos; package, and additional forecast metrics are provided with this package. Alternatively, new user-defined forecast scores can be implemented using the example scores provided and applied using the functionality of this package.</dc:description>
+        <dc:source xml:lang="en">https://github.com/cran/easyVerification</dc:source>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#loadeR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#loadeR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">loadeR is an R package enabling transparent, user-friendly access to local and remote climate datasets compliant with Unidata&apos;s Common Data Model, through the exploitation of the NetCDF-Java API utilities</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR</dc:source>
+        <rdfs:seeAlso xml:lang="en">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#loadeR.ECOMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#loadeR.ECOMS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR.ECOMS</dc:source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">loadeR.ECOMS</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://meteo.unican.es/ecoms-udg</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://www.sciencedirect.com/science/article/pii/S2405880717300079?via%3Dihub</rdfs:seeAlso>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#loadeR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#transformeR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#transformeR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">An R package for climate data manipulation and transformation, including subsetting, regridding, and data conversion.</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/transformeR</dc:source>
+        <rdfs:label xml:lang="en">transformeR</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#visualizeR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#visualizeR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
+        <dc:description xml:lang="en">An R package for climate data visualization, with special focus on ensemble forecasting and uncertainty communication. It includes functions for visualizing climatological, forecast and evaluation products, and combinations of them.</dc:description>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/visualizeR</dc:source>
+        <rdfs:label>visualizeR</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2017.09.008</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#202020_20C3M -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#202020_20C3M">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
+        <rdfs:comment xml:lang="en">Experiments run with greenhouse gasses increasing as observed through the 20th century</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.ipcc-data.org/sim/gcm_clim/SRES_TAR/ddc_sres_emissions.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+            <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#Reanalysis"/>
+            <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast"/>
+            <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
