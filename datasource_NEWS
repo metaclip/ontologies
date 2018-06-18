@@ -26,7 +26,10 @@
  * Add C3S seasonal forecasting systems (instances of :GCM)
  * Add new individuals for ObservationalDataset (WFDEI, E-OBS)
  * Updated annotations
- * Add wasInternallyCalledBy object property
+ * Add :wasInternallyCalledBy object property
 
 ## v0.6 (15 Jun 2018)
  * New individuals and several annotation updates
+
+## v0.7 (devel)
+ * Add :hasHorizontalRes* data properties to :SpatialExtent domain
