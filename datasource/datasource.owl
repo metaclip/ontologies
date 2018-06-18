@@ -1124,6 +1124,28 @@
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#BicubicInterpolation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#BicubicInterpolation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
+        <dc:description xml:lang="en">Bicubic interpolation is an extension of cubic interpolation for interpolating data points on a two-dimensional regular grid. The interpolated surface is smoother than corresponding surfaces obtained by bilinear interpolation or nearest-neighbor interpolation. Bicubic interpolation can be accomplished using either Lagrange polynomials, cubic splines, or cubic convolution algorithm.</dc:description>
+        <rdfs:label>BicubicInterpolation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Bicubic_interpolation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#BilinearInterpolation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#BilinearInterpolation">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
+        <dc:description xml:lang="en">Bilinear interpolation is an extension of linear interpolation for interpolating functions of two variables (e.g., x and y) on a rectilinear 2D grid. The key idea is to perform linear interpolation first in one direction, and then again in the other direction. Although each step is linear in the sampled values and in the position, the interpolation as a whole is not linear but rather quadratic in the sample location</dc:description>
+        <rdfs:label>BilinearInterpolation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Bilinear_interpolation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#ClimateIndex -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex">
@@ -1310,6 +1332,28 @@
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">Interpolation is the problem of approximating the value of a function for a non-given point in some space when given the value of that function in points around (neighboring) that point. This class should not be used, but instead its most specific subclasses describing different interpolation methods should be asserted when relevant</rdfs:comment>
+        <rdfs:label>InterpolationMethod</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/regridding-overview</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#InverseDistanceWeighting -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#InverseDistanceWeighting">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
+        <dc:description xml:lang="en">Inverse distance weighting (IDW) is a type of deterministic method for multivariate interpolation with a known scattered set of points. The assigned values to unknown points are calculated with a weighted average of the values available at the known points.</dc:description>
+        <rdfs:label>InverseDistanceWeighting</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Inverse_distance_weighting</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#Latitude -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Latitude">
@@ -1374,6 +1418,17 @@
         <rdfs:seeAlso xml:lang="en">Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M., 2003. An overview of the North Atlantic Oscillation, in: Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M. (Eds.), Geophysical Monograph Series. American Geophysical Union, Washington, D. C., pp. 1–35.</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based</rdfs:seeAlso>
         <prov:definition xml:lang="en">The principal component (PC)-based indices of the North Atlantic Oscillation (NAO) are the time series of the leading Empirical Orthogonal Function (EOF) of SLP anomalies over the Atlantic sector, 20°-80°N, 90°W-40°E</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#NearestNeighbor -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#NearestNeighbor">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
+        <dc:description xml:lang="en">The nearest neighbor algorithm selects the value of the nearest point and does not consider the values of neighboring points at all, yielding a piecewise-constant interpolant. The algorithm is very simple to implement and is widely used</dc:description>
+        <rdfs:label>NearestNeighbor</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1463,9 +1518,8 @@
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Regridding">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
         <dc:description xml:lang="en">Regridding is the process of interpolating from one grid resolution to a different grid resolution. This could involve temporal, vertical or spatial (&apos;horizontal&apos;) interpolations. However, most commonly, regridding refers to spatial interpolation.</dc:description>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Regridding</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/regridding-overview</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/regridding-overview</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1509,6 +1563,17 @@
         <rdfs:comment xml:lang="en">Definition of the spatial boundaries of a :DatasetSubset or :Transformation</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SpatialExtent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Splines -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Splines">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
+        <dc:description xml:lang="en">A spline is a function defined piecewise by polynomials. In interpolation problems, spline interpolation is often preferred to polynomial interpolation because it yields similar results, even when using low degree polynomials, while avoiding Runge&apos;s phenomenon for higher degrees (i.e., a problem due to oscillation at the edges of an interval).</dc:description>
+        <rdfs:label>Splines</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Spline_(mathematics)</rdfs:seeAlso>
     </owl:Class>
     
 

@@ -33,3 +33,4 @@
 
 ## v0.7 (devel)
  * Add :hasHorizontalRes* data properties to :SpatialExtent domain
+ * Add :InterpolationMethod class and subclasses
