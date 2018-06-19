@@ -31,7 +31,7 @@
 ## v0.6 (15 Jun 2018)
  * New individuals and several annotation updates
 
-## v0.7 (devel)
+## v0.7 (19 Jun 2018)
  * Add :hasHorizontalRes* data properties to :SpatialExtent domain
  * Add :InterpolationMethod class and subclasses and hadInterpolationMethod object property
  * New definition of :HorizontalExtent and :VerticalExtent as subclasses :SpatialExtent, with the corresponding object subproperties
