@@ -498,7 +498,6 @@
     <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasHorizontalExtent">
         <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hasSpatialExtent"/>
         <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DatasetSubset"/>
-        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Interpolation"/>
         <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
         <rdfs:comment xml:lang="en">Horizontal position may be expressed directly in geographic coordinates (latitude and longitude) for global models or in a map projection planar coordinates for regional models.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -620,6 +619,18 @@
         <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Argument"/>
         <rdfs:comment xml:lang="en">Object property linking a :Command with its :Argument</rdfs:comment>
         <rdfs:label>usedArgument</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#usedReferenceCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#usedReferenceCoordinates">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hasSpatialExtent"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Interpolation"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <dc:description xml:lang="en">This object property is used to indicate the target locations used for interpolation/regridding operations (i.e., the target coordinates onto which the data are interpolated). Its range is a :HorizontalExtent class entity, representing either a regular grid or scattered localities</dc:description>
+        <rdfs:label>usedReferenceCoordinates</rdfs:label>
     </owl:ObjectProperty>
     
 

@@ -38,4 +38,6 @@
  * Other minor annotation updates
 
 ## v0.8 (in devel)
+ * Bug fix in writing literal command calls in JSON (scapes in double-quotes)
+ * New object data property :usedReferenceCoordinates, linking :Interpolation with :HorizontalExtent
  * Other minor annotation updates
