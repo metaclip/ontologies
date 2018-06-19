@@ -33,4 +33,6 @@
 
 ## v0.7 (devel)
  * Add :hasHorizontalRes* data properties to :SpatialExtent domain
- * Add :InterpolationMethod class and subclasses
+ * Add :InterpolationMethod class and subclasses and hadInterpolationMethod object property
+ * New definition of :HorizontalExtent and :VerticalExtent as subclasses :SpatialExtent, with the corresponding object subproperties
+ * Other minor annotation updates
