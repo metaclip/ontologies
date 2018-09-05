@@ -37,7 +37,11 @@
  * New definition of :HorizontalExtent and :VerticalExtent as subclasses :SpatialExtent, with the corresponding object subproperties
  * Other minor annotation updates
 
-## v0.8 (in devel)
+## v0.8 (05 Sep 2018)
  * Bug fix in writing literal command calls in JSON (scapes in double-quotes)
  * New object data property :usedReferenceCoordinates, linking :Interpolation with :HorizontalExtent
+ * New SeasonalForecastingSystem class as a subclass of GCM, and improved annotations of the C3S seasonal forecasting systems
+ * New individual CDS for DataProvider class
+ * new individual MeteoFrance for ModellingCenter class
+ * New individual QA4Seas for Project class
  * Other minor annotation updates
