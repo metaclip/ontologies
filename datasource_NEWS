@@ -45,3 +45,12 @@
  * new individual MeteoFrance for ModellingCenter class
  * New individual QA4Seas for Project class
  * Other minor annotation updates
+
+## v0.9 (in devel) 
+ * New class :CombinationMethod to describe multimodel combination methods.
+ * Several individual instances of :CombinationMethod, relevant in seasonal forecasting, have been defined 
+ * Defined ds:GlobalExtent, as a new individual instance of :HorizontalExtent
+ * ds:ERA5, new individual instance of ds:Reanalysis 
+ * QA4Seas prototype included as individual instance of ds:Package
+ * Other minor annotation updates
+
