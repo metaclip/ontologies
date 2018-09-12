@@ -46,7 +46,7 @@
  * New individual QA4Seas for Project class
  * Other minor annotation updates
 
-## v0.9 (in devel) 
+## v0.9 (11 Sep 2018) 
  * New class :CombinationMethod to describe multimodel combination methods.
  * Several individual instances of :CombinationMethod, relevant in seasonal forecasting, have been defined 
  * Defined ds:GlobalExtent, as a new individual instance of :HorizontalExtent
@@ -54,3 +54,6 @@
  * QA4Seas prototype included as individual instance of ds:Package
  * Other minor annotation updates
 
+## v0.10 (12 Sep 2018)
+ * Bug fix in xsd:anyURI annotation yielding error by METACLIP interpreter
+ * Other minor annotation updates
