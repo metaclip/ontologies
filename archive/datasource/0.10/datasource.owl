@@ -1444,6 +1444,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>Ensemble</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CombinationMethod"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Climate_ensemble</rdfs:seeAlso>
+        <prov:definition xml:lang="en">In the context of climate science, an Ensemble involves slightly different models of the climate system that are used together to use their outcomes jointly. The aim of running an ensemble is usually in order to be able to deal with uncertainties in the system. An ultimate aim may be to produce policy relevant information such as a probability distribution function of different outcomes.</prov:definition>
     </owl:Class>
     
 
@@ -1464,9 +1466,9 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#GCM">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <owl:disjointWith rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
-        <rdfs:comment xml:lang="en">Global Climate Models or General Circulation Models (GCMs) are global, three-dimensional computer models of the climate system, used to solve a set of mathematical equations describing the laws of physics relevant to the atmospheric and oceanic circulation, the distribution of heat and the interaction between electromagnetic radiation and atmospheric gases and aerosols. They consist of different modules describing the atmosphere, oceans, sea-ice/snow and the land surface, and represent the world in terms of boxes stacked next to and on top of each other. Evolution of the model circulation is computed by time integration of those equations starting from an initial condition.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <dc:description xml:lang="en">Global Climate Models or General Circulation Models (GCMs) are global, three-dimensional computer models of the climate system, used to solve a set of mathematical equations describing the laws of physics relevant to the atmospheric and oceanic circulation, the distribution of heat and the interaction between electromagnetic radiation and atmospheric gases and aerosols. They consist of different modules describing the atmosphere, oceans, sea-ice/snow and the land surface, and represent the world in terms of boxes stacked next to and on top of each other. Evolution of the model circulation is computed by time integration of those equations starting from an initial condition.</dc:description>
         <rdfs:label>GCM</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/General_circulation_model</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1631,9 +1633,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Package">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <dc:description xml:lang="en">A package is a distribution of software and data in archive files. Packages contain metadata, such as the software&apos;s name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, metadata is stored in a local package database.</dc:description>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>Package</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Package_manager</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Package_manager</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1655,9 +1656,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCM">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <rdfs:comment xml:lang="en">A Regional Climate Model. It is a numerical climate prediction model forced by specified lateral and ocean conditions from a general circulation model (GCM) or observation-based dataset (reanalysis) that simulates atmospheric and land surface processes, while accounting for high-resolution topographical data, land-sea contrasts, surface characteristics, and other components of the Earth-system. Since RCMs only cover a limited domain, the values at their boundaries must be specified explicitly, referred to as boundary conditions, by the results from a coarser GCM or reanalysis; RCMs are initialized with the initial conditions and driven along its lateral-atmospheric-boundaries and lower-surface boundaries with time-variable conditions. RCMs thus downscale global reanalysis or GCM runs to simulate climate variability with regional refinements.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>RCM</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">http://glossary.ametsoc.org/wiki/Regional_climate_model</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://glossary.ametsoc.org/wiki/Regional_climate_model</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1687,7 +1687,10 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalForecastingSystem">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:description xml:lang="en">Numerical weather prediction requires input of meteorological data, collected by satellites and earth observation systems such as automatic and manned stations, aircraft, ships and weather balloons. Assimilation of this data is used to produce an initial state of a computer model of the atmosphere. Seasonal forecasting systems are based on an atmospheric model (GCM) coupled to the ocean, used to produce forecasts of the weather up to 12 months ahead. These forecasts are produced operationally and are typically issued once per month, although their periodicity varies among forecasting systems. The forecast verification relies on an antecedent historical forecast dataset (a &apos;reforecast&apos; or &apos;hindcast&apos;), for which historical observations exist.</dc:description>
         <rdfs:label>SeasonalForecastingSystem</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalHindcast"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
     </owl:Class>
     
 
@@ -1699,6 +1702,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast"/>
         <dc:description xml:lang="en">A seasonal hindcast (a.k.a. &apos;reforecast&apos;) is a forecast made for a period in the past using only information available before the beginning of the forecast. The hindcast can be used for verification purposes, helping to build trust (or not) on the forecasting system. Hindcasts typically encompass a relatively long period (i.e. 30 years or more) in order to provide more robust skill assessments.</dc:description>
         <rdfs:label>SeasonalHindcast</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalForecastingSystem"/>
     </owl:Class>
     
 
@@ -1708,6 +1712,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#SeasonalOperationalForecast">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Dataset"/>
         <rdfs:label>SeasonalOperationalForecast</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#SeasonalForecastingSystem"/>
     </owl:Class>
     
 
@@ -1815,7 +1820,6 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Variable">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:description xml:lang="en">Characterization of a Geophysical Variable</dc:description>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>Variable</rdfs:label>
     </owl:Class>
     
@@ -2831,7 +2835,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#QA4Seas-prototype">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Package"/>
-        <dc:description xml:lang="en">The QA4Seas prototype is a proof-of-concept software for seasonal forecast quality assessment that illustrates the most relevant practices suggested in the C3S EQC strategy. Tt was developed in the QA4Seas Project, part of the Copernicus Climate Change Initiative.</dc:description>
+        <dc:description xml:lang="en">The QA4Seas prototype is a proof-of-concept software for seasonal forecast quality assessment that illustrates the most relevant practices suggested in the C3S EQC strategy. It was developed in the QA4Seas Project, part of the Copernicus Climate Change Initiative.</dc:description>
         <rdfs:label>QA4Seas prototype</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#C3S"/>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#QA4Seas"/>
@@ -3406,6 +3410,52 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#psl -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#psl">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Sea-level pressure</rdfs:label>
+        <prov:definition xml:lang="en">Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL. Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. &quot;Mean sea level&quot; means the time mean of sea surface elevation at a given location over an arbitrary period sufficient to eliminate the tidal signals.</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#sst -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#sst">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Sea-surface temperature</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">sst</rdfs:label>
+        <prov:definition xml:lang="en">Sea surface temperature is usually abbreviated as &quot;SST&quot;. It is the temperature of sea water near the surface (including the part under sea-ice, if any). More specific terms, namely sea_surface_skin_temperature, sea_surface_subskin_temperature, and surface_termperature are available for the skin, subskin, and interface temperature respectively. For the temperature of sea water at a particular depth or layer, a data variable of sea_water_temperature with a vertical coordinate axis should be used.</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ta -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ta">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Air temperature is the bulk temperature of the air, not the surface (skin) temperature. This can be near-surface air (typically 2m) or any other vertical level, that should be included in the metadata.</dc:description>
+        <rdfs:comment xml:lang="en">Usually, the code &apos;tas&apos; is used to refer to near-surface air temperature (typically 2-m height).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#tp -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#tp">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">total precip</rdfs:label>
+        <prov:definition xml:lang="en">This variable is the total precipitation amount. &quot;Amount&quot; in this context means mass per unit area.</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#transformeR -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#transformeR">
@@ -3429,6 +3479,30 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:label>visualizeR</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.meteo.unican.es/climate4R</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2017.09.008</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#wss -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#wss">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:comment xml:lang="en">In particular, &apos;wss&apos; refers to near-surface wind speed (typically measured at 10-m height).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wind speed</rdfs:label>
+        <prov:definition xml:lang="en">Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#zg -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#zg">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:comment xml:lang="en">Geopotential is specified for a particular isobaric surface pressure level.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Geopotential height</rdfs:label>
+        <prov:definition xml:lang="en">Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy. Geopotential height is the geopotential divided by the standard acceleration due to gravity. It is numerically similar to the altitude (or geometric height) and not to the quantity with standard name height, which is relative to the surface.</prov:definition>
     </owl:NamedIndividual>
     
 
