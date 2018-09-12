@@ -58,5 +58,6 @@
  * Bug fix in xsd:anyURI annotation yielding error by METACLIP interpreter
  * Other minor annotation updates and improvements
  * Add individual instances of ds:Variable (sst, psl, tas, tp, zg and wss)
+ * Add individual instances of ds:ENSO
  
  
