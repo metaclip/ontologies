@@ -1402,11 +1402,10 @@
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
-        <inputECV xml:lang="en">Sea surface temperature</inputECV>
+        <inputECV rdf:resource="http://www.metaclip.org/datasource/datasource.owl#sst"/>
         <rdfs:comment xml:lang="en">Historically “El Niño” referred to the appearance of unusually warm water off the coast of Peru near Christmastime (Niño is Spanish and refers to “the boy Christ child”). Today it describes broader changes that occur across the Pacific basin. Oceanic and atmospheric conditions in the tropical Pacific fluctuate somewhat irregularly between warm El Niño phases and cold phases in which surface waters cool across the tropical Pacific. These cooling events are called “La Niña” (“the girl” in Spanish). The most intense phase of each event typically lasts about a year. El Niño is linked to major changes in the atmosphere known as the Southern Oscillation (SO). The whole phenomenon is known as the El Niño Southern Oscillation (ENSO)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>ENSO</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2290,8 +2289,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO1plus2">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
-        <dc:description xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.  This index tends to have the largest variance of the Niño SST indices</dc:description>
+        <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 1+2 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-90 10, -80 -10, -80 0, -90 0, -90 10))</geosparql:asWKT>
+        <rdfs:comment xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.  This index tends to have the largest variance of the Niño SST indices.</rdfs:comment>
         <rdfs:label>ENSO-1+2</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2302,8 +2302,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO3">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
-        <dc:description xml:lang="en">This region was once the primary focus for monitoring and predicting El Niño, but researchers later learned that the key region for coupled ocean-atmosphere interactions for ENSO lies further west (Trenberth, 1997).  Hence, the Niño 3.4 and ONI became favored for defining El Niño and La Niña events</dc:description>
+        <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 3 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-150 -5, -90 -5, -90 5, -150 5, -150 -5))</geosparql:asWKT>
+        <rdfs:comment xml:lang="en">This region was once the primary focus for monitoring and predicting El Niño, but researchers later learned that the key region for coupled ocean-atmosphere interactions for ENSO lies further west (Trenberth, 1997).  Hence, the Niño 3.4 and ONI became favored for defining El Niño and La Niña events.</rdfs:comment>
         <rdfs:label>ENSO-3</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2314,8 +2315,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO3dot4">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
-        <dc:description xml:lang="en">The  Niño 3.4 anomalies may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.  The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La  Niña events are defined when the  Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more</dc:description>
+        <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 3.4 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
+        <rdfs:comment xml:lang="en">The ENSO 3.4 SST anomalies  may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.  The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La  Niña events are defined when the  Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more</rdfs:comment>
         <rdfs:label>ENSO-3.4</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2326,8 +2328,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ENSO4">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
-        <dc:description xml:lang="en">The  Niño 4 index captures SST anomalies in the central equatorial Pacific.  This region tends to have less variance than the other Niño regions</dc:description>
+        <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 4 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((160 -5, -150 -5, -150 5, 160 5, 160 -5))</geosparql:asWKT>
+        <rdfs:comment xml:lang="en">The  Niño 4 index captures SST anomalies in the central equatorial Pacific.  This region tends to have less variance than the other Niño regions.</rdfs:comment>
         <rdfs:label>ENSO-4</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2740,6 +2743,58 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:label xml:lang="en">NORESM1-M</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://doi.org/10.5194/gmd-6-687-2013</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Nino3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Nino3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <dc:description xml:lang="en">This index is similar to El Niño 3.4 (:Nino3_4), but using a a different region definition (:ENSO3)</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Niño 3</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO3"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino3_4"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Nino3_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Nino3_4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <dc:description xml:lang="en">The  Niño 3.4 anomalies may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.  The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La  Niña events are defined when the Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Niño 3.4</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO3dot4"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Nino4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Nino4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <dc:description xml:lang="en">Similar to El Niño 3.4 index (:Nino3_4), the  Niño 4 index captures SST anomalies in the central equatorial Pacific, considering a particular domain defined by (:ENSO4)</dc:description>
+        <rdfs:comment xml:lang="en">This region tends to have less variance than the other Niño regions.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Niño 4</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO4"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino3_4"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ONI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ONI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <dc:description xml:lang="en">The ONI uses the same region as the Niño 3.4 index.  The ONI uses a 3-month running mean, and to be classified as a full-fledged El Niño or La Niña, the anomalies must exceed +0.5C or -0.5C for at least five consecutive months.</dc:description>
+        <rdfs:comment xml:lang="en">This is the operational definition used by :NOAA</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oceanic Niño Index</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO3dot4"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -3513,6 +3568,20 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Experiment"/>
         <rdfs:comment xml:lang="en">Experiments run with greenhouse gasses increasing as observed through the 20th century</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">http://www.ipcc-data.org/sim/gcm_clim/SRES_TAR/ddc_sres_emissions.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#Nino1+2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Nino1+2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <dc:description xml:lang="en">This index is similar to El Niño 3.4 (:Nino3_4), but considers a samller region of coastal South America where El Niño was first recognized by the local population (:ENSO1plus2)</dc:description>
+        <rdfs:comment xml:lang="en">This index tends to have the largest variance of the Niño SST indices</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Niño 1+2</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO1plus2"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino3_4"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     <rdf:Description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
