@@ -1027,7 +1027,7 @@
         <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#TemporalResolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The time step is defined according to ISO 8601</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://en.wikipedia.org/wiki/ISO_8601#Durations</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/ISO_8601#Durations</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Time Step Duration</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2291,8 +2291,10 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
         <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 1+2 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-90 10, -80 -10, -80 0, -90 0, -90 10))</geosparql:asWKT>
-        <rdfs:comment xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.  This index tends to have the largest variance of the Niño SST indices.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Niño 1+2 region is the smallest and eastern-most of the Niño SST regions, and corresponds with the region of coastal South America where El Niño was first recognized by the local populations.</rdfs:comment>
         <rdfs:label>ENSO-1+2</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino1plus2"/>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     
@@ -2306,6 +2308,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-150 -5, -90 -5, -90 5, -150 5, -150 -5))</geosparql:asWKT>
         <rdfs:comment xml:lang="en">This region was once the primary focus for monitoring and predicting El Niño, but researchers later learned that the key region for coupled ocean-atmosphere interactions for ENSO lies further west (Trenberth, 1997).  Hence, the Niño 3.4 and ONI became favored for defining El Niño and La Niña events.</rdfs:comment>
         <rdfs:label>ENSO-3</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino3"/>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     
@@ -2317,8 +2321,10 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSOregion"/>
         <dc:description xml:lang="en">Rectangular region used for the computation of the The Niño 3.4 anomalies.</dc:description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
-        <rdfs:comment xml:lang="en">The ENSO 3.4 SST anomalies  may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.  The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La  Niña events are defined when the  Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more</rdfs:comment>
+        <rdfs:comment xml:lang="en">The ENSO 3.4 SST anomalies  may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast.</rdfs:comment>
         <rdfs:label>ENSO-3.4</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino3_4"/>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     
@@ -2332,6 +2338,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((160 -5, -150 -5, -150 5, 160 5, 160 -5))</geosparql:asWKT>
         <rdfs:comment xml:lang="en">The  Niño 4 index captures SST anomalies in the central equatorial Pacific.  This region tends to have less variance than the other Niño regions.</rdfs:comment>
         <rdfs:label>ENSO-4</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Nino4"/>
         <rdfs:seeAlso xml:lang="en">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</rdfs:seeAlso>
     </owl:NamedIndividual>
     
