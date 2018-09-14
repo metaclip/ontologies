@@ -8,5 +8,9 @@
 ## v0.1 (28 May 2018)
  * Updated ontology URI. <http://metaclip.org> domain
 
+## v0.2 (14 Sep 2018) 
+ * A few annotation updates
+ * Inclusion of :EnsembleRecalibration individuals (CCR, MVA) for QA4Seas EQC prototype product description
+
 
 
