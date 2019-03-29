@@ -59,5 +59,8 @@
  * Other minor annotation updates and improvements
  * Add individual instances of ds:Variable (sst, psl, tas, tp, zg and wss)
  * Add individual instances of ds:ENSO
- 
- 
+
+## v0.11 (29 Mar 2019)
+ * Add referenceURL annotation property
+ * Remove several individual instances passed to the ipcc_terms vocabulary (under construction)
+ * Other minor annotation updates
