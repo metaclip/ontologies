@@ -64,3 +64,8 @@
  * Add referenceURL annotation property
  * Remove several individual instances passed to the ipcc_terms vocabulary (under construction)
  * Other minor annotation updates
+
+## v0.12 (29 Mar 2019)
+ * Remove several individual instances passed to the ipcc_terms vocabulary (just released)
+ * Other minor annotation updates
+ 
