@@ -14,7 +14,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.12/datasource.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.13/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
@@ -22,8 +22,8 @@
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...). It also provides a framework for describing the source code generating the product.</dc:description>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-29</dc:date>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.13</owl:versionInfo>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2884,6 +2884,17 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#pH -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#pH">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">The pH scale is logarithmic and approximates the negative of the base 10 logarithm of the molar concentration (measured in units of moles per liter) of hydrogen ions in a solution.</dc:description>
+        <rdfs:label>pH</rdfs:label>
+        <prov:definition xml:lang="en">pH is defined as the decimal logarithm of the reciprocal of the hydrogen ion activity in a solution.</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#psl -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#psl">
@@ -2899,10 +2910,11 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#sst">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <owl:sameAs rdf:resource="http://www.metaclip.org/datasource/datasource.owl#tos"/>
         <dc:description xml:lang="en">Sea-surface temperature</dc:description>
+        <rdfs:comment xml:lang="en">Sea surface temperature is usually abbreviated as &quot;SST&quot;. It is the temperature of sea water near the surface (including the part under sea-ice, if any). More specific terms, namely sea_surface_skin_temperature, sea_surface_subskin_temperature, and surface_termperature are available for the skin, subskin, and interface temperature respectively. For the temperature of sea water at a particular depth or layer, a data variable of sea_water_temperature with a vertical coordinate axis should be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">sst</rdfs:label>
-        <prov:definition xml:lang="en">Sea surface temperature is usually abbreviated as &quot;SST&quot;. It is the temperature of sea water near the surface (including the part under sea-ice, if any). More specific terms, namely sea_surface_skin_temperature, sea_surface_subskin_temperature, and surface_termperature are available for the skin, subskin, and interface temperature respectively. For the temperature of sea water at a particular depth or layer, a data variable of sea_water_temperature with a vertical coordinate axis should be used.</prov:definition>
     </owl:NamedIndividual>
     
 
@@ -2919,13 +2931,45 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#tasmax -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#tasmax">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Maximum daily temperature</dc:description>
+        <rdfs:label>tasmax</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#tasmin -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#tasmin">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Minimum daily temperature</dc:description>
+        <rdfs:label>tasmin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#tos -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#tos">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Sea-surface temperature</dc:description>
+        <rdfs:comment xml:lang="en">Sea surface temperature is usually abbreviated as &quot;SST&quot;. It is the temperature of sea water near the surface (including the part under sea-ice, if any). More specific terms, namely sea_surface_skin_temperature, sea_surface_subskin_temperature, and surface_termperature are available for the skin, subskin, and interface temperature respectively. For the temperature of sea water at a particular depth or layer, a data variable of sea_water_temperature with a vertical coordinate axis should be used.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
+        <rdfs:label>tos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#tp -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#tp">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">This variable is the total precipitation amount. &quot;Amount&quot; in this context means mass per unit area.</dc:description>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">total precip</rdfs:label>
-        <prov:definition xml:lang="en">This variable is the total precipitation amount. &quot;Amount&quot; in this context means mass per unit area.</prov:definition>
     </owl:NamedIndividual>
     
 
@@ -2959,10 +3003,10 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#wss">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.</dc:description>
         <rdfs:comment xml:lang="en">In particular, &apos;wss&apos; refers to near-surface wind speed (typically measured at 10-m height).</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wind speed</rdfs:label>
-        <prov:definition xml:lang="en">Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.</prov:definition>
     </owl:NamedIndividual>
     
 
@@ -2971,10 +3015,10 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#zg">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <dc:description xml:lang="en">Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy. Geopotential height is the geopotential divided by the standard acceleration due to gravity. It is numerically similar to the altitude (or geometric height) and not to the quantity with standard name height, which is relative to the surface.</dc:description>
         <rdfs:comment xml:lang="en">Geopotential is specified for a particular isobaric surface pressure level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Geopotential height</rdfs:label>
-        <prov:definition xml:lang="en">Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy. Geopotential height is the geopotential divided by the standard acceleration due to gravity. It is numerically similar to the altitude (or geometric height) and not to the quantity with standard name height, which is relative to the surface.</prov:definition>
     </owl:NamedIndividual>
     <rdf:Description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
