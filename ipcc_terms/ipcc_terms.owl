@@ -547,6 +547,7 @@
         <dc:title xml:lang="en">Queensland Climate Change Centre of Excellence</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.csiro.au/</ds:referenceURL>
         <rdfs:label>QCCCE</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO"/>
     </owl:NamedIndividual>
     
 
@@ -910,6 +911,17 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#PRNAP99 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#PRNAP99">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <dc:description xml:lang="en">Number of days above precipitation 99th percentile</dc:description>
+        <ds:inputECV rdf:resource="http://www.metaclip.org/datasource/datasource.owl#tp"/>
+        <rdfs:label>PRNAP99</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RACMO22E -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RACMO22E">
@@ -1014,6 +1026,17 @@
         <dc:title xml:lang="en">Swedish Meteorological and Hydrological Institute</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.smhi.se/en</ds:referenceURL>
         <rdfs:label>SMHI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#TASMAXNA35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#TASMAXNA35">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
+        <dc:description xml:lang="en">Number of days with maximum temperature above 35 degrees Celsius</dc:description>
+        <ds:inputECV rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ta"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmaxNa35</rdfs:label>
     </owl:NamedIndividual>
     
 
