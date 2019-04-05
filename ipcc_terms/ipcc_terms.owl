@@ -16,8 +16,8 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl">
         <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.1/ipcc_terms.owl"/>
-        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.12/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.13/datasource.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
