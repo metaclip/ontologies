@@ -14,16 +14,16 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.14/datasource.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.15/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-05</dc:date>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...). It also provides a framework for describing the source code generating the product.</dc:description>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</owl:versionInfo>
         <dc:creator>Santander Meteorology Group &lt;http://meteo.unican.es&gt;</dc:creator>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.14</owl:versionInfo>
     </owl:Ontology>
     
 
