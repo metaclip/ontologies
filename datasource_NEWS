@@ -73,5 +73,8 @@
  * New annotation property ds:season
  * New subclasses of ds:Anomaly, ds:DifferenceAnomaly and ds:Relative Anomaly
  * Other minor changes and annotation updates
+
+## v0.14 (5 Jul 2019)
+ * hasRun property relocated from :GCM/:RCM to :Dataset domain
  
  
