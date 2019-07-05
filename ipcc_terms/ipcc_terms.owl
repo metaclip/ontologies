@@ -15,16 +15,16 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.1/ipcc_terms.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.2/ipcc_terms.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.13/datasource.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:description xml:lang="en">ipcc_terms provides a definition of individual entities used by the Working Group 1 of the IPCC-AR6, extending some the classes of the METACLIP framework.</dc:description>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-05</dc:date>
         <dc:title xml:lang="en">IPCC individual entities of METACLIP generic classes</dc:title>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-29</dc:date>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
     </owl:Ontology>
     
@@ -371,6 +371,28 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ACCESS1-0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ACCESS1-0">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.22499/2.6301.006</ds:referenceURL>
+        <rdfs:label>ACCESS1.0</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.22499/2.6301.004</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ACCESS1-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ACCESS1-3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.22499/2.6402.001</ds:referenceURL>
+        <rdfs:label>ACCESS1.3</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.22499/2.6301.004</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AORI -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AORI">
@@ -378,6 +400,40 @@
         <dc:title xml:lang="en">Atmosphere and Ocean Research Institute (University of Tokyo)</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.aori.u-tokyo.ac.jp/english/</ds:referenceURL>
         <rdfs:label>AORI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BCC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BCC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Beijing Climate Center</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://forecast.bcccsm.ncc-cma.net/htm/</ds:referenceURL>
+        <rdfs:label>BCC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BNU -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BNU">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Beijing Normal University</dc:title>
+        <ds:referenceURL xml:lang="en">https://english.bnu.edu.cn/</ds:referenceURL>
+        <rdfs:label>BNU</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BNU-ESM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#BNU-ESM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/gmd-7-2039-2014</ds:referenceURL>
+        <rdfs:label>BNU-ESM</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -404,6 +460,16 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCSM4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCSM4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/topic/ccsm4-cesm1</ds:referenceURL>
+        <rdfs:label>CCSM4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CERFACS -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CERFACS">
@@ -412,6 +478,26 @@
         <dc:title xml:lang="fr">Centre Européen de Recherche et de Formation Avancée en Calcul Scientifique</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cerfacs.fr/en/</ds:referenceURL>
         <rdfs:label>CERFACS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CESM1-BGC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CESM1-BGC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/topic/ccsm4-cesm1</ds:referenceURL>
+        <rdfs:label>CESM1-BGC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CESM1-CAM5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CESM1-CAM5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/topic/ccsm4-cesm1</ds:referenceURL>
+        <rdfs:label>CESM1-CAM5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -427,16 +513,6 @@
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CM5A-MR -->
-
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CM5A-MR">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/journal/382/40/9/page/1</ds:referenceURL>
-        <rdfs:label>IPSL-CM5A-MR</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC">
@@ -445,6 +521,26 @@
         <dc:title xml:lang="it">Centro Euromediterraneo sui Cambiamenti Climatici</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cmcc.it/</ds:referenceURL>
         <rdfs:label>CMCC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC-CM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC-CM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cmcc.it/models/cmcc-cm</ds:referenceURL>
+        <rdfs:label>CMCC-CM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC-CMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMCC-CMS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cmcc.it/models/cmcc-cm</ds:referenceURL>
+        <rdfs:label>CMCC-CMS</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -535,7 +631,22 @@
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
         <dc:title xml:lang="en">Commonwealth Scientific and Industrial Research Organisation</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.csiro.au</ds:referenceURL>
         <rdfs:label>CSIRO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-BOM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-BOM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:description xml:lang="en">A research partnership between :CSIRO and the Australian Bureau of Meteorology</dc:description>
+        <dc:title xml:lang="en">Collaboration for Australian Weather and Climate Research</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cawcr.gov.au/</ds:referenceURL>
+        <rdfs:label>CSIRO-BOM</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO"/>
     </owl:NamedIndividual>
     
 
@@ -643,14 +754,66 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FGOALS-g2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FGOALS-g2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label>FGOALS-g2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FIO -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FIO">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">The First Institute of Oceanography</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.fio.org.cn/</ds:referenceURL>
+        <rdfs:label>FIO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FIO-ESM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#FIO-ESM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:label>FIO-ESM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-CM3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-CM3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gfdl.noaa.gov/cmip/</ds:referenceURL>
+        <rdfs:label>GFDL-CM3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-ESM2G -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-ESM2G">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gfdl.noaa.gov/earth-system-model/</ds:referenceURL>
+        <rdfs:label>GFDL-ESM2G</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/JCLI-D-11-00150.1</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/JCLI-D-11-00560.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-ESM2M -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GFDL-ESM2M">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gfdl.noaa.gov/earth-system-model/</ds:referenceURL>
-        <rdfs:label xml:lang="en">ESM2M</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/full/10.1175/JCLI-D-11-00560.1</rdfs:seeAlso>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/full/10.1175/JCLI-D-12-00150.1</rdfs:seeAlso>
+        <rdfs:label>GFDL-ESM2M</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/JCLI-D-11-00560.1</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/JCLI-D-12-00150.1</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -732,6 +895,16 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-MR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-MR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/journal/382/40/9/page/1</ds:referenceURL>
+        <rdfs:label>IPSL-CM5A-MR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ISIMIP -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ISIMIP">
@@ -775,6 +948,18 @@
         <dc:title xml:lang="en">Royal Netherlands Meteorological Institute</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://knmi.nl/over-het-knmi/about</ds:referenceURL>
         <rdfs:label>KNMI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#LASG-CESS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#LASG-CESS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Institute of Atmospheric Physics, Chinese Academy of Sciences</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://english.iap.cas.cn/</ds:referenceURL>
+        <rdfs:label>LASG-CESS</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -873,6 +1058,18 @@
         <dc:title xml:lang="en">National Aeronautics and Space Administration</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nasa.gov/</ds:referenceURL>
         <rdfs:label>NASA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NCAR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NCAR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">National Center for Atmospheric Research</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ncar.ucar.edu/</ds:referenceURL>
+        <rdfs:label>NCAR</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1081,6 +1278,28 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF331F">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:label>WRF331F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#bcc-csm1-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#bcc-csm1-1">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://forecast.bcccsm.ncc-cma.net/web/channel-34.htm</ds:referenceURL>
+        <rdfs:label>bcc-csm1-1</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/jgrd.50320</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#bcc-csm1-1-m -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#bcc-csm1-1-m">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://forecast.bcccsm.ncc-cma.net/web/channel-34.htm</ds:referenceURL>
+        <rdfs:label>bcc-csm1-1-m</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/jgrd.50320</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
