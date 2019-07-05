@@ -76,5 +76,6 @@
 
 ## v0.14 (5 Jul 2019)
  * hasRun property relocated from :GCM/:RCM to :Dataset domain
+ * Other minor annotation updates
  
  
