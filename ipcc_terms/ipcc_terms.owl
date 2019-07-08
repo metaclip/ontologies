@@ -23,7 +23,7 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
         <dc:description xml:lang="en">ipcc_terms provides a definition of individual entities used by the Working Group 1 of the IPCC-AR6, extending some the classes of the METACLIP framework.</dc:description>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-05</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-08</dc:date>
         <dc:title xml:lang="en">IPCC individual entities of METACLIP generic classes</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
     </owl:Ontology>
@@ -818,6 +818,72 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-H -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-H">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.giss.nasa.gov/modelE/ar5/</ds:referenceURL>
+        <rdfs:label>GISS-E2-H</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/2013MS000265</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-H-CC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-H-CC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.giss.nasa.gov/modelE/ar5/</ds:referenceURL>
+        <rdfs:comment xml:lang="en">As for :GISS-E2-H with interactive terrestrial carbon cycle and oceanic bio-geochemistry</rdfs:comment>
+        <rdfs:label>GISS-E2_H-CC</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/2013MS000265</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-R -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-R">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.giss.nasa.gov/modelE/ar5/</ds:referenceURL>
+        <rdfs:label>GISS-E2-R</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/2013MS000265</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-R-CC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#GISS-E2-R-CC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.giss.nasa.gov/modelE/ar5/</ds:referenceURL>
+        <rdfs:comment xml:lang="en">As for :GISS-E2-R with interactive terrestrial carbon cycle and oceanic bio-geochemistry.</rdfs:comment>
+        <rdfs:label>GISS-E2-R-CC</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/2013MS000265</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-AO -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-AO">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/JCLI3712.1</ds:referenceURL>
+        <rdfs:label>HADGEM2-AO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-CC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-CC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL xml:lang="en">https://doi.org/10.5194/gmd-4-723-2011</ds:referenceURL>
+        <rdfs:label>HADGEM2-CC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-ES -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#HADGEM2-ES">
@@ -883,6 +949,28 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Russian Academy of Sciences, Institute of Numerical Mathematics</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.inm.ras.ru/inm_en_ver/</ds:referenceURL>
+        <rdfs:label>INM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4.0">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.doi.org/10.1134/S000143381004002X</ds:referenceURL>
+        <rdfs:label>INMCM4.0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL">
@@ -895,12 +983,32 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-LR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-LR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/journal/382/40/9/page/1</ds:referenceURL>
+        <rdfs:label>IPSL-CM5A-LR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-MR -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5A-MR">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/journal/382/40/9/page/1</ds:referenceURL>
         <rdfs:label>IPSL-CM5A-MR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5B-LR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IPSL-CM5B-LR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://link.springer.com/journal/382/40/9/page/1</ds:referenceURL>
+        <rdfs:label>IPSL-CM5B-LR</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -974,6 +1082,16 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MIROC-ESM-CHEM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MIROC-ESM-CHEM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://amaterasu.ees.hokudai.ac.jp/~fswiki/pub/wiki.cgi?page=CMIP5</ds:referenceURL>
+        <rdfs:label>MIROC-ESM-CHEM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MIROC5 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MIROC5">
@@ -1038,6 +1156,28 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MRI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MRI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Meteorological Research Institute (Japan)</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.mri-jma.go.jp/index_en.html</ds:referenceURL>
+        <rdfs:label>MRI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MRI-CGCM3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MRI-CGCM3">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.mri-jma.go.jp/Publish/Technical/DATA/VOL_64/index_en.html</dc:title>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">MRI-CGCM3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MeteoFrance -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MeteoFrance">
@@ -1050,14 +1190,14 @@
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NASA -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NASA-GISS -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NASA">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NASA-GISS">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
-        <dc:title xml:lang="en">National Aeronautics and Space Administration</dc:title>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nasa.gov/</ds:referenceURL>
-        <rdfs:label>NASA</rdfs:label>
+        <dc:title xml:lang="en">NASA Goddard Institute for Space Studies</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.giss.nasa.gov/</ds:referenceURL>
+        <rdfs:label>NASA-GISS</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1098,6 +1238,18 @@
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NMR-KMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NMR-KMA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">National Institute of Meteorlogical Sciences - Korea Meteorological Administration</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://eng.nimr.go.kr/AE/MA/main.jsp</ds:referenceURL>
+        <rdfs:label>NMR-KMA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NOAA-GFDL -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NOAA-GFDL">
@@ -1127,7 +1279,17 @@
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NORESM1-M">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/gmd-6-687-2013</ds:referenceURL>
-        <rdfs:label xml:lang="en">NORESM1-M</rdfs:label>
+        <rdfs:label>NORESM1-M</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NORESM1-ME -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NORESM1-ME">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/gmd-6-687-2013</ds:referenceURL>
+        <rdfs:label>NORESM1-ME</rdfs:label>
     </owl:NamedIndividual>
     
 
