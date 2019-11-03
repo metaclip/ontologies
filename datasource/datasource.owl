@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.metaclip.org/datasource/datasource.owl#"
      xml:base="http://www.metaclip.org/datasource/datasource.owl"
-     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:datasource="http://www.metaclip.org/datasource/datasource.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:datasource="http://www.metaclip.org/datasource/datasource.owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
         <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.15/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <dc:creator>Santander Meteorology Group &lt;http://meteo.unican.es&gt;</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-05</dc:date>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...). It also provides a framework for describing the source code generating the product.</dc:description>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</owl:versionInfo>
-        <dc:creator>Santander Meteorology Group &lt;http://meteo.unican.es&gt;</dc:creator>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1259,8 +1259,8 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Anomaly">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
-        <dc:description xml:lang="en">An :Anomaly is defined as the difference (ratio) between the average climate over a period of several decades or more (see :Climatology), and the climate during a particular month or season</dc:description>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <dc:description xml:lang="en">The deviation of a variable from its value averaged over a reference period.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ipcc.ch/site/assets/uploads/2018/11/sr15_glossary.pdf</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Anomaly</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://glossary.ametsoc.org/wiki/Climate_anomaly</rdfs:seeAlso>
     </owl:Class>
@@ -1370,11 +1370,14 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     
 
 
-    <!-- http://www.metaclip.org/datasource/datasource.owl#ConservativeInterpolation -->
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ConservativeRemapping -->
 
-    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ConservativeInterpolation">
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ConservativeRemapping">
         <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
-        <rdfs:label>Conservative</rdfs:label>
+        <dc:description xml:lang="en">In a fully coupled climate model, state variables and heat and water fluxes must be transferred between models periodically, and such fields must be remapped from one component grid to another. Fluxes in particular must be remapped in a conservative manner in order to maintain the energy and water budgets of the coupled climate system. Conservative mapping methods attempt to preserve fluxes (or other integrals) during the interpolation process</dc:description>
+        <rdfs:label>ConservativeRemapping</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1137/0908037</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/1520-0493(1999)127%3C2204:FASOCR%3E2.0.CO;2</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2342,7 +2345,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#Nino1plus2">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO"/>
-        <dc:description xml:lang="en">This index is similar to El Niño 3.4 (:Nino3_4), but considers a samller region of coastal South America where El Niño was first recognized by the local population (:ENSO1plus2)</dc:description>
+        <dc:description xml:lang="en">This index is similar to El Niño 3.4 (:Nino3_4), but considers a smaller region of coastal South America where El Niño was first recognized by the local population (:ENSO1plus2)</dc:description>
         <rdfs:comment xml:lang="en">This index tends to have the largest variance of the Niño SST indices</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Niño 1+2</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ENSO1plus2"/>
@@ -3096,5 +3099,5 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
