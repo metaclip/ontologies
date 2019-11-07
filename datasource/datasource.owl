@@ -2233,6 +2233,18 @@ The Programme is coordinated and managed by the European Commission. It is imple
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#EWEMBI -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EWEMBI">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:creator rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ISIMIP"/>
+        <dc:description xml:lang="en">The EWEMBI dataset was compiled to support the bias correction of climate input data for ISIMIP2b and the ISIMIP2a protocol extension. It is a reference data set for bias correction</dc:description>
+        <referenceURL xml:lang="en">http://doi.org/10.5880/pik.2019.004</referenceURL>
+        <rdfs:label>EWEMBI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#FD -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#FD">
@@ -2306,6 +2318,18 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ID</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#ISIMIP -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#ISIMIP">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">ISIMIP offers a framework for consistently projecting the impacts of climate change across affected sectors and spatial scales. An international network of climate-impact modellers contribute to a comprehensive and consistent picture of the world under different climate-change scenarios.</dc:description>
+        <dc:title xml:lang="en">The Inter-Sectoral Impact Model Intercomparison Project</dc:title>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.isimip.org/</referenceURL>
+        <rdfs:label>ISIMIP</rdfs:label>
     </owl:NamedIndividual>
     
 

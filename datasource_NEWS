@@ -78,9 +78,10 @@
  * hasRun property relocated from :GCM/:RCM to :Dataset domain
  * Other minor annotation updates
 
-## v0.15 (03 Nov 2019)
+## v0.15 (07 Nov 2019)
  * Update several annotations
- * Refactor Conservative to Conservative Remapping, and include new annotations
+ * Add new Individual instances of ObservationalDataset (EWEMBI) and Project (ISIMIP)
+ * Refactor Conservative to ConservativeRemapping, and include new annotations
  
  
  
