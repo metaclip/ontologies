@@ -12,5 +12,8 @@
  * A few annotation updates
  * Inclusion of :EnsembleRecalibration individuals (CCR, MVA) for QA4Seas EQC prototype product description
 
+## v0.3 (14 Nov 2019)
+ * Minor annotation updates
+ * Allow for updating SpatialExtent of calibrated objects
 
 
