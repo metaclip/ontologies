@@ -57,7 +57,7 @@
 ## v0.10 (12 Sep 2018)
  * Bug fix in xsd:anyURI annotation yielding error by METACLIP interpreter
  * Other minor annotation updates and improvements
- * Add individual instances of ds:Variable (sst, psl, tas, tp, zg and wss)
+ * Add individual instances of ds:Variable (sst, psl, ta, tp, zg and wss)
  * Add individual instances of ds:ENSO
 
 ## v0.11 (29 Mar 2019)
@@ -82,6 +82,13 @@
  * Update several annotations
  * Add new Individual instances of ObservationalDataset (EWEMBI) and Project (ISIMIP)
  * Refactor Conservative to ConservativeRemapping, and include new annotations
- 
+
+## v0.16 (28 Jan 2020)
+ * New :Variable individual :tas
+ * New Step subclass :Binding, for :DatasetSubset binding along a specified :Dimension
+ * New superclass :ClimatologicalDifference, encompassing both :Anomaly (and its subclasses) and the new ClimateChangeSignal (and its subclasses)
+ * New data property :hadClimateChangeSignal, and corresponding superproperty :hadClimatologicalDifference
+ * Several new individual instances of the :ClimateIndex class
+ * Several minor annotation updates
  
  
