@@ -90,5 +90,10 @@
  * New data property :hadClimateChangeSignal, and corresponding superproperty :hadClimatologicalDifference
  * Several new individual instances of the :ClimateIndex class
  * Several minor annotation updates
+
+## v0.17 (05 Feb 2020)
+ * New data property :hadBinding
+ * New entity :RectangularGrid and data property :hasRectangularGrid
+ * Other minor changes and annotation updates
  
  
