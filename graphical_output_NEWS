@@ -18,4 +18,6 @@
  * New MapProjection class, and some individual instances (polar stereographic, Robin)
  * New data property hasMapProjection
 
- 
+## v0.5 (07 Feb 2020)
+ * Add new classes for describing Hatching and other graphical features of maps
+
