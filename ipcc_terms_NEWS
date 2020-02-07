@@ -7,5 +7,9 @@
  * AR6 WG1 FoD version
 
 ## v0.2 (07 Nov 2019)
- * Added full list of GCMs and Modelling Centers from AR4 Annex 1
+ * Added full list of GCMs and Modelling Centers from AR5 Annex 1
  * Other minor annotation updates
+
+## v0.3 (07 Feb 2020)
+ * Added new individual instances of ds:ClimateIndex to be included in the IPCC Atlas
+ * Other annotation updates
