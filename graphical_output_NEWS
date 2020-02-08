@@ -21,3 +21,6 @@
 ## v0.5 (07 Feb 2020)
  * Add new classes for describing Hatching and other graphical features of maps
 
+## v0.6 (08 Feb 2020)
+ * New ColorPalette class and subclasses
+ * Other minor annotation updates
