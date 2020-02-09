@@ -95,5 +95,10 @@
  * New data property :hadBinding
  * New entity :RectangularGrid and data property :hasRectangularGrid
  * Other minor changes and annotation updates
+
+## v0.18 (09 Feb 2020)
+ * Minor annotation updates, including the CMIP5 DRS mappings
+
+
  
  
