@@ -617,7 +617,7 @@ the distribution that define climate extremes.</rdfs:comment>
     <!-- http://www.metaclip.org/calibration/calibration.owl#PQM -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/calibration/calibration.owl#PQM">
-        <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#PQuantileMapping"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/calibration/calibration.owl#ParametricBiasCorrection"/>
         <dc:description xml:lang="en">The method is based on the initial assumption that both observed and simulated precipitation intensity distributions are well approximated by the gamma distribution. It yields adjusted precipitation series that have the same statistical intensity distribution as the reference observations.</dc:description>
         <hasProbCharacter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deterministic</hasProbCharacter>
         <hasSeasonality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasSeasonality>
