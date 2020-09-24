@@ -16,9 +16,9 @@
  * Minor annotation updates
  * Allow for updating SpatialExtent of calibrated objects
 
-## v0.4 (in devel)
+## v0.4 (24 Sep 2020)
  * Include new individual instances of BA methods 
  * Include DeltaChange class, different from calibration
  * New isTrendPreserving annotation property
  * Rename individual ISI-MIP --> ISIMIP1 and ISI-MIP3 --> ISIMIP3
- * Minor annotation updates
+ * Other minor annotation updates

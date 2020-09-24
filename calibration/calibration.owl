@@ -18,7 +18,7 @@
         <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.4/calibration.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-24</dc:date>
         <dc:description xml:lang="en">The calibration ontology is aimed at the creation of a conceptual framework to describe the different statistical calibration techniques and procedures used in climate data analysis. In particular, the calibration ontology deals with bias correction, perfect-prog, ensemble recalibration and similar statistical post-processing techniques that rely on an observed reference and a calibration dataset to undertake an adjustment of climate model outputs. The vocabulary is constructed following the naming conventions and techniques followed in several international initiatives, such as the Action COST VALUE and EURO-CORDEX.</dc:description>
         <dc:title xml:lang="en">The Calibration Vocabulary of METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
@@ -679,8 +679,8 @@ the distribution that define climate extremes.</rdfs:comment>
         <rdfs:label>hasProbCharacter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.metaclip.org/calibration/calibration.owl#hasSeasonality">
-        <rdfs:comment xml:lang="en">Describes the procedure followed to deal with the seasonal cycle. Typical values for this property are &quot;none&quot; (in case the seasonal cycle is not taken into account), &quot;n-day moving window&quot;, &quot;monthly&quot;,  &quot;seasonal&quot;.</rdfs:comment>
         <rdfs:label>hasSeasonality</rdfs:label>
+        <rdfs:comment xml:lang="en">Describes the procedure followed to deal with the seasonal cycle. Typical values for this property are &quot;none&quot; (in case the seasonal cycle is not taken into account), &quot;n-day moving window&quot;, &quot;monthly&quot;,  &quot;seasonal&quot;.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.metaclip.org/calibration/calibration.owl#isMultiSite">
         <dc:description xml:lang="en">A data property of the downscaling method that determines whether the :CalibrationMethod is envisaged to reproduce the spatial structure of the observations in the downscaled model outputs</dc:description>
