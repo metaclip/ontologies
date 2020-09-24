@@ -14,17 +14,17 @@
      xmlns:datasource="http://www.metaclip.org/datasource/datasource.owl#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.18/datasource.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/datasource/0.19/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:creator>Santander Meteorology Group &lt;http://meteo.unican.es&gt;</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-09</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-24</dc:date>
         <dc:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...). It also provides a framework for describing the source code generating the product.</dc:description>
         <dc:title xml:lang="en">The Climate Data Source Vocabulary from METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.18</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.19</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2431,7 +2431,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#EUROCordexConservativeRemapping">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ConservativeRemapping"/>
-        <dc:description xml:lang="en">Conservative remapping in which parameters sensitive to land-sea transitions are dually interpolated, i.e. land-sea separated, and then re-combined in one file. Residual missing values (NaN) in the interior domain are filled with values from a straighforward remap.</dc:description>
+        <dc:description xml:lang="en">Conservative remapping in which parameters sensitive to land-sea transitions are dually interpolated, i.e. land-sea separated, and then re-combined in one file. Residual missing values (NaN) in the interior domain are filled with values from a straightforward remap.</dc:description>
         <rdfs:comment xml:lang="en">This conservative remapping approach has been used in the framework of EURO-CORDEX. The basic remapping operand is conservative remapping as defined in CDO.
 1. Variables exposing a large sensitivity to land-sea contrast are remapped with reference to land-sea mask in the native grid and the regular grid. This includes virtually all (near-) surface variables
 2. Near-surface temperature parameters (tas, tasmin, tasmax) are corrected with an adiabatic adjustment (6.5K/km) to account for differences in surface height between source grid points in the native domain and target grid points in the regular grids.
@@ -3187,6 +3187,20 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#W5E5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#W5E5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:description xml:lang="en">The W5E5 dataset was compiled to support the bias adjustment of climate input data for the impact assessments carried out in phase 3b of the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP3b). Version 1.0 of the W5E5 dataset covers the entire globe at 0.5deg horizontal and daily temporal resolution from 1979 to 2016. Data sources of W5E5 are version 1.0 of WATCH Forcing Data methodology applied to ERA5 data (WFDE5; Weedon et al., 2014; Cucchi et al., 2020), ERA5 reanalysis data (Hersbach et al., 2019, 2020), and precipitation data from version 2.3 of the Global Precipitation Climatology Project (GPCP; Adler et al., 2003).</dc:description>
+        <dc:title xml:lang="en">WFDE5 over land merged with ERA5 over the ocean</dc:title>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5880/pik.2019.023</referenceURL>
+        <rdfs:label>W5E5</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ERA5"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#WFDE5"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#WATCH -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WATCH">
@@ -3194,6 +3208,20 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <dc:description xml:lang="en">The EU-WATCH Project</dc:description>
         <rdfs:label>WATCH</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/abs/10.1175/JHM-D-11-024.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#WFDE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/datasource/datasource.owl#WFDE5">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:description xml:lang="en">The WFDE5 dataset has been generated using the WATCH Forcing Data (WFD) methodology applied to surface meteorological variables from the ERA5 reanalysis. The WFDEI dataset had previously been generated by applying the WFD methodology to ERA-Interim. The WFDE5 is provided at 0.5∘ spatial resolution but has higher temporal resolution (hourly) compared to WFDEI (3-hourly). It also has higher spatial variability since it was generated by aggregation of the higher-resolution ERA5 rather than by interpolation of the lower-resolution ERA-Interim data.</dc:description>
+        <dc:title xml:lang="en">Bias-adjusted ERA5 reanalysis data for impact studies</dc:title>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.20d54e34?tab=overview</referenceURL>
+        <rdfs:label>WFDE5</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ERA5"/>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#WFDEI"/>
     </owl:NamedIndividual>
     
 
