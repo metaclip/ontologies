@@ -13,3 +13,8 @@
 ## v0.3 (07 Feb 2020)
  * Added new individual instances of ds:ClimateIndex to be included in the IPCC Atlas
  * Other annotation updates
+
+## v0.4 (25 Sep 2020)
+ * Moved ESGF individual to datasource vocabulary (v0.20)
+
+

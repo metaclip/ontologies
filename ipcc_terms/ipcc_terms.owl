@@ -15,18 +15,18 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.3/ipcc_terms.owl"/>
-        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.17/datasource.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.4/ipcc_terms.owl"/>
+        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.18/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-07</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-25</dc:date>
         <dc:description xml:lang="en">ipcc_terms provides a definition of individual entities used by the Working Group 1 of the IPCC-AR6, extending some the classes of the METACLIP framework.</dc:description>
         <dc:title xml:lang="en">IPCC individual entities of METACLIP generic classes</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -764,19 +764,6 @@
         <dc:description xml:lang="en">EC‐Earth brings together 27 research institutes from 10 European countries to collaborate on the development of the EC-EARTH Earth System Model.</dc:description>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ec-earth.org/community/consortium/</ds:referenceURL>
         <rdfs:label xml:lang="en">EC-EARTH Consortium</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ESGF -->
-
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ESGF">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
-        <dc:description xml:lang="en">Earth System Grid Federation</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.future.2013.07.002</ds:referenceURL>
-        <rdfs:comment xml:lang="en">The Earth System Grid Federation (ESGF) allows users to access, analyze, and visualize data using a globally federated collection of networks, computers, and software. Its architecture employs a system of geographically distributed peer nodes that are independently administered yet united by common federation protocols and application programming interfaces (APIs). The full ESGF infrastructure has now been adopted by multiple Earth science projects and allows access to petabytes of geophysical data, including the Coupled Model Intercomparison Project (CMIP). Data served by ESGF not only include model output (i.e., CMIP simulation runs) but also include observational data from satellites and instruments, reanalyses, and generated images. Metadata summarize basic information about the data for fast and easy data discovery.</rdfs:comment>
-        <rdfs:label>ESGF</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/10.1175/BAMS-D-15-00132.1</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
