@@ -18,17 +18,17 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/graphical_output/graphical_output.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/graphical_output/0.6/graphical_output.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/graphical_output/0.7/graphical_output.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/calibration/calibration.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/verification/0.1/verification.owl"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-08</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-21</dc:date>
         <dc:description xml:lang="en">The Graphical Output Ontology provides a description of graphical climate products (charts, maps...), including a description of uncertainty communication. It has two main components: i) The graphical product description and ii) the description of the uncertainty types communicated by the different graphical elements of the product. There are specific concepts to describe the types of uncertainty and how this is communicated within the product. It extends the ds:Step class from METACLIP&apos;s Data Source Ontology introducing the generation of the graphical product as an additional step within the climate data workflow.</dc:description>
         <dc:title xml:lang="en">The Graphical Product Vocabulary from METACLIP</dc:title>
         <rdfs:seeAlso xml:lang="en">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -912,10 +912,25 @@ are produced following an ensemble approach, considering  a  number of simulatio
         <rdf:type rdf:resource="http://www.metaclip.org/graphical_output/graphical_output.owl#MapProjection"/>
         <dc:title xml:lang="en">Robinson Projection</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spatialreference.org/ref/sr-org/8511/</ds:referenceURL>
+        <epsg_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epsg:54030</epsg_code>
         <isConformal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isConformal>
         <isEqualArea rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isEqualArea>
         <proj_string rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+proj=robin +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs</proj_string>
         <rdfs:comment xml:lang="en">The Robinson projection is a map projection of a world map which shows the entire world at once. It was specifically created in an attempt to find a good compromise to the problem of readily showing the whole globe as a flat image</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/graphical_output/graphical_output.owl#Robin-Pacific -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/graphical_output/graphical_output.owl#Robin-Pacific">
+        <rdf:type rdf:resource="http://www.metaclip.org/graphical_output/graphical_output.owl#MapProjection"/>
+        <dc:title>Pacific centric WGS84 projection</dc:title>
+        <isConformal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isConformal>
+        <isEqualArea rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isEqualArea>
+        <proj_string rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+proj=robin +lon_0=-150 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs</proj_string>
+        <rdfs:comment xml:lang="en">The Robinson projection is a map projection of a world map which shows the entire world at once. It was specifically created in an attempt to find a good compromise to the problem of readily showing the whole globe as a flat image. In this case, the lon center proj parameter is set to -150 so the map is centered on the Pacific Ocean.</rdfs:comment>
+        <rdfs:label>Robin-Pacific</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
