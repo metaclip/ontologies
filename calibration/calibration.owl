@@ -15,7 +15,7 @@
      xmlns:calibration="http://www.metaclip.org/calibration/calibration.owl#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/calibration/calibration.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.4/calibration.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.5/calibration.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-24</dc:date>
@@ -23,7 +23,7 @@
         <dc:title xml:lang="en">The Calibration Vocabulary of METACLIP</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     
 
