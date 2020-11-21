@@ -103,9 +103,10 @@
  * Add WFDE5 and W5E5 individuals
  * Minor annotation updates and fixed typos
 
-## v0.20 (25 Sep 2020)
+## v0.20 (21 Nov 2020)
  * Add ESGF individual of the DataProvider class (removed from ipcc_terms)
- * Annotation updates
+ * Include Variable in withVersionTag domain (to annotate CMIP6 variable versions)
+ * Other annotation updates
 
 
 
