@@ -16,5 +16,8 @@
 
 ## v0.4 (25 Sep 2020)
  * Moved ESGF individual to datasource vocabulary (v0.20)
+ * Add new individuals for CMIP6 Modelling Centers and GCMs
+ * Add new individual for Pacific-centric Projection
+ * Add individuals for several SSPs
 
 
