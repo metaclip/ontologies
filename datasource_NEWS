@@ -108,6 +108,8 @@
  * Include Variable in withVersionTag domain (to annotate CMIP6 variable versions)
  * Other annotation updates
 
+## v0.21 (22 Nov 2020)
+ * Include DatasetSubset in withVersionTag domain (to annotate CMIP6 variable versions)
 
 
 
