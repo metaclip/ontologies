@@ -1864,6 +1864,18 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#DKRZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#DKRZ">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="de">Deutsches Klimarechenzentrum</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dkrz.de/dkrz-partner-for-climate-research?set_language=en&amp;cl=en</ds:referenceURL>
+        <rdfs:label>DKRZ</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#DMI -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#DMI">
