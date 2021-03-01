@@ -15,18 +15,18 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.5/ipcc_terms.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.6/ipcc_terms.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.21/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-23</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-24</dc:date>
         <dc:description xml:lang="en">ipcc_terms provides a definition of individual entities used by the Working Group 1 of the IPCC-AR6, extending some the classes of the METACLIP framework.</dc:description>
         <dc:title xml:lang="en">IPCC individual entities of METACLIP generic classes</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -293,6 +293,12 @@
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#Project -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#Project"/>
@@ -462,6 +468,17 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.climatescience.org.au/</ds:referenceURL>
         <rdfs:comment xml:lang="en">The Australian Research Council’s Centre of Excellence for Climate System Science’s website is no longer actively maintained and administered.</rdfs:comment>
         <rdfs:label>ARCCSS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AS-RCEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AS-RCEC">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Research Center for Environmental Changes - Academia SInica</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.rcec.sinica.edu.tw/index_en.php</ds:referenceURL>
+        <rdfs:label>AS-RCEC</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2542,6 +2559,18 @@ The model was run by the ETH Zurich, Switzerland; Max Planck Institut fur Meteor
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MPI-ESM1-2-HR -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MPI-ESM1-2-HR">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/gmd-12-3241-2019</ds:referenceURL>
+        <rdfs:label>MPI-ESM1-2-HR</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1029/2018MS001400</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mpimet.mpg.de/en/science/projects/integrated-activities/cmip6</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MPI-ESM1-2-LR -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MPI-ESM1-2-LR">
@@ -3030,6 +3059,16 @@ aerosol: OsloAero, atmos: CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; t
         <ds:inputECV rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ta"/>
         <ds:thresholdType>Absolute</ds:thresholdType>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmaxNa35</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#TaiESM1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#TaiESM1">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cclics.rcec.sinica.edu.tw/index.php/en/databaseen/data/68-cclics-model-output/934-historical-taiesm1-cam5.html</ds:referenceURL>
+        <rdfs:label>TaiESM1</rdfs:label>
     </owl:NamedIndividual>
     
 
