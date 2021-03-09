@@ -16,7 +16,7 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl">
         <owl:versionIRI rdf:resource="http://www.metaclip.org/ipcc_terms/0.6/ipcc_terms.owl"/>
-        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.21/datasource.owl"/>
+        <owl:imports rdf:resource="http://www.metaclip.org/datasource/0.22/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
@@ -462,11 +462,10 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AFR-22 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AFR-22">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX AFR-22 Domain, centered over Africa</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-5-africa/</ds:referenceURL>
         <rdfs:label>AFR-22</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -474,11 +473,10 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AFR-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AFR-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX AFR-44 Domain, centered over Africa</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-5-africa/</ds:referenceURL>
         <rdfs:label>AFR-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -523,11 +521,10 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-22 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-22">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX AUS-22 Domain, centered over Australasia</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-9-australasia/</ds:referenceURL>
         <rdfs:label>AUS-22</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -535,11 +532,10 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX AUS-44 Domain, centered over Australasia</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-9-australasia/</ds:referenceURL>
         <rdfs:label>AUS-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -547,11 +543,10 @@ The model was run by the Commonwealth Scientific and Industrial Research Organis
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-44i -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#AUS-44i">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX AUS-44 Domain, centered over Australasia. The &apos;i&apos; suffix indicates a regular geographic grid.</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-9-australasia/</ds:referenceURL>
         <rdfs:label>AUS44i</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -641,11 +636,10 @@ The model was run by the Beijing Climate Center, Beijing 100081, China (BCC) in 
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CAM-22 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CAM-22">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX CAM-22 Domain, centered over Central America</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-central-america-cordex/</ds:referenceURL>
         <rdfs:label>CAM-22</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -653,11 +647,10 @@ The model was run by the Beijing Climate Center, Beijing 100081, China (BCC) in 
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CAM-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CAM-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX CAM-44 Domain, centered over Central America</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-central-america-cordex/</ds:referenceURL>
         <rdfs:label>CAM-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -735,8 +728,9 @@ The model was run by the Canadian Centre for Climate Modelling and Analysis, Env
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCLM4-8-17">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.clm-community.eu/index.php?menuid=220</ds:referenceURL>
-        <rdfs:label xml:lang="en">CCLM4-8-17</rdfs:label>
+        <dc:title xml:lang="en">The COSMO model in CLimate Mode (COSMO-CLM)</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cosmo-model.org/content/model/documentation/core/default.htm</ds:referenceURL>
+        <rdfs:label>CCLM4-8-17</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -745,7 +739,8 @@ The model was run by the Canadian Centre for Climate Modelling and Analysis, Env
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCLM4-8-17-CLM3-5">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.clm-community.eu/index.php?menuid=220</ds:referenceURL>
+        <dc:title xml:lang="en">The COSMO model in CLimate Mode (COSMO-CLM)</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cosmo-model.org/content/model/documentation/core/default.htm</ds:referenceURL>
         <rdfs:label>CCLM4-8-17-CLM3-5</rdfs:label>
     </owl:NamedIndividual>
     
@@ -755,7 +750,20 @@ The model was run by the Canadian Centre for Climate Modelling and Analysis, Env
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCLM5-0-15">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:title xml:lang="en">The COSMO model in CLimate Mode (COSMO-CLM)</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cosmo-model.org/content/model/documentation/core/default.htm</ds:referenceURL>
         <rdfs:label>CCLM5-0-15</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCLM5-0-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CCLM5-0-2">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:title xml:lang="en">The COSMO model in CLimate Mode (COSMO-CLM)</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cosmo-model.org/content/model/documentation/core/default.htm</ds:referenceURL>
+        <rdfs:label>CCLM5-0-2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3258,7 +3266,7 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-AFR">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
-        <dc:description xml:lang="en">The Cordex-Africa initiative has been developed to analyze downscaled regional climate data over the CORDEX-African domain.</dc:description>
+        <dc:description xml:lang="en">The Cordex-Africa initiative has been developed to analyze downscaled regional climate data over the CORDEX-African domain (CORDEX Region 5).</dc:description>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.csag.uct.ac.za/cordex-africa/</ds:referenceURL>
         <rdfs:label>CORDEX-Africa</rdfs:label>
         <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
@@ -3270,7 +3278,7 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-ARC">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
-        <dc:description xml:lang="en">The Cordex-Arctic initiative has been developed to analyze downscaled regional climate data over the CORDEX-Arctic domain.</dc:description>
+        <dc:description xml:lang="en">The Cordex-Arctic initiative has been developed to analyze downscaled regional climate data over the CORDEX-Arctic domain (CORDEX Region 11).</dc:description>
         <dc:title>CORDEX Arctic</dc:title>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">CORDEX-ARC</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.climate-cryosphere.org/activities/polar-cordex</rdfs:seeAlso>
@@ -3284,7 +3292,7 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-AUS">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
-        <dc:description xml:lang="en">The Cordex-Australasia initiative has been developed to analyze downscaled regional climate data over the CORDEX-Australian domain.</dc:description>
+        <dc:description xml:lang="en">The Cordex-Australasia initiative has been developed to analyze downscaled regional climate data over the CORDEX-Australian domain (CORDEX Region 9).</dc:description>
         <dc:title>CORDEX Australasia</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cordex-australasia.wikidot.com/</ds:referenceURL>
         <rdfs:label>CORDEX-AUS</rdfs:label>
@@ -3298,7 +3306,36 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-CAM">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
         <dc:description xml:lang="en">The Cordex-CAM initiative has been developed to analyze downscaled regional climate data over Central America (CORDEX Region 2).</dc:description>
+        <dc:title>CORDEX Central America</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-central-america-cordex/</ds:referenceURL>
+        <rdfs:label>CORDEX-CAM</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-EAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-EAS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The Cordex-EAS initiative has been developed to analyze downscaled regional climate data over East Asia (CORDEX Region 7).</dc:description>
+        <dc:title>CORDEX East Asia</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cordex-ea.climate.go.kr/cordex/</ds:referenceURL>
+        <rdfs:label>CORDEX-EAS</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-NAM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-NAM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The Cordex-NAM initiative has been developed to analyze downscaled regional climate data over North America (CORDEX Region 3).</dc:description>
+        <dc:title xml:lang="en">CORDEX North America</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://na-cordex.org/</ds:referenceURL>
+        <rdfs:label xml:lang="en">CORDEX-NAM</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
     </owl:NamedIndividual>
     
 
@@ -3311,6 +3348,55 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.climate-cryosphere.org/activities/polar-cordex</ds:referenceURL>
         <rdfs:label>Polar-CORDEX</rdfs:label>
         <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-SAM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-SAM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The Cordex-SAM initiative has been developed to analyze downscaled regional climate data over South America (CORDEX Region 1).</dc:description>
+        <dc:title>CORDEX South America</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-south-america-cordex/</ds:referenceURL>
+        <rdfs:label>CORDEX-SAM</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-SEA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-SEA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The Cordex-SEA initiative has been developed to analyze downscaled regional climate data over South East Asia (CORDEX Region 14).</dc:description>
+        <dc:title xml:lang="en">CORDEX South East Asia</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ukm.my/seaclid-cordex/</ds:referenceURL>
+        <rdfs:label>CORDEX-SEA</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-WAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX-WAS">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">The Cordex-WAS initiative has been developed to analyze downscaled regional climate data over South Asia.</dc:description>
+        <dc:title xml:lang="en">CORDEX South Asia</dc:title>
+        <rdfs:label>CORDEX-WAS</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CORDEX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#COSMO-crCLIM-v1-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#COSMO-crCLIM-v1-1">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label>COSMO-crCLIM-v1-1</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cosmo-model.org/content/model/documentation/core/default.htm</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://crclim.ch/</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -3431,6 +3517,28 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EAS-22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EAS-22">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX EAS-22 Domain, centered over East Asia</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-7-east-asia/</ds:referenceURL>
+        <rdfs:label>EAS-22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EAS-44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EAS-44">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX EAS-44 Domain, centered over East Asia</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-7-east-asia/</ds:referenceURL>
+        <rdfs:label>EAS-44</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EC-EARTH -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EC-EARTH">
@@ -3481,14 +3589,25 @@ The model was run by the AEMET, Spain; BSC, Spain; CNR-ISAC, Italy; DMI, Denmark
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ETH -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ETH">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title>ETH Zurich</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ethz.ch/en.html</ds:referenceURL>
+        <rdfs:label>ETH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EUR-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#EUR-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX EUR-44 Domain, centered over Europe</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-euro-cordex/</ds:referenceURL>
         <rdfs:label>EUR-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -3781,6 +3900,18 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IITM -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IITM">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Indian Institute of Tropical Meteorology</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tropmet.res.in/</ds:referenceURL>
+        <rdfs:label>IITM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IITM-ESM -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#IITM-ESM">
@@ -3906,6 +4037,18 @@ atmos: LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 80000
 The model was run by the Institut Pierre Simon Laplace, Paris 75252, France (IPSL) in native nominal resolutions: atmos: 250 km, land: 250 km, ocean: 100 km, ocnBgchem: 100 km, seaIce: 100 km.</dc:description>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1029/2019MS002010</ds:referenceURL>
         <rdfs:label>IPSL-CM6A-LR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ISU -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ISU">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Iowa State University</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ge-at.iastate.edu/</ds:referenceURL>
+        <rdfs:label>ISU</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4042,6 +4185,7 @@ aerosol: UKCA-GLOMAP-mode, atmos: MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MGO -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#MGO">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
         <dc:title xml:lang="en">Voeikov Main Geophysical Observatory, St. Petersburg</dc:title>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://voeikovmgo.ru/?lang=en</ds:referenceURL>
@@ -4249,14 +4393,24 @@ aerosol: MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NAM-22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NAM-22">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX NAM-22 Domain, centered over North America</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region1-north-america/</ds:referenceURL>
+        <rdfs:label>NAM-22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NAM-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#NAM-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX NAM-44 Domain, centered over North America</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region1-north-america/</ds:referenceURL>
         <rdfs:label>NAM-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -4462,6 +4616,18 @@ aerosol: OsloAero, atmos: CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; t
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ORNL -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#ORNL">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Oak Ridge National Laboratory</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ornl.gov/</ds:referenceURL>
+        <rdfs:label>ORNL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#OURANOS -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#OURANOS">
@@ -4622,12 +4788,33 @@ aerosol: OsloAero, atmos: CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; t
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RU-CORE -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RU-CORE">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">Ramkhamhaeng University - Center of Regional Climate Change and Renewable Energy</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.rucore.ru.ac.th/</ds:referenceURL>
+        <rdfs:label>RU-CORE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RegCM4-3 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RegCM4-3">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/ictp-esp/RegCM</ds:referenceURL>
         <rdfs:label>RegCM4-3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RegCM4-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#RegCM4-4">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/ictp-esp/RegCM</ds:referenceURL>
+        <rdfs:label>RegCM4-4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4642,14 +4829,35 @@ aerosol: OsloAero, atmos: CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; t
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SAM-22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SAM-22">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX SAM-22 Domain, centered over South America</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-south-america-cordex/</ds:referenceURL>
+        <rdfs:label>SAM-22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SAM-44 -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SAM-44">
-        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#HorizontalExtent"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
         <dc:description xml:lang="en">CORDEX SAM-44 Domain, centered over South America</dc:description>
-        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</ds:referenceURL>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-south-america-cordex/</ds:referenceURL>
         <rdfs:label>SAM-44</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SEA-22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SEA-22">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX SEA-22 Domain, centered over South East Asia</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-14-south-east-asia-sea/</ds:referenceURL>
+        <rdfs:label>SEA-22</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4767,6 +4975,30 @@ aerosol: OsloAero, atmos: CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; t
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UA -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UA">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">University of Arizona</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.arizona.edu/</ds:referenceURL>
+        <rdfs:label>UA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UCAN -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UCAN">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="es">Universidad de Cantabria</dc:title>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://web.unican.es/en/Pages/default.aspx</ds:referenceURL>
+        <rdfs:label>UCAN</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#SMG"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UKESM-1-0-LL -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#UKESM-1-0-LL">
@@ -4839,6 +5071,28 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     
 
 
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WAS-22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WAS-22">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX WAS-22 Domain, centered over South Asia</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-6-south-asia-2/</ds:referenceURL>
+        <rdfs:label>WAS-22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WAS-44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WAS-44">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">CORDEX WAS-44 Domain, centered over South Asia</dc:description>
+        <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/region-6-south-asia-2/</ds:referenceURL>
+        <rdfs:label>WAS-44</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF -->
 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF">
@@ -4855,6 +5109,17 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF331F">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:label>WRF331F</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF341I -->
+
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF341I">
+        <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:label>WRF341I</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF"/>
     </owl:NamedIndividual>
     
 
@@ -4864,6 +5129,7 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF360J">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:label>WRF360J</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF"/>
     </owl:NamedIndividual>
     
 
@@ -4873,6 +5139,7 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF360K">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:label>WRF360K</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF"/>
     </owl:NamedIndividual>
     
 
@@ -4882,6 +5149,7 @@ The model was run by the Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, 
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF360L">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:label>WRF360L</rdfs:label>
+        <prov:specializationOf rdf:resource="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#WRF"/>
     </owl:NamedIndividual>
     
 

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.metaclip.org/datasource/0.22/datasource.owl" uri="http://www.metaclip.org/datasource/datasource.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.metaclip.org/datasource/0.21/datasource.owl" uri="http://www.metaclip.org/datasource/datasource.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.metaclip.org/datasource/0.18/datasource.owl" uri="https://raw.githubusercontent.com/metaclip/vocabularies/master/datasource/datasource.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.metaclip.org/datasource/0.17/datasource.owl" uri="https://raw.githubusercontent.com/metaclip/vocabularies/master/datasource/datasource.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.metaclip.org/datasource/0.15/datasource.owl" uri="http://www.metaclip.org/datasource/datasource.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1614789066621" name="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl" uri="ipcc_terms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1615217924640" name="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl" uri="ipcc_terms.owl"/>
     </group>
 </catalog>
