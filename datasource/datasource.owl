@@ -172,21 +172,13 @@
 
     <!-- http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole -->
 
-    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole">
-        <dc:description xml:lang="en">Position of the North Pole in a rotated pole grid, in geographical coordinates of the form (lon, lat)</dc:description>
-        <rdfs:label>rotated_north_pole</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole"/>
     
 
 
     <!-- http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude -->
 
-    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude">
-        <dc:description xml:lang="en">Position of the zero longitude in a rotated pole grid, in geographical coordinates of the form (lon, lat)</dc:description>
-        <rdfs:label>rotated_zero_longitude</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude"/>
     
 
 
@@ -1185,6 +1177,22 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:description xml:lang="en">Vertical Level</dc:description>
         <rdfs:label xml:lang="en">hasVerticalLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
     </owl:DatatypeProperty>
     
 
@@ -2205,6 +2213,7 @@ C3S is one of six core thematic services of Copernicus, the European Union&apos;
         <indexType xml:lang="en">extremes</indexType>
         <inputECV xml:lang="en">precipitation</inputECV>
         <thresholdType xml:lang="en">absolute</thresholdType>
+        <rdfs:comment xml:lang="en">This climate index is a measure of low precipitation, with high values corresponding to long periods of low precipitation and potentially drought-favouring conditions. An increase of this index with time means that the chance of drought conditions will increase.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CDD</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
@@ -3520,6 +3529,25 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_north_pole">
+        <rdfs:label>rotated_north_pole</rdfs:label>
+        <dc:description xml:lang="en">Position of the North Pole in a rotated pole grid, in geographical coordinates of the form (lon, lat)</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.metaclip.org/datasource/datasource.owl#rotated_zero_longitude">
+        <dc:description xml:lang="en">Position of the zero longitude in a rotated pole grid, in geographical coordinates of the form (lon, lat)</dc:description>
+        <rdfs:label>rotated_zero_longitude</rdfs:label>
     </rdf:Description>
     
 

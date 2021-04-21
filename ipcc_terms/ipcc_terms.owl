@@ -3508,9 +3508,10 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
     <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#DS">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
         <dc:description xml:lang="en">Maximum length of dry spell, maximum number of consecutive days with RR &lt; 1mm</dc:description>
-        <dc:title xml:lang="en">Dry Spell</dc:title>
+        <dc:title xml:lang="en">Consecutive Dry Days</dc:title>
+        <rdfs:comment xml:lang="en">This climate index is a measure of low precipitation, with high values corresponding to long periods of low precipitation and potentially drought-favouring conditions. An increase of this index with time means that the chance of drought conditions will increase.</rdfs:comment>
         <rdfs:comment xml:lang="en">This index is already defined ds:CDD. This is a synonym used in AR5 to refer to CDD (consecutive dry days, as defined by the ETCCDI)</rdfs:comment>
-        <rdfs:label>DS</rdfs:label>
+        <rdfs:label>CDD</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#CDD"/>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/datasource/datasource.owl#ETCCDI"/>
     </owl:NamedIndividual>
