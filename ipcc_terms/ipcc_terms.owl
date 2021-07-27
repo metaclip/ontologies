@@ -21,7 +21,7 @@
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-24</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-27</dc:date>
         <dc:description xml:lang="en">ipcc_terms provides a definition of individual entities used by the Working Group 1 of the IPCC-AR6, extending some the classes of the METACLIP framework.</dc:description>
         <dc:title xml:lang="en">IPCC individual entities of METACLIP generic classes</dc:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
@@ -3436,12 +3436,12 @@ The model was run by the CNRM (Centre National de Recherches Meteorologiques, To
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-Mk3.6.0 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-Mk3-6-0 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-Mk3.6.0">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CSIRO-Mk3-6-0">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.atmos-chem-phys.net/12/6377/2012/acp-12-6377-2012.html</ds:referenceURL>
-        <rdfs:label>CSIRO-Mk3.6.0</rdfs:label>
+        <rdfs:label>CSIRO-Mk3-6-0</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://www.bom.gov.au/amoj/docs/2013/jeffrey_hres.pdf</rdfs:seeAlso>
     </owl:NamedIndividual>
     
@@ -3976,12 +3976,12 @@ The model was run by the Institute for Numerical Mathematics, Russian Academy of
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4.0 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4.0">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#INMCM4">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#GCM"/>
         <ds:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.doi.org/10.1134/S000143381004002X</ds:referenceURL>
-        <rdfs:label>INMCM4.0</rdfs:label>
+        <rdfs:label>INMCM4</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/esd-9-1235-2018</rdfs:seeAlso>
     </owl:NamedIndividual>
     
