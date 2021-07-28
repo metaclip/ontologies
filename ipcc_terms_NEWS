@@ -20,4 +20,8 @@
  * Add new individual for Pacific-centric Projection
  * Add individuals for several SSPs
 
+## v0.5 (08 Mar 2021)
+ * Include individual instances of CMIP5/6 datasets
 
+## v0.6 (28 Jul 2021)
+ * Rename some datasets to fix GCM naming (for consistency with IA)

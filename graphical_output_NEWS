@@ -28,3 +28,7 @@
 ## v0.7 (21 Nov 2020)
  * Add Robin-Pacific instance of MapProjection
 
+## v0.8 (28 Jul 2021)
+ * Rename Robin --> Robinson
+ * Other minor annotation changes
+
