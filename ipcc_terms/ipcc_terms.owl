@@ -1192,33 +1192,33 @@ The model was run by the National Center for Atmospheric Research, Climate and G
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_historical -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_historical -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_historical">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_historical">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp26 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp26 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp26">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp26">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp45 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp45 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp45">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp45">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp85 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp85 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3.6.0_rcp85">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_CSIRO-Mk3-6-0_rcp85">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
@@ -1440,25 +1440,25 @@ The model was run by the National Center for Atmospheric Research, Climate and G
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_historical -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_historical -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_historical">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_historical">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_rcp45 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_rcp45 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_rcp45">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_rcp45">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_rcp85 -->
+    <!-- http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_rcp85 -->
 
-    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4.0_rcp85">
+    <owl:NamedIndividual rdf:about="http://www.metaclip.org/ipcc_terms/ipcc_terms.owl#CMIP5_INMCM4_rcp85">
         <rdf:type rdf:resource="http://www.metaclip.org/datasource/datasource.owl#MultiDecadalSimulation"/>
     </owl:NamedIndividual>
     
