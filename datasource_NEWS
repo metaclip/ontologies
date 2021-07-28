@@ -114,6 +114,9 @@
 ## v0.22 (08 Mar 2021)
  * Add CORDEXdomain as subclass of HorizontalExtent
 
+## v0.23 (28 Jul 2021)
+ * Fix a few GCM names consistently with IPCC AR6 WGI Atlas Chapter naming
+
 
  
  
