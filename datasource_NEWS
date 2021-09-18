@@ -117,6 +117,10 @@
 ## v0.23 (28 Jul 2021)
  * Fix a few GCM names consistently with IPCC AR6 WGI Atlas Chapter naming
 
+## v0.24 (18 Sep 2021)
+ * New ocean variables
+ * Minor annotation updates and fixed typos
+
 
  
  
