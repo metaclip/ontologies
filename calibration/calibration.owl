@@ -120,17 +120,6 @@
 
 
 
-    <!-- http://www.metaclip.org/calibration/calibration.owl#Downscaling -->
-
-    <owl:Class rdf:about="http://www.metaclip.org/calibration/calibration.owl#Downscaling">
-        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
-        <dc:description>A downscaling operation refers to the computational procedure applied to transform coarser-resolution climate data into finer-resolution representations, typically achieved through statistical or dynamical methodologies. This process involves the utilization of mathematical algorithms or numerical simulations to extrapolate localized climate phenomena and detailed spatial patterns from broader-scale atmospheric or oceanic information, thus facilitating more precise analyses and projections at regional or local scales.</dc:description>
-        <dc:title>Downscaling</dc:title>
-        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Downscaling</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
     <!-- http://www.metaclip.org/calibration/calibration.owl#withCalibrationMethod -->
 
     <owl:ObjectProperty rdf:about="http://www.metaclip.org/calibration/calibration.owl#withCalibrationMethod">
@@ -288,9 +277,20 @@
         <rdfs:label>Delta Change</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nature.com/doifinder/10.1038/nature09388</rdfs:seeAlso>
     </owl:Class>
+
+
+
+    <!-- http://www.metaclip.org/calibration/calibration.owl#Downscaling -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/calibration/calibration.owl#Downscaling">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Step"/>
+        <dc:description>A downscaling operation refers to the computational procedure applied to transform coarser-resolution climate data into finer-resolution representations, typically achieved through statistical or dynamical methodologies. This process involves the utilization of mathematical algorithms or numerical simulations to extrapolate localized climate phenomena and detailed spatial patterns from broader-scale atmospheric or oceanic information, thus facilitating more precise analyses and projections at regional or local scales.</dc:description>
+        <dc:title>Downscaling</dc:title>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Downscaling</rdfs:seeAlso>
+    </owl:Class>
+
+
     
-
-
     <!-- http://www.metaclip.org/calibration/calibration.owl#ESD -->
 
     <owl:Class rdf:about="http://www.metaclip.org/calibration/calibration.owl#ESD">
