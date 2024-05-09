@@ -283,7 +283,7 @@
     <!-- http://www.metaclip.org/calibration/calibration.owl#Downscaling -->
 
     <owl:Class rdf:about="http://www.metaclip.org/calibration/calibration.owl#Downscaling">
-        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Calibration"/>
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/calibration/calibration.owl#Calibration"/>
         <dc:description>A downscaling operation refers to the computational procedure applied to transform coarser-resolution climate data into finer-resolution representations, typically achieved through statistical or dynamical methodologies. This process involves the utilization of mathematical algorithms or numerical simulations to extrapolate localized climate phenomena and detailed spatial patterns from broader-scale atmospheric or oceanic information, thus facilitating more precise analyses and projections at regional or local scales.</dc:description>
         <dc:title>Downscaling</dc:title>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Downscaling</rdfs:seeAlso>
