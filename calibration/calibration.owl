@@ -15,15 +15,19 @@
      xmlns:calibration="http://www.metaclip.org/calibration/calibration.owl#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.metaclip.org/calibration/calibration.owl">
-        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.5/calibration.owl"/>
+        <owl:versionIRI rdf:resource="http://www.metaclip.org/calibration/0.6/calibration.owl"/>
         <owl:imports rdf:resource="http://www.metaclip.org/datasource/datasource.owl"/>
         <dc:creator xml:lang="en">Santander Meteorology Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-24</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-11T11:05:00Z</dc:date>
         <dc:description xml:lang="en">The calibration ontology is aimed at the creation of a conceptual framework to describe the different statistical calibration techniques and procedures used in climate data analysis. In particular, the calibration ontology deals with bias correction, perfect-prog, ensemble recalibration and similar statistical post-processing techniques that rely on an observed reference and a calibration dataset to undertake an adjustment of climate model outputs. The vocabulary is constructed following the naming conventions and techniques followed in several international initiatives, such as the Action COST VALUE and EURO-CORDEX.</dc:description>
         <dc:title xml:lang="en">The Calibration Vocabulary of METACLIP</dc:title>
+        <terms:contributor>Albert Puiggros</terms:contributor>
+        <terms:contributor>Daniel San Martín</terms:contributor>
+        <terms:contributor>Joaquín Bedia</terms:contributor>
+        <terms:contributor>Jose Manuel Gutiérrez</terms:contributor>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -104,7 +108,7 @@
         <dc:description xml:lang="en">This object property links a ds:Dtep with a :Calibration step</dc:description>
         <rdfs:label>hadCalibration</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.metaclip.org/calibration/calibration.owl#hadDeltaChange -->
@@ -117,7 +121,7 @@
         <rdfs:label>hadDeltaChange</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.metaclip.org/calibration/calibration.owl#DeltaChange"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.metaclip.org/calibration/calibration.owl#withCalibrationMethod -->
@@ -277,7 +281,7 @@
         <rdfs:label>Delta Change</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nature.com/doifinder/10.1038/nature09388</rdfs:seeAlso>
     </owl:Class>
-
+    
 
 
     <!-- http://www.metaclip.org/calibration/calibration.owl#Downscaling -->
@@ -288,9 +292,9 @@
         <dc:title>Downscaling</dc:title>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Downscaling</rdfs:seeAlso>
     </owl:Class>
-
-
     
+
+
     <!-- http://www.metaclip.org/calibration/calibration.owl#ESD -->
 
     <owl:Class rdf:about="http://www.metaclip.org/calibration/calibration.owl#ESD">
