@@ -121,6 +121,9 @@
  * New ocean variables
  * Minor annotation updates and fixed typos
 
-
+## v0.25 (19 Jun 2024)
+ * New prov:SoftwareAgent subclasses to describe GCM components (ocean, land lurface, lea-Ice models etc.)
  
- 
+## v0.26 (in devel)
+ * New annotation properties compatible with CMIP6 controlled vocabularies 
+ * Other minor annotation updates
