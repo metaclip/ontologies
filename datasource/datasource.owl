@@ -1863,6 +1863,17 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#LandIceModel -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#LandIceModel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <dc:description xml:lang="en">A land-ice model is a computational tool used to simulate the behavior of ice sheets and glaciers on land.</dc:description>
+        <rdfs:comment xml:lang="en">These models are used to understand and predict how ice sheets and glaciers respond to changes in climate and contribute to sea level rise. They take into account various factors such as ice dynamics, surface mass balance, and interactions with the atmosphere and oceans.</rdfs:comment>
+        <rdfs:label>LandIceModel</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#LandSurfaceModel -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#LandSurfaceModel">
@@ -1964,6 +1975,18 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#OceanBgchemModel -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#OceanBgchemModel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <dc:description xml:lang="en">An ocean biogeochemical model (ds:OceanBgchmeModel) with a climate model is a complex system that simulates the interactions between the ocean’s physical properties, circulation, and biogeochemical transformations. It describes the ocean’s temperature, salinity distributions, and circulation, which includes wind and density-driven currents, and wind, convective, and eddy-driven mixing. They also describe the transformations of biogeochemical constituents contained in seawater, typically nutrients, functional plankton groups, non-living organic matter, dissolved gases, and parameters of the inorganic carbon system</dc:description>
+        <rdfs:comment xml:lang="en">These models can be regional or global in their geographical scope and can be a component of a larger model, such as Earth System Models (ESMs), where the OceanBgchemModel is coupled to a model of the atmosphere and land biosphere.</rdfs:comment>
+        <rdfs:label>OceanBgchemModel</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1038/s43586-022-00154-2</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#OceanModel -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#OceanModel">
@@ -2014,7 +2037,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#RCM">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
-        <rdfs:comment xml:lang="en">A Regional Climate Model. It is a numerical climate prediction model forced by specified lateral and ocean conditions from a general circulation model (GCM) or observation-based dataset (reanalysis) that simulates atmospheric and land surface processes, while accounting for high-resolution topographical data, land-sea contrasts, surface characteristics, and other components of the Earth-system. Since RCMs only cover a limited domain, the values at their boundaries must be specified explicitly, referred to as boundary conditions, by the results from a coarser GCM or reanalysis; RCMs are initialized with the initial conditions and driven along its lateral-atmospheric-boundaries and lower-surface boundaries with time-variable conditions. RCMs thus downscale global reanalysis or GCM runs to simulate climate variability with regional refinements.</rdfs:comment>
+        <dc:description xml:lang="en">A Regional Climate Model. It is a numerical climate prediction model forced by specified lateral and ocean conditions from a general circulation model (GCM) or observation-based dataset (reanalysis) that simulates atmospheric and land surface processes, while accounting for high-resolution topographical data, land-sea contrasts, surface characteristics, and other components of the Earth-system.</dc:description>
+        <rdfs:comment xml:lang="en">Since RCMs only cover a limited domain, the values at their boundaries must be specified explicitly, referred to as boundary conditions, by the results from a coarser GCM or reanalysis; RCMs are initialized with the initial conditions and driven along its lateral-atmospheric-boundaries and lower-surface boundaries with time-variable conditions. RCMs thus downscale global reanalysis or GCM runs to simulate climate variability with regional refinements.</rdfs:comment>
         <rdfs:label>RCM</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://glossary.ametsoc.org/wiki/Regional_climate_model</rdfs:seeAlso>
     </owl:Class>
