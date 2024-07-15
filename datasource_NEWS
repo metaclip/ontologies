@@ -124,7 +124,8 @@
 ## v0.25 (19 Jun 2024)
  * New prov:SoftwareAgent subclasses to describe GCM components (ocean, land lurface, lea-Ice models etc.)
  
-## v0.26 (in devel)
+## v0.26 (15 Jul 2024)
  * New annotation properties compatible with CMIP6 controlled vocabularies 
  * Additional GCM components: new OcnBgChem and Land-Ice model SoftwareAgent sibling classes
  * Other minor annotation updates
+
