@@ -126,4 +126,5 @@
  
 ## v0.26 (in devel)
  * New annotation properties compatible with CMIP6 controlled vocabularies 
+ * Additional GCM components: new OcnBgChem and Land-Ice model SoftwareAgent sibling classes
  * Other minor annotation updates
