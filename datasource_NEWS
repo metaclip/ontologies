@@ -129,3 +129,13 @@
  * Additional GCM components: new OcnBgChem and Land-Ice model SoftwareAgent sibling classes
  * Other minor annotation updates
 
+## v0.27 (25 Jul 2024)
+ * Remove ds:VariableStandardDefinition Class -> replaced by standard_name annotation property of ds:Variable class
+ * Included new annotation properties for ds:Variable entities from CMIP6 CVs
+ * Rename entity hasCellMethod --> hasCellMethods (in plural)
+ * Add hasModelComponent subproperties for specific GCM Components
+ * Add Copernicus-CMIP6-Projections as individual instance of Dataset
+ * Other minor annotation updates and old, unused data properties removed
+
+
+
