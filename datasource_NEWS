@@ -137,5 +137,8 @@
  * Add Copernicus-CMIP6-Projections as individual instance of Dataset
  * Other minor annotation updates and old, unused data properties removed
 
+## v0.28 (26 Jul 2024)
+ * New annotation property ds:dimensions (for CMIP6 variables vocabulary)
+
 
 
