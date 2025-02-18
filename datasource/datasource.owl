@@ -2317,6 +2317,17 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#UnitConversion -->
+
+    <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#UnitConversion">
+        <rdfs:subClassOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Transformation"/>
+        <dc:description xml:lang="en">Unit conversion represents the process of transforming a measurement value from one unit of measurement to another within a defined system. This class is used to define conversion factors, rules, and relationships between different units.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Unit conversion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#ValidationTime -->
 
     <owl:Class rdf:about="http://www.metaclip.org/datasource/datasource.owl#ValidationTime">
