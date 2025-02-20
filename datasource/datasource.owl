@@ -709,6 +709,19 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- http://www.metaclip.org/datasource/datasource.owl#hadUnitConversion -->
+
+    <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hadUnitConversion">
+        <rdfs:subPropertyOf rdf:resource="http://www.metaclip.org/datasource/datasource.owl#hadDerivation"/>
+        <rdfs:domain rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:comment xml:lang="en">hadUnitConversion is used to describe cases where a unit conversion has been applied to a variable, leading to a transformed version of that variable. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
+        <rdfs:label>hadUnitConversion</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://www.metaclip.org/datasource/datasource.owl#hasAerosolModelComponent -->
 
     <owl:ObjectProperty rdf:about="http://www.metaclip.org/datasource/datasource.owl#hasAerosolModelComponent">
