@@ -140,5 +140,7 @@
 ## v0.28 (26 Jul 2024)
  * New annotation property ds:dimensions (for CMIP6 variables vocabulary)
 
-
+## v0.30 (11 Apr 2025) 
+ * Replace http by https in METACLIP ontology IRIs
+ 
 
