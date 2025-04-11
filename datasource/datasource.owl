@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.metaclip.org/datasource/datasource.owl#"
-     xml:base="http://www.metaclip.org/datasource/datasource.owl"
+<rdf:RDF xmlns="https://www.metaclip.org/datasource/datasource.owl#"
+     xml:base="https://www.metaclip.org/datasource/datasource.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ds="https://www.metaclip.org/datasource/datasource.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,8 +12,6 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:datasource="http://www.metaclip.org/datasource/datasource.owl#"
-     xmlns:datasource1="https://www.metaclip.org/datasource/datasource.owl#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://www.metaclip.org/datasource/datasource.owl">
         <owl:versionIRI rdf:resource="https://www.metaclip.org/datasource/0.30/datasource.owl"/>
@@ -144,7 +143,7 @@
 
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#DRS_BA_CORDEX">
         <dc:description xml:lang="en">Establishes a direct link between the METACLIP vocabulary names and the vocabularies used in the DRS for the CORDEX Bias-Adjusted simulations</dc:description>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://is-enes-data.github.io/CORDEX_adjust_drs.pdf</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://is-enes-data.github.io/CORDEX_adjust_drs.pdf</referenceURL>
         <rdfs:subPropertyOf rdf:resource="https://www.metaclip.org/datasource/datasource.owl#DRS_reference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -156,7 +155,7 @@
 
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#DRS_CMIP5">
         <dc:description xml:lang="en">Establishes a direct link between the METACLIP vocabulary names and the vocabularies used in the CMIP5 DRS</dc:description>
-        <datasource1:referenceURL xml:lang="en">http://pcmdi.github.io/mips/cmip5/docs/cmip5_data_reference_syntax.pdf</datasource1:referenceURL>
+        <referenceURL xml:lang="en">http://pcmdi.github.io/mips/cmip5/docs/cmip5_data_reference_syntax.pdf</referenceURL>
         <rdfs:subPropertyOf rdf:resource="https://www.metaclip.org/datasource/datasource.owl#DRS_reference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -168,7 +167,7 @@
 
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#DRS_CMIP6">
         <dc:description xml:lang="en">Establishes a direct link between the METACLIP vocabulary names and the vocabularies used in the CMIP6 DRS</dc:description>
-        <datasource1:referenceURL xml:lang="en">https://github.com/WCRP-CMIP/CMIP6_CVs</datasource1:referenceURL>
+        <referenceURL xml:lang="en">https://github.com/WCRP-CMIP/CMIP6_CVs</referenceURL>
         <rdfs:subPropertyOf rdf:resource="https://www.metaclip.org/datasource/datasource.owl#DRS_reference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -180,7 +179,7 @@
 
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#DRS_CORDEX">
         <dc:description xml:lang="en">Establishes a direct link between the METACLIP vocabulary names and the vocabularies used in the CORDEX DRS</dc:description>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://is-enes-data.github.io/cordex_archive_specifications.pdf</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://is-enes-data.github.io/cordex_archive_specifications.pdf</referenceURL>
         <rdfs:subPropertyOf rdf:resource="https://www.metaclip.org/datasource/datasource.owl#DRS_reference"/>
     </owl:AnnotationProperty>
     
@@ -204,7 +203,7 @@
         <rdfs:comment xml:lang="en">This metadata is crucial for understanding the specific measurements taken within each cell of a data grid. It provides a definitive description of what the data values found in each variable represent. This ensures that the data can be accurately interpreted and compared with data from other sources.</rdfs:comment>
         <rdfs:label>cell_measures</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#cell-measures</rdfs:seeAlso>
-        <datasource1:DRS_CMIP6>cell_measures</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>cell_measures</DRS_CMIP6>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
     </owl:AnnotationProperty>
@@ -223,7 +222,7 @@ Height: Represents the height dimension, such as height above ground level
 For example, a near-surface variable might have dimensions like &quot;longitude, latitude, time, height2m&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#dimensions</rdfs:isDefinedBy>
         <rdfs:label>dimensions</rdfs:label>
-        <datasource1:DRS_CMIP6>frequency</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>frequency</DRS_CMIP6>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
     </owl:AnnotationProperty>
@@ -235,7 +234,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#frequency">
         <terms:description xml:lang="en">The temporal frequency of a climate variable refers to the rate at which data about the variable is recorded or observed over time. It indicates how often the variable is measured or observed, which could be hourly, daily, monthly, seasonally, annually, or on any other time scale. This frequency is crucial in understanding patterns and trends in climate data over time.</terms:description>
         <rdfs:label xml:lang="en">frequency</rdfs:label>
-        <datasource1:DRS_CMIP6>frequency</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>frequency</DRS_CMIP6>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
     </owl:AnnotationProperty>
@@ -276,7 +275,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     <owl:AnnotationProperty rdf:about="https://www.metaclip.org/datasource/datasource.owl#modelling_realm">
         <dc:description xml:lang="en">The term &quot;modelling realm&quot; refers to the specific area or component of the Earth’s climate system that a climate model is designed to simulate (e.g.: atmosphere, ocean, cryosphere etc.). Model output Variables are produced in the context of the specific modelling realm.</dc:description>
         <rdfs:label xml:lang="en">modelling_realm</rdfs:label>
-        <datasource1:DRS_CMIP6>modelling_realm</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>modelling_realm</DRS_CMIP6>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
     </owl:AnnotationProperty>
@@ -321,7 +320,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:comment xml:lang="en">The use of standard names promotes interoperability among data providers, data users, and data services by providing a clear and unambiguous standard for representing geolocations and times of Earth science data, physical quantities that the data represent, and other ancillary information useful in interpreting the data or comparing it with data from other sources</rdfs:comment>
         <rdfs:label>standard_name</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cfconventions.org/</rdfs:seeAlso>
-        <datasource1:DRS_CMIP6>standard_name</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>standard_name</DRS_CMIP6>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
     </owl:AnnotationProperty>
@@ -1184,7 +1183,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:comment xml:lang="en">A specific cell method is specified in the case of :Dimension, when this is asserted in the context of an :Aggregation step</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods</rdfs:isDefinedBy>
         <rdfs:label>hasCellMethod</rdfs:label>
-        <datasource1:DRS_CMIP6>cell_methods</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>cell_methods</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1223,7 +1222,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:description xml:lang="en">Long name of the variable</dc:description>
         <rdfs:label>hasLongName</rdfs:label>
-        <datasource1:DRS_CMIP6>long_name</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>long_name</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1300,7 +1299,7 @@ be distinguishable by a &quot;perturbed physics&quot; number &apos;L&apos;, wher
 For example the two different ensemble members, r3i1p7 and r3i1p8, should both be initialized from exactly the same initial conditions using the same method (because the &quot;r&quot; and &quot;i&quot; values are identical) although the subsequent evolution of the simulations will presumably differ since they were produced by two different &quot;perturbed physics&quot; versions of the same model.</dc:description>
         <rdfs:comment xml:lang="en">A model run refers to one complete model calculation. There is usually a well established nomenclature for run definition. Model run is indicated as a xsd:string</rdfs:comment>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://pcmdi.llnl.gov/mips/cmip5/docs/cmip5_data_reference_syntax.pdf</rdfs:seeAlso>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ensemble member (r&lt;N&gt;i&lt;M&gt;p&lt;L&gt;)</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ensemble member (r&lt;N&gt;i&lt;M&gt;p&lt;L&gt;)</DRS_CMIP5>
     </owl:DatatypeProperty>
     
 
@@ -1345,7 +1344,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:description xml:lang="en">Time frequency refers to the interval at which data is recorded or output by the model. Climate models simulate various atmospheric, oceanic, and land processes over time, and the time frequency determines how often these simulations are saved for analysis</terms:description>
         <rdfs:label xml:lang="en">Time frequency</rdfs:label>
-        <datasource1:DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frequency</datasource1:DRS_CMIP6>
+        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frequency</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1463,7 +1462,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:description xml:lang="en">Units of a geophysical variable</dc:description>
         <rdfs:label xml:lang="en">withUnits</rdfs:label>
-        <datasource1:DRS_CMIP6>units</datasource1:DRS_CMIP6>
+        <DRS_CMIP6>units</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1478,7 +1477,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <rdfs:domain rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>withVersionTag</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version number</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version number</DRS_CMIP5>
     </owl:DatatypeProperty>
     
 
@@ -1711,7 +1710,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
 In addition, a set of &quot;Core variables&quot; have to be provided on a regular geographic latitude/longitude grid. These grids have grid point boundaries (not centers) at whole-number degrees of longitude and latitude, and have roughly the same resolution as the native grid.The domain acronyms for the regular grids are the same as those for the corresponding model grid with the letter &apos;i&apos; appended to the resolution (e.g. “SAM-44i”).</rdfs:comment>
         <rdfs:label>CORDEX Domain</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/wp-content/uploads/2012/11/CORDEX-domain-description_231015.pdf</rdfs:seeAlso>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://is-enes-data.github.io/cordex_archive_specifications.pdf</referenceURL>
     </owl:Class>
     
 
@@ -1885,7 +1884,7 @@ In addition, a set of &quot;Core variables&quot; have to be provided on a regula
         <rdfs:comment xml:lang="en">Historically “El Niño” referred to the appearance of unusually warm water off the coast of Peru near Christmastime (Niño is Spanish and refers to “the boy Christ child”). Today it describes broader changes that occur across the Pacific basin. Oceanic and atmospheric conditions in the tropical Pacific fluctuate somewhat irregularly between warm El Niño phases and cold phases in which surface waters cool across the tropical Pacific. These cooling events are called “La Niña” (“the girl” in Spanish). The most intense phase of each event typically lasts about a year. El Niño is linked to major changes in the atmosphere known as the Southern Oscillation (SO). The whole phenomenon is known as the El Niño Southern Oscillation (ENSO)</rdfs:comment>
         <rdfs:label>ENSO</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni?qt-climatedatasetmaintabs=1#qt-climatedatasetmaintabs</rdfs:seeAlso>
-        <datasource1:inputECV rdf:resource="https://www.metaclip.org/datasource/datasource.owl#sst"/>
+        <inputECV rdf:resource="https://www.metaclip.org/datasource/datasource.owl#sst"/>
     </owl:Class>
     
 
@@ -1935,7 +1934,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:comment xml:lang="en">An :Experiment is an activity aimed at addressing a specific scientific problem. In the climate context, different datasets (particularly model simulations, but also observations etc...) can be adscribed to specific experiments. Several predefined :Experiment individuals can be instantiated (this is preferred), for instance :RCP45 or :Evaluation experiments.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiment</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiment</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiment</DRS_CMIP5>
     </owl:Class>
     
 
@@ -1948,7 +1947,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <dc:description xml:lang="en">Global Climate Models or General Circulation Models (GCMs) are global, three-dimensional computer models of the climate system, used to solve a set of mathematical equations describing the laws of physics relevant to the atmospheric and oceanic circulation, the distribution of heat and the interaction between electromagnetic radiation and atmospheric gases and aerosols. They consist of different modules describing the atmosphere, oceans, sea-ice/snow and the land surface, and represent the world in terms of boxes stacked next to and on top of each other. Evolution of the model circulation is computed by time integration of those equations starting from an initial condition.</dc:description>
         <rdfs:label>GCM</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/General_circulation_model</rdfs:seeAlso>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2067,7 +2066,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Organization"/>
         <rdfs:comment xml:lang="en">The organization producing the Dataset, either by running and/or delivering the climate model simulations or carrying out any other type of data processing (interpolation, homogenization, assimilation, harmonization, distillation...) leading to a data product that is a primary source described by _ds:Dataset_.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institute</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institute</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2092,8 +2091,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M., 2003. An overview of the North Atlantic Oscillation, in: Hurrell, J.W., Kushnir, Y., Ottersen, G., Visbeck, M. (Eds.), Geophysical Monograph Series. American Geophysical Union, Washington, D. C., pp. 1–35.</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based</rdfs:seeAlso>
         <prov:definition xml:lang="en">The principal component (PC)-based indices of the North Atlantic Oscillation (NAO) are the time series of the leading Empirical Orthogonal Function (EOF) of SLP anomalies over the Atlantic sector, 20°-80°N, 90°W-40°E</prov:definition>
-        <datasource1:indexType xml:lang="en">circulation</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">sea-level pressure</datasource1:inputECV>
+        <indexType xml:lang="en">circulation</indexType>
+        <inputECV xml:lang="en">sea-level pressure</inputECV>
     </owl:Class>
     
 
@@ -2173,7 +2172,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:comment xml:lang="en">This Class aims at recording the necessary information to unequivocally identify a given data simulation with a specific project. For instance, A MultiDecadalSImulationDataset may belong to CMIP5 or CMIP3. Similarly, a SeasonalHindcastDataset may be adscribed to DEMETER.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2347,7 +2346,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <dc:description xml:lang="en">Describes the time resolution of the variable</dc:description>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>TemporalResolution</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</datasource1:DRS_CMIP5>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2435,10 +2434,10 @@ C3S is one of six core thematic services of Copernicus, the European Union&apos;
         <rdfs:comment xml:lang="en">Symmetrical to the Heating Degree Days  (HDD) Index. Energy consumption in hot environments typically depends on the excess of temperature above a given threshold, where cooling within buildings is required.</rdfs:comment>
         <rdfs:label>CDD</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#HD"/>
-        <datasource1:indexType xml:lang="en">Energy</datasource1:indexType>
-        <datasource1:inputECV>tas, tasmin, tasmax</datasource1:inputECV>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.3959</datasource1:referenceURL>
-        <datasource1:thresholdType xml:lang="en">Absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">Energy</indexType>
+        <inputECV>tas, tasmin, tasmax</inputECV>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.3959</referenceURL>
+        <thresholdType xml:lang="en">Absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2452,9 +2451,9 @@ C3S is one of six core thematic services of Copernicus, the European Union&apos;
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CDD</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2466,7 +2465,7 @@ C3S is one of six core thematic services of Copernicus, the European Union&apos;
         <dc:title xml:lang="en">Copernicus Climate Data Store</dc:title>
         <rdfs:comment xml:lang="en">The CDS is a cloud-based tool that allows to browse and combine online petabytes of raw data. It is developed by the Copernicus Climate Change Service (:C3S) at :ECMWF, the store draws on Earth observation data collected through the European Commission&apos;s Copernicus Programme.</rdfs:comment>
         <rdfs:label>CDS</rdfs:label>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cds.climate.copernicus.eu</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cds.climate.copernicus.eu</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2503,9 +2502,9 @@ Sanna, A., A. Borrelli, P. Athanasiadis, S. Materia, A. Storto, S. Tibaldi, S. G
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CSDI</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2518,9 +2517,9 @@ Sanna, A., A. Borrelli, P. Athanasiadis, S. Materia, A. Storto, S. Tibaldi, S. G
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CWD</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2547,8 +2546,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:title xml:lang="en">Copernicus CMIP6 Climate Projections</dc:title>
         <terms:description xml:lang="en">This catalogue entry provides daily and monthly global climate projections data from a large number of experiments, models and time periods computed in the framework of the sixth phase of the Coupled Model Intercomparison Project (CMIP6).</terms:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copernicus CMIP6</rdfs:label>
-        <datasource1:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</datasource1:license>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.c866074c</datasource1:referenceURL>
+        <license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.c866074c</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2561,7 +2560,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:title xml:lang="en">Drought Frequency</dc:title>
         <rdfs:label>DF</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#SPI"/>
-        <datasource1:indexType xml:lang="en">Drought</datasource1:indexType>
+        <indexType xml:lang="en">Drought</indexType>
     </owl:NamedIndividual>
     
 
@@ -2574,8 +2573,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DTR</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (minimum), temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (minimum), temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2586,7 +2585,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
         <dc:title xml:lang="de">Deutscher Wetterdienst</dc:title>
         <rdfs:label>DWD</rdfs:label>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dwd.de</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dwd.de</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2623,7 +2622,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:title xml:lang="en">European Centre for Medium-Range Weather Forecasts</dc:title>
         <rdfs:comment xml:lang="en">The European Centre for Medium-Range Weather Forecasts (ECMWF) is an independent intergovernmental organisation supported by 34 states</rdfs:comment>
         <rdfs:label xml:lang="en">ECMWF</rdfs:label>
-        <datasource1:referenceURL xml:lang="en">https://www.ecmwf.int/</datasource1:referenceURL>
+        <referenceURL xml:lang="en">https://www.ecmwf.int/</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2733,7 +2732,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:comment xml:lang="en">The Earth System Grid Federation (ESGF) allows users to access, analyze, and visualize data using a globally federated collection of networks, computers, and software. Its architecture employs a system of geographically distributed peer nodes that are independently administered yet united by common federation protocols and application programming interfaces (APIs). The full ESGF infrastructure has now been adopted by multiple Earth science projects and allows access to petabytes of geophysical data, including the Coupled Model Intercomparison Project (CMIP). Data served by ESGF not only include model output (i.e., CMIP simulation runs) but also include observational data from satellites and instruments, reanalyses, and generated images. Metadata summarize basic information about the data for fast and easy data discovery.</rdfs:comment>
         <rdfs:label>ESGF</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/10.1175/BAMS-D-15-00132.1</rdfs:seeAlso>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.future.2013.07.002</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.future.2013.07.002</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2762,7 +2761,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:creator rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ISIMIP"/>
         <dc:description xml:lang="en">The EWEMBI dataset was compiled to support the bias correction of climate input data for ISIMIP2b and the ISIMIP2a protocol extension. It is a reference data set for bias correction</dc:description>
         <rdfs:label>EWEMBI</rdfs:label>
-        <datasource1:referenceURL xml:lang="en">http://doi.org/10.5880/pik.2019.004</datasource1:referenceURL>
+        <referenceURL xml:lang="en">http://doi.org/10.5880/pik.2019.004</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2775,8 +2774,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FD</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2800,9 +2799,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:description xml:lang="en">Growing degree days (GDD), also called growing degree units (GDUs), are a heuristic tool in phenology. GDD are a measure of heat accumulation used by horticulturists, gardeners, and farmers to predict plant and animal development rates such as the date that a flower will bloom, an insect will emerge from dormancy, or a crop will reach maturity. It is calculated as the cumulative number of degrees above a threshold (often between 0 and 10 degC, depending on species and farming system) during a given growing period. In AR6 Chaper 12 and Atlas, a threshold of 5 degC is used (see e.g. Ruosteenoja et al. 2016).</dc:description>
         <dc:title xml:lang="en">Growing Degree Days</dc:title>
         <rdfs:label>GDD</rdfs:label>
-        <datasource1:indexType xml:lang="en">Agriculture</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">Mean daily temperature</datasource1:inputECV>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.4535</datasource1:referenceURL>
+        <indexType xml:lang="en">Agriculture</indexType>
+        <inputECV xml:lang="en">Mean daily temperature</inputECV>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.4535</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2815,8 +2814,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GSL</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (mean)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (mean)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2852,10 +2851,10 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:comment xml:lang="en">Symmetrical to the Cooling Degree Day index, the HDD index is used for illustrating energy demand for heating. It has been used in several studies of impacts of climate change on the energy sector.</rdfs:comment>
         <rdfs:label>HDD</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#CD"/>
-        <datasource1:indexType xml:lang="en">Energy</datasource1:indexType>
-        <datasource1:inputECV>tas, tasmin, tasmax</datasource1:inputECV>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.3959</datasource1:referenceURL>
-        <datasource1:thresholdType xml:lang="en">Absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">Energy</indexType>
+        <inputECV>tas, tasmin, tasmax</inputECV>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1002/joc.3959</referenceURL>
+        <thresholdType xml:lang="en">Absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2868,8 +2867,8 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ID</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -2882,7 +2881,7 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:title xml:lang="en">The Inter-Sectoral Impact Model Intercomparison Project</dc:title>
         <rdfs:label>ISIMIP</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.geosci-model-dev.net/10/4321/2017/</rdfs:seeAlso>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.isimip.org/</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.isimip.org/</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2895,9 +2894,9 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <dc:title xml:lang="en">Length of frost-free period (days)</dc:title>
         <rdfs:comment xml:lang="en">Many ecosystems and crops are sensitive to frost conditions, and can only develop over a frost-free period.</rdfs:comment>
         <rdfs:label>LFFP</rdfs:label>
-        <datasource1:inputECV xml:lang="en">Minimum temperature</datasource1:inputECV>
-        <datasource1:referenceURL xml:lang="en">https://doi.org/10.1002/joc.4315</datasource1:referenceURL>
-        <datasource1:thresholdType xml:lang="en">Absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">Minimum temperature</inputECV>
+        <referenceURL xml:lang="en">https://doi.org/10.1002/joc.4315</referenceURL>
+        <thresholdType xml:lang="en">Absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3035,7 +3034,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ModellingCenter"/>
         <dc:title xml:lang="en">Potsdam Institute for Climate Impact Research</dc:title>
         <rdfs:label xml:lang="en">PIK</rdfs:label>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.pik-potsdam.de/</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.pik-potsdam.de/</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3048,8 +3047,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PRCPTOT</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3119,8 +3118,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">R10mm</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3133,8 +3132,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">R20mm</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3147,9 +3146,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">R95pTOT</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3162,9 +3161,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">R99pTOT</rdfs:label>
         <prov:definition xml:lang="en">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3187,8 +3186,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Rnnmm</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3201,9 +3200,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Rx1day</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3216,9 +3215,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Rx5day</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3231,8 +3230,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SDII</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">precipitation</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">precipitation</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3271,9 +3270,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <dc:title xml:lang="en">Standardized Precipitation-Evapotranspiration Index</dc:title>
         <rdfs:label>SPEI</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#SPI"/>
-        <datasource1:indexType xml:lang="en">Drought</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">Precipitation, temperature</datasource1:inputECV>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/2009JCLI2909.1</datasource1:referenceURL>
+        <indexType xml:lang="en">Drought</indexType>
+        <inputECV xml:lang="en">Precipitation, temperature</inputECV>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/2009JCLI2909.1</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3286,8 +3285,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:comment xml:lang="en">The SPI is based on the probability of precipitation for any time scale. The probability of observed precipitation is then transformed into an index. It is being used in research or operational mode in more than 70 countries.</rdfs:comment>
         <rdfs:label>SPI</rdfs:label>
         <rdfs:seeAlso>McKee, T.B., Doesken, N.J., Kleist, J., others, 1993. The relationship of drought frequency and duration to time scales, in: Proceedings of the 8th Conference on Applied Climatology. American Meteorological Society Boston, MA, pp. 179–183.</rdfs:seeAlso>
-        <datasource1:indexType xml:lang="en">Drought</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">Precipitation</datasource1:inputECV>
+        <indexType xml:lang="en">Drought</indexType>
+        <inputECV xml:lang="en">Precipitation</inputECV>
     </owl:NamedIndividual>
     
 
@@ -3300,8 +3299,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SU</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3322,8 +3321,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
         <dc:description xml:lang="en">Number of days with mean temperature above 21.5 degC</dc:description>
         <rdfs:label>T21.5</rdfs:label>
-        <datasource1:inputECV xml:lang="en">Mean daily temperature</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">Mean daily temperature</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3336,9 +3335,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TN10p</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3351,9 +3350,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TN90p</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3366,9 +3365,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TNn</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3381,9 +3380,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TNx</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3396,8 +3395,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TR</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:inputECV xml:lang="en">temperature (minimum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <inputECV xml:lang="en">temperature (minimum)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3410,9 +3409,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TX10p</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3423,9 +3422,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
         <dc:description xml:lang="en">Number of days with maximum temperature above 35 degC</dc:description>
         <rdfs:label>TX35</rdfs:label>
-        <datasource1:indexType xml:lang="en">Extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">Maximum temperature (daily)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">Extremes</indexType>
+        <inputECV xml:lang="en">Maximum temperature (daily)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3436,9 +3435,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ClimateIndex"/>
         <dc:description xml:lang="en">Number of days with maximum temperature above 40 degC</dc:description>
         <rdfs:label>TX40</rdfs:label>
-        <datasource1:indexType xml:lang="en">Extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">Maximum temperature (daily)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">absolute</datasource1:thresholdType>
+        <indexType xml:lang="en">Extremes</indexType>
+        <inputECV xml:lang="en">Maximum temperature (daily)</inputECV>
+        <thresholdType xml:lang="en">absolute</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3451,9 +3450,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TX90p</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3466,9 +3465,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TXn</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3481,9 +3480,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TXx</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">none</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">none</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3496,7 +3495,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <dc:title xml:lang="en">User Data Gateway</dc:title>
         <rdfs:label>UDG</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.1016/j.cliser.2017.07.001</rdfs:seeAlso>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2018.09.009</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2018.09.009</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3511,7 +3510,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ERA5"/>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#WFDE5"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5880/pik.2019.023</rdfs:seeAlso>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.20d54e34</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.20d54e34</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3536,7 +3535,7 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:label>WFDE5</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#ERA5"/>
         <rdfs:seeAlso rdf:resource="https://www.metaclip.org/datasource/datasource.owl#WFDEI"/>
-        <datasource1:referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.20d54e34?tab=overview</datasource1:referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.20d54e34?tab=overview</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3562,9 +3561,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">Expert Team on Climate Change Detection and Indices (ETCCDI)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">WSDI</rdfs:label>
         <prov:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://etccdi.pacificclimate.org/list_27_indices.shtml</prov:definition>
-        <datasource1:indexType xml:lang="en">extremes</datasource1:indexType>
-        <datasource1:inputECV xml:lang="en">temperature (maximum)</datasource1:inputECV>
-        <datasource1:thresholdType xml:lang="en">relative</datasource1:thresholdType>
+        <indexType xml:lang="en">extremes</indexType>
+        <inputECV xml:lang="en">temperature (maximum)</inputECV>
+        <thresholdType xml:lang="en">relative</thresholdType>
     </owl:NamedIndividual>
     
 
@@ -3691,8 +3690,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Near-surface (typically 2m) air temperature. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</datasource1:DRS_CMIP5>
-        <datasource1:DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</datasource1:DRS_CMIP6>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</DRS_CMIP5>
+        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
@@ -3703,8 +3702,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Maximum near-surface daily temperature</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</datasource1:DRS_CMIP5>
-        <datasource1:DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</datasource1:DRS_CMIP6>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</DRS_CMIP5>
+        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
@@ -3715,8 +3714,8 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <rdf:type rdf:resource="https://www.metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Minimum near-surface daily temperature</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</rdfs:label>
-        <datasource1:DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</datasource1:DRS_CMIP5>
-        <datasource1:DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</datasource1:DRS_CMIP6>
+        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</DRS_CMIP5>
+        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
