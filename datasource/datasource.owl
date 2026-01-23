@@ -14,11 +14,11 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="https://metaclip.org/datasource/0.30/datasource.owl"/>
+        <owl:versionIRI rdf:resource="https://metaclip.org/datasource/0.31/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-25T15:46:12Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-07T17:46:12Z</dc:date>
         <dc:title xml:lang="en">The Climate Data Source Ontology from METACLIP</dc:title>
         <terms:contributor>Daniel San-Martin &lt;https://orcid.org/0000-0002-2862-2704&gt;</terms:contributor>
         <terms:contributor>Joaquin Bedia &lt;https://orcid.org/0000-0001-6219-4312&gt;</terms:contributor>
@@ -27,7 +27,7 @@
         <terms:description xml:lang="en">The datasource ontology describes the provenance of climate datasets  (observations, operative/retrospective forecasts, reanalysis, climate projections...), and other subsequent operations performed with these data sources producing their transformation, but that do not entail a second dataset (may entail a different subset of the same dataset though; e.g. temporal/spatial aggregation, ensemble mean calculation, spatial interpolation/regridding, calculation of climate indices and anomalies...). It also provides a framework for describing the source code generating the product.</terms:description>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.30</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.31</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -330,7 +330,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     <!-- https://metaclip.org/datasource/datasource.owl#thresholdType -->
 
     <owl:AnnotationProperty rdf:about="https://metaclip.org/datasource/datasource.owl#thresholdType">
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:16:14Z</dc:date>
         <rdfs:comment xml:lang="en">This entity is aimed at the description of the types of threshold used for climate index definition. &quot;Absolute&quot; thresholds refer to absolute quantities, while &quot;relative&quot; thresholds are based on percentiles (and thus are relative to a given sample). In case no threshold is used for a certain climate index, the category &quot;none&quot; can optionally be used.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -370,6 +370,14 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
     
 
 
@@ -446,7 +454,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hadTransformation"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#Aggregation"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:31Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of an :Aggregation from a previous :Step</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -478,7 +486,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadArgumentValue">
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Argument"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#ArgumentValue"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-01T16:24:14Z</dc:date>
         <rdfs:comment xml:lang="en">A property representing the :ArgumentValue taken by an :Argument</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -544,7 +552,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hadTransformation"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#Climatology"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:00:57Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of a :Climatology from a previous :Step</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -596,7 +604,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#DatasetSubset"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T15:40:35Z</dc:date>
         <rdfs:comment xml:lang="en">This property describes a :DatasetSubset derivation. This can happen from a :Dataset entity to produce a new :DatasetSubset, or from any other :Step within the data workflow from which a specific subsetting operation is performed (e.g., a :ClimateIndex might be temporally or spatially subsetted for further analysis or graphical representation).</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -686,7 +694,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hadTransformation"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#PCA"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T17:01:31Z</dc:date>
         <rdfs:comment xml:lang="en">An object property to express the derivation of a :PCA from a previous :Step</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -742,7 +750,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hadDerivation"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Step"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#Transformation"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T16:44:19Z</dc:date>
         <rdfs:comment xml:lang="en">This property describes any :Transformation experienced throughout the data workflow, leading to a derivation from one :Step into another. For instance, a :DatasetSubset may be aggregated or subsequently subsetted. Because :Transformation is a generic :Step, the more specific subproperties should be used when applicable (e.g. :hadRegridding, :hadAnomalyCalculation etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -755,8 +763,24 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasAerosolModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isAerosolModelComponentOf"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+            </owl:Restriction>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
+        <dc:description xml:lang="en">Links a climate model to its aerosol model component responsible for simulating aerosol microphysics, chemistry, and aerosol–radiation and aerosol–cloud interactions.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Introduced as a specific subproperty of hasModelComponent to classify aerosol-related subsystems of climate models.</dc:source>
+        <rdfs:comment xml:lang="en">Used to associate an RCM or GCM with the module that represents atmospheric aerosol processes. Typical components include aerosol optical properties, deposition, and aerosol–cloud interactions.</rdfs:comment>
+        <rdfs:label xml:lang="en">has aerosol model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -765,8 +789,13 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasAtmosChemModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isAtmosChemModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosChemModel"/>
+        <dc:description xml:lang="en">Associates a climate model with its atmospheric chemistry component responsible for gas-phase chemistry, chemical mechanisms, and reactive transport processes.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Defined as a specialised model-component relation for atmospheric chemistry modules.</dc:source>
+        <rdfs:comment xml:lang="en">Represents the chemical subsystem of an atmospheric model, including oxidation pathways, chemical tracers, and coupling with aerosols or radiation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has atmospheric chemistry model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -775,8 +804,19 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasAtmosModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isAtmosModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+            </owl:Restriction>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <dc:description xml:lang="en">Links a climate model to the atmospheric dynamical core or physical parameterisation package that simulates atmospheric circulation and thermodynamic processes.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Introduced to capture general atmospheric modules before distinguishing specific physics packages.</dc:source>
+        <rdfs:comment xml:lang="en">Covers atmospheric dynamics, radiation, convection, microphysics, boundary-layer schemes, and other components of the atmospheric model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has atmospheric model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -787,7 +827,7 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#ENSO"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#ENSOregion"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictia</dc:creator>
+        <dc:creator>Predictia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T12:27:17Z</dc:date>
         <rdfs:comment xml:lang="en">The numbers of the Niño 1,2,3, and 4 regions correspond with the labels assigned to ship tracks that crossed these regions.  Data from these tracks enabled the historic records of El Niño to be carried back in time to 1949, as discussed in a classic study by Rasmusson and Carpenter (1982)</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
@@ -819,12 +859,33 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#hasLakeModelComponent -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasLakeModelComponent">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isLakeModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#LakeModel"/>
+        <dc:description xml:lang="en">Links a climate model (e.g., RCM or GCM) to the lake model component responsible for simulating inland water bodies</dc:description>
+        <rdfs:comment xml:lang="en">Used to associate a model configuration with its lake model component, which typically represents vertical lake temperature profiles, mixing processes, and lake ice evolution. Examples include FLake, Hostetler, or other prognostic or mixed-layer lake schemes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has lake model component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#hasLandIceModelComponent -->
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasLandIceModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isLandIceModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#LandIceModel"/>
+        <dc:description xml:lang="en">Links a climate model to a land-ice component responsible for simulating glacier dynamics, ice-sheet evolution, and surface mass balance.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Added as a dedicated relation for land-ice modelling subsystems.</dc:source>
+        <rdfs:comment xml:lang="en">Includes modules that handle ice-flow dynamics, ice-sheet coupling, melt processes, and accumulation on land-based ice bodies.</rdfs:comment>
+        <rdfs:label xml:lang="en">has land-ice model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -833,8 +894,14 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasLandSurfaceModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isLandSurfaceModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <dc:description xml:lang="en">Associates a climate model with its land-surface module responsible for energy, water, and momentum exchanges between land and atmosphere.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Created as a parent relation for LSM subsystems</dc:source>
+        <rdfs:comment xml:lang="en">Typically includes soil moisture, vegetation processes, evapotranspiration, snow, and carbon-cycle interactions on land surfaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has land-surface model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -842,18 +909,13 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     <!-- https://metaclip.org/datasource/datasource.owl#hasModelComponent -->
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasModelComponent">
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosChemModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#LandIceModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanBgchemModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
-        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#SeaIceModel"/>
-        <dc:description xml:lang="en">Links the climate model with its sub-components</dc:description>
-        <rdfs:label>hasModelComponent</rdfs:label>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <dc:description xml:lang="en">Links a software‑based climate model (e.g., RCM, GCM) to one of its internal model components responsible for representing a specific physical or biogeochemical subsystem, including specific parameterization schemes or prescribed fields.</dc:description>
+        <rdfs:comment xml:lang="en">General parent property for all model-component relations. Use specific subproperties (e.g., hasAerosolModelComponent) when available</rdfs:comment>
+        <rdfs:label xml:lang="en">has model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -862,8 +924,13 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasOceanBgchemModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isOceanBgchemModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanBgchemModel"/>
+        <dc:description xml:lang="en">Links a climate model to its ocean biogeochemistry component responsible for nutrients, plankton dynamics, biogeochemical cycles, and ocean carbon processes.</dc:description>
+        <dc:source xml:lang="en">has ocean biogeochemistry model component</dc:source>
+        <terms:description xml:lang="en">Editorial note: Defined to distinguish ocean biogeochemical modules from physical ocean components.</terms:description>
+        <rdfs:comment xml:lang="en">Represents ocean internal biogeochemical processes, including nutrient cycles, primary production, remineralisation, and CO2 fluxes.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -872,8 +939,14 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasOceanModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isOceanModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
+        <dc:description xml:lang="en">Associates a climate model with its physical ocean component responsible for ocean circulation, mixing, temperature, salinity, and sea-level processes.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Introduced to represent physical-ocean components in coupled climate models.</dc:source>
+        <rdfs:comment xml:lang="en">Covers large-scale ocean dynamics, boundary processes, vertical mixing, and coupling to sea-ice or biogeochemistry modules.</rdfs:comment>
+        <rdfs:label xml:lang="en">has ocean model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -902,8 +975,13 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasSeaIceModelComponent">
         <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isSeaIceModelComponentOf"/>
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#SeaIceModel"/>
+        <dc:description xml:lang="en">Links a climate model to its sea-ice component responsible for sea-ice concentration, thickness, thermodynamics, and dynamics.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Added to identify sea-ice components in coupled modelling systems.</dc:source>
+        <rdfs:comment xml:lang="en">Represents sea-ice processes such as freezing/melting, albedo evolution, ridging, and coupling with ocean and atmosphere components.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sea-ice model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -923,6 +1001,21 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#TemporalResolution"/>
         <rdfs:label xml:lang="en">Temporal resolution of a Variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#hasUrbanLandSurfaceModelComponent -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasUrbanLandSurfaceModelComponent">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+        <owl:inverseOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isUrbanLandSurfaceModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#UrbanLandSurfaceModel"/>
+        <dc:description xml:lang="en">Associates a climate model with its urban land-surface module responsible for simulating urban canopy processes and urban energy balance.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Specific subproperty to represent urban LSM components such as UCM, BEP, or TEB.</dc:source>
+        <rdfs:comment xml:lang="en">Models urban radiative trapping, heat storage in buildings, anthropogenic heat emissions, modified turbulence, and the urban heat island effect.</rdfs:comment>
+        <rdfs:label xml:lang="en">has urban land-surface model component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -961,6 +1054,170 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#isAerosolModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isAerosolModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking an aerosol model component to the climate model that incorporates it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf to mirror the hierarchy of hasAerosolModelComponent.</dc:source>
+        <rdfs:comment xml:lang="en">Allows navigation from an aerosol module to the parent climate model, covering microphysics, aerosol–radiation interactions, deposition, and related aerosol processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">is aerosol model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isAtmosChemModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isAtmosChemModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosChemModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking an atmospheric chemistry component to the climate model that employs it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf to maintain consistency across component inverses.</dc:source>
+        <rdfs:comment xml:lang="en">Represents the relation from a chemistry module to the model that uses it, covering gas-phase chemistry, tracers, and reactive transport.</rdfs:comment>
+        <rdfs:label xml:lang="en">is atmospheric chemistry model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isAtmosModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isAtmosModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking an atmospheric model component to the climate model that integrates it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Included to support inverse navigation of hasAtmosModelComponent and preserve the component hierarchy.</dc:source>
+        <rdfs:comment xml:lang="en">Connects atmospheric-dynamics or physics modules (radiation, convection, microphysics, boundary-layer schemes) to the employing model.</rdfs:comment>
+        <rdfs:label xml:lang="en">is atmospheric model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isLakeModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isLakeModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LakeModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a lake model component to the climate model that employs it.</dc:description>
+        <rdfs:comment xml:lang="en">Identifies the parent climate model (RCM, GCM, or similar) that incorporates the given lake model component in its configuration.</rdfs:comment>
+        <rdfs:label xml:lang="en">is lake model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isLandIceModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isLandIceModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandIceModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a land-ice component to the climate model that incorporates it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf for hierarchical consistency.</dc:source>
+        <rdfs:comment xml:lang="en">Used to relate ice-sheet and glacier-dynamics modules back to the parent climate model.</rdfs:comment>
+        <rdfs:label xml:lang="en">is land-ice model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isLandSurfaceModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isLandSurfaceModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a land-surface model component to the climate model that uses it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf, matching the hierarchy of hasLandSurfaceModelComponent.</dc:source>
+        <rdfs:comment xml:lang="en">Covers soil moisture, vegetation processes, evapotranspiration, land–atmosphere fluxes, snow, and other land-surface processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">is land-surface model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isModelComponentOf">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a model component to the climate model that incorporates it as part of its internal architecture. Identifies the parent climate model (RCM/GCM...) to which a given component belongs, enabling upward navigation from subsystem modules to composite models.</dc:description>
+        <rdfs:comment xml:lang="en">se for component-to-model relationships. Specific inverses (e.g., isUrbanLandSurfaceModelComponentOf) should be subproperties</rdfs:comment>
+        <rdfs:label xml:lang="en">is model component of</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isOceanBgchemModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isOceanBgchemModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanBgchemModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking an ocean biogeochemistry module to the climate model that employs it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Added as a subproperty of isModelComponentOf to ensure inverse hierarchy alignment.</dc:source>
+        <rdfs:comment xml:lang="en">Includes nutrient cycles, plankton dynamics, carbon processes, and other biogeochemical subsystems in ocean modelling.</rdfs:comment>
+        <rdfs:label xml:lang="en">is ocean biogeochemistry model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isOceanModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isOceanModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a physical ocean model component to the climate model that incorporates it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf to mirror the direct property hierarchy.</dc:source>
+        <rdfs:comment xml:lang="en">Covers ocean circulation, mixing, temperature/salinity, and sea-level-related processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">is ocean model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isSeaIceModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isSeaIceModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#SeaIceModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking a sea-ice component to the climate model that uses it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of isModelComponentOf to ensure a parallel inverse hierarchy.</dc:source>
+        <rdfs:comment xml:lang="en">Includes sea-ice thermodynamics, dynamics, ridging, albedo evolution, and interactions with ocean/atmosphere.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sea-ice model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#isUrbanLandSurfaceModelComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#isUrbanLandSurfaceModelComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isLandSurfaceModelComponentOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://metaclip.org/datasource/datasource.owl#isModelComponentOf"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <dc:description xml:lang="en">Inverse property linking an urban land-surface model component to the climate model that incorporates it.</dc:description>
+        <dc:source xml:lang="en">Editorial note: Declared as a subproperty of both isLandSurfaceModelComponentOf and isModelComponentOf to reflect its dual classification.</dc:source>
+        <rdfs:comment xml:lang="en">Models urban canopy processes, radiative trapping, heat storage, anthropogenic heat fluxes, and urban–atmosphere exchange.</rdfs:comment>
+        <rdfs:label xml:lang="en">is urban land-surface model component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#usedArgument -->
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#usedArgument">
@@ -980,6 +1237,19 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#RectangularGrid"/>
         <dc:description xml:lang="en">This object property is used to indicate the target locations used for interpolation/regridding operations (i.e., the target coordinates onto which the data are interpolated). Its range is a :HorizontalExtent class entity, representing either a regular grid or scattered localities</dc:description>
         <rdfs:label>usedReferenceCoordinates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#wasDevelopedBy -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#wasDevelopedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <rdfs:comment xml:lang="en">Links a regional/general climate model (software agent) to the institution responsible for its development/maintenance.</rdfs:comment>
+        <prov:definition xml:lang="en">Specialised attribution stating that the modelling center developed the climate model (RCM/GCM).</prov:definition>
     </owl:ObjectProperty>
     
 
@@ -1071,6 +1341,155 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#aerosolMisc -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#aerosolMisc">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Additional free-text information related to the aerosol model component, including climatologies, references, or experiment-specific aerosol settings.</dc:description>
+        <rdfs:comment xml:lang="en">Intended for heterogeneous notes that do not fit into other aerosol metadata fields, such as published climatologies, spatial/temporal assumptions, or extra configuration flags.</rdfs:comment>
+        <rdfs:label xml:lang="en">aerosol model miscellaneous information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#aerosolParameterizationDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#aerosolParameterizationDescription">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text description of how aerosol processes are parameterized in the aerosol model component.</dc:description>
+        <rdfs:comment xml:lang="en">Captures the methodological approach used in the aerosol scheme, including turbulent flux handling, coupling mechanisms, or specific algorithmic choices reported by the modelling group.</rdfs:comment>
+        <rdfs:label xml:lang="en">aerosol parameterization description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#aerosolRepresentationMode -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#aerosolRepresentationMode">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Mode in which aerosols are represented in the model (e.g., prescribed, interactive, semi-interactive, climatology-based).</dc:description>
+        <rdfs:comment xml:lang="en">Stores the high-level approach used for aerosol representation, typically distinguishing between prescribed fields, interactive schemes, climatologies, or other modelling modes.</rdfs:comment>
+        <rdfs:label xml:lang="en">aerosol representation mode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosConvectionScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosConvectionScheme">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the cumulus convection parameterization used in the atmospheric model.</dc:description>
+        <rdfs:comment xml:lang="en">Represents deep/shallow convection schemes (e.g., Kain–Fritsch, Grell–Freitas, Tiedtke), including tuned configurations where applicable.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric convection scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosDynamicsCore -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosDynamicsCore">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the dynamical core used by the atmospheric model.</dc:description>
+        <rdfs:comment xml:lang="en">Typical values include hydrostatic/non-hydrostatic cores and specific dynamical frameworks (e.g., spectral, finite-volume, ARW).</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric dynamics core</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosLongwaveRadiationScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosLongwaveRadiationScheme">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the longwave radiation parameterization used by the atmospheric component.</dc:description>
+        <rdfs:comment xml:lang="en">Includes the LW radiative transfer package (e.g., RRTMG-LW) and any relevant options reported by the modelling group.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric longwave radiation scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosMicrophysicsScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosMicrophysicsScheme">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the cloud and precipitation microphysics scheme used by the atmospheric model.</dc:description>
+        <rdfs:comment xml:lang="en">Covers single-/double-moment, mixed-phase and ice processes; typical labels include WSM6, Thompson, Morrison, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric microphysics scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosMisc -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosMisc">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Additional free-text information related to the atmospheric model configuration that does not fall into specific parameterization categories.</dc:description>
+        <rdfs:comment xml:lang="en">Intended to capture heterogeneous comments or notes relevant to the atmospheric component, such as unusual configuration flags, namelist options, special tuning choices, references, or experiment-specific considerations.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric model miscellaneous information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosPblScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosPblScheme">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the planetary boundary layer (PBL) scheme employed by the atmospheric model.</dc:description>
+        <rdfs:comment xml:lang="en">Includes turbulence closure approach and commonly used schemes (e.g., YSU, MYJ, MYNN), with optional stability-dependent variants.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric PBL scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#atmosShortwaveRadiationScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#atmosShortwaveRadiationScheme">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the shortwave radiation parameterization used by the atmospheric component.</dc:description>
+        <rdfs:comment xml:lang="en">Captures spectral treatment and options; examples include RRTMG-SW or model-specific SW radiation packages.</rdfs:comment>
+        <rdfs:label xml:lang="en">atmospheric shortwave radiation scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#cellMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#cellMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Climatology"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dimension"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#TemporalResolution"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">When data that is representative of cells can be described by simple statistical methods; those methods can be indicated using the cell_methods attribute</dc:description>
+        <rdfs:comment xml:lang="en">A specific cell method is specified in the case of :Dimension, when this is asserted in the context of an :Aggregation step</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cell method</rdfs:label>
+        <DRS_CMIP6>cell_methods</DRS_CMIP6>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#climatologicalPeriod -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#climatologicalPeriod">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Anomaly"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">The time frame used to compute the anomaly. Possible values are &quot;none&quot; (i.e., the whole period has been averaged and subtracted), &quot;monthly&quot; (i.e., the climatological mean is subtracted month by month) or &quot;daily&quot; (i.e., a daily climatology is subtrated to each day)</dc:description>
+        <rdfs:label xml:lang="en">climatological period</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#filterMonth -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#filterMonth">
@@ -1159,6 +1578,20 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#gridDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#gridDescription">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text description of the spatial grid used by a climate model or model component, including resolution, projection, coordinate system, and any relevant configuration details.</dc:description>
+        <rdfs:comment xml:lang="en">Intended to store heterogeneous metadata regarding grid specifications such as grid type (e.g., regular lat-lon, rotated pole, Lambert), horizontal and vertical resolution, staggering, map projection, nesting configuration, or experiment-specific grid notes.</rdfs:comment>
+        <rdfs:label xml:lang="en">grid description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#hadLiteralCommandCall -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadLiteralCommandCall">
@@ -1166,24 +1599,6 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The literal command call triggering the step. &apos;Lliteral&apos; here means that the :hasLiteralCommandCall string could be directly copied/pasted into a terminal, and it should work provided that the environment contains the necessary elements to run it (installed software, input variables in scope etc.)</rdfs:comment>
         <rdfs:label>hadLiteralCommandCall</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://metaclip.org/datasource/datasource.owl#hasCellMethods -->
-
-    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasCellMethods">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Climatology"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dimension"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#TemporalResolution"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description xml:lang="en">When data that is representative of cells can be described by simple statistical methods; those methods can be indicated using the cell_methods attribute</dc:description>
-        <rdfs:comment xml:lang="en">A specific cell method is specified in the case of :Dimension, when this is asserted in the context of an :Aggregation step</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods</rdfs:isDefinedBy>
-        <rdfs:label>hasCellMethod</rdfs:label>
-        <DRS_CMIP6>cell_methods</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1250,27 +1665,6 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
-    <!-- https://metaclip.org/datasource/datasource.owl#hasNominalResolution -->
-
-    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasNominalResolution">
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AerosolModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosChemModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandIceModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanBgchemModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#SeaIceModel"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description xml:lang="en">The nominal resolution is the approximate resolution of the final output data.</dc:description>
-        <rdfs:comment xml:lang="en">The term ‘nominal resolution’ refers to a metric that allows users to discern the relative fineness of the data output by different models. It is important to note that the nominal resolution might be presented to end-users by the data provider, which may not necessarily reflect the resolution of the data as originally produced by the model. Therefore, while it serves as a useful guide for comparison, it should not be solely relied upon for assessing the detailed accuracy of the model’s output.</rdfs:comment>
-        <rdfs:label>hasNominalResolution</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://metaclip.org/datasource/datasource.owl#hasProjection -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasProjection">
@@ -1278,28 +1672,6 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#SpatialExtent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A map projection is a systematic transformation of the latitudes and longitudes of locations from the surface of a sphere or an ellipsoid into locations on a plane</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://metaclip.org/datasource/datasource.owl#hasRun -->
-
-    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasRun">
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description xml:lang="en">This triad of integers (N, M, L), formatted e.g., &quot;r3i1p21&quot; distinguishes among closely related simulations by a single model. All three are required even if only a single simulation is performed. 
-
-The so-called &quot;realization&quot; number (a positive integer value of &apos;N&apos;) is used to distinguish among members of an ensemble typically generated by initializing a set of runs with different, but equally realistic, initial conditions
-
-Models used for forecasts that depend on the initial conditions might be initialized from observations using different methods or different observational datasets. These should be distinguished by assigning different positive integer values of &apos;M&apos; in the &quot;initialization method indicator&quot;.
-
-If there are many closely related model versions, which, as a group, are generally referred to as a perturbed physics ensemble, then these should
-be distinguishable by a &quot;perturbed physics&quot; number &apos;L&apos;, where the positive integer value of &apos;L&apos; is uniquely associated with a particular set of model parameters (e.g., r3i1p78 is a third realization of the seventy-eighth version of the perturbed physics model).
-
-For example the two different ensemble members, r3i1p7 and r3i1p8, should both be initialized from exactly the same initial conditions using the same method (because the &quot;r&quot; and &quot;i&quot; values are identical) although the subsequent evolution of the simulations will presumably differ since they were produced by two different &quot;perturbed physics&quot; versions of the same model.</dc:description>
-        <rdfs:comment xml:lang="en">A model run refers to one complete model calculation. There is usually a well established nomenclature for run definition. Model run is indicated as a xsd:string</rdfs:comment>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://pcmdi.llnl.gov/mips/cmip5/docs/cmip5_data_reference_syntax.pdf</rdfs:seeAlso>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ensemble member (r&lt;N&gt;i&lt;M&gt;p&lt;L&gt;)</DRS_CMIP5>
     </owl:DatatypeProperty>
     
 
@@ -1326,17 +1698,6 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     
 
 
-    <!-- https://metaclip.org/datasource/datasource.owl#hasTimeFrame -->
-
-    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasTimeFrame">
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Anomaly"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description xml:lang="en">The time frame used to compute the anomaly. Possible values are &quot;none&quot; (i.e., the whole period has been averaged and subtracted), &quot;monthly&quot; (i.e., the climatological mean is subtracted month by month) or &quot;daily&quot; (i.e., a daily climatology is subtrated to each day)</dc:description>
-        <rdfs:label xml:lang="en">Climatological period</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://metaclip.org/datasource/datasource.owl#hasTimeFrequency -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hasTimeFrequency">
@@ -1344,7 +1705,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:description xml:lang="en">Time frequency refers to the interval at which data is recorded or output by the model. Climate models simulate various atmospheric, oceanic, and land processes over time, and the time frequency determines how often these simulations are saved for analysis</terms:description>
         <rdfs:label xml:lang="en">Time frequency</rdfs:label>
-        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frequency</DRS_CMIP6>
+        <DRS_CMIP6>frequency</DRS_CMIP6>
     </owl:DatatypeProperty>
     
 
@@ -1360,6 +1721,139 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#lakeRepresentation -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#lakeRepresentation">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LakeModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Mode in which lakes are represented in the lake model component (e.g., prognostic lake ice, mixed-layer scheme, prescribed lake temperature)</dc:description>
+        <rdfs:comment xml:lang="en">Describes whether the lake model predicts vertical temperature profiles, lake ice evolution, mixed-layer behaviour, or uses prescribed or climatological fields.</rdfs:comment>
+        <rdfs:label xml:lang="en">lake representation mode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#lsmComponentName -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#lsmComponentName">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or identifier of the land-surface model component or configuration used.</dc:description>
+        <rdfs:comment xml:lang="en">Captures labels such as &apos;TERRA-ML&apos;, &apos;Noah-MP&apos;, or descriptive variants (e.g., &apos;TERRA-ML with modified soil hydrology scheme (Schlemmer et al. 2018)&apos;).</rdfs:comment>
+        <rdfs:label xml:lang="en">land-surface model component name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#lsmLevels -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#lsmLevels">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text indication of the number of vertical levels used by the land-surface model.</dc:description>
+        <rdfs:comment xml:lang="en">Stores the reported count of land/soil levels (e.g., &apos;10&apos;, &apos;10 levels&apos;, or strings with additional notes). Values may include units or qualifiers as provided by the modelling group.</rdfs:comment>
+        <rdfs:label xml:lang="en">land-surface model levels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#lsmMaxDepth -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#lsmMaxDepth">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Maximum depth of the land/soil column represented by the land-surface model (free text with units).</dc:description>
+        <rdfs:comment xml:lang="en">Typical values include strings with units, e.g., &apos;11.5 m&apos;. This property does not normalise units or vertical coordinate conventions; it preserves the original metadata text.</rdfs:comment>
+        <rdfs:label xml:lang="en">land-surface model maximum depth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#lsmMisc -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#lsmMisc">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Additional free-text information related to the land-surface model configuration.</dc:description>
+        <rdfs:comment xml:lang="en">For heterogeneous notes that do not fit other LSM fields (e.g., &apos;deepest soil mid-layer level is 11.5 m; dynamic moisture calculation is restricted to upper 8 levels until 2.86 m&apos;).</rdfs:comment>
+        <rdfs:label xml:lang="en">land-surface model miscellaneous information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#modelRun -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#modelRun">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">This triad of integers (N, M, L), formatted e.g., &quot;r3i1p21&quot; distinguishes among closely related simulations by a single model. All three are required even if only a single simulation is performed. 
+
+The so-called &quot;realization&quot; number (a positive integer value of &apos;N&apos;) is used to distinguish among members of an ensemble typically generated by initializing a set of runs with different, but equally realistic, initial conditions
+
+Models used for forecasts that depend on the initial conditions might be initialized from observations using different methods or different observational datasets. These should be distinguished by assigning different positive integer values of &apos;M&apos; in the &quot;initialization method indicator&quot;.
+
+If there are many closely related model versions, which, as a group, are generally referred to as a perturbed physics ensemble, then these should
+be distinguishable by a &quot;perturbed physics&quot; number &apos;L&apos;, where the positive integer value of &apos;L&apos; is uniquely associated with a particular set of model parameters (e.g., r3i1p78 is a third realization of the seventy-eighth version of the perturbed physics model).
+
+For example the two different ensemble members, r3i1p7 and r3i1p8, should both be initialized from exactly the same initial conditions using the same method (because the &quot;r&quot; and &quot;i&quot; values are identical) although the subsequent evolution of the simulations will presumably differ since they were produced by two different &quot;perturbed physics&quot; versions of the same model.</dc:description>
+        <rdfs:comment xml:lang="en">A model run refers to one complete model calculation. There is usually a well established nomenclature for run definition. Model run is indicated as a xsd:string</rdfs:comment>
+        <rdfs:label xml:lang="en">model run</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://pcmdi.llnl.gov/mips/cmip5/docs/cmip5_data_reference_syntax.pdf</rdfs:seeAlso>
+        <DRS_CMIP5>Ensemble member (r&lt;N&gt;i&lt;M&gt;p&lt;L&gt;)</DRS_CMIP5>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#nominalResolution -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#nominalResolution">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">The nominal resolution is the approximate resolution of the final output data.</dc:description>
+        <rdfs:comment xml:lang="en">The term ‘nominal resolution’ refers to a metric that allows users to discern the relative fineness of the data output by different models. It is important to note that the nominal resolution might be presented to end-users by the data provider, which may not necessarily reflect the resolution of the data as originally produced by the model. Therefore, while it serves as a useful guide for comparison, it should not be solely relied upon for assessing the detailed accuracy of the model’s output.</rdfs:comment>
+        <rdfs:label xml:lang="en">has nominal resolution of</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#oceanComponentReference -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#oceanComponentReference">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Name or bibliographic reference of the ocean model component used in the configuration.</dc:description>
+        <rdfs:comment xml:lang="en">Captures identifiers such as &apos;NEMOMED8 (Beuvier et al., 2010)&apos; or other combinations of official model names, configurations, and citation details as reported by the modelling group.</rdfs:comment>
+        <rdfs:label xml:lang="en">ocean component reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#oceanMisc -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#oceanMisc">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Additional free-text information related to the ocean model component.</dc:description>
+        <rdfs:comment xml:lang="en">Intended for heterogeneous notes such as basin extent, grid structure, nesting configuration, vertical level structure, horizontal resolution, or any experiment-specific settings.</rdfs:comment>
+        <rdfs:label xml:lang="en">ocean model miscellaneous information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#oceanRepresentationMode -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#oceanRepresentationMode">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#OceanModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Mode in which the ocean component is represented (e.g., interactive, prescribed, slab ocean, climatology).</dc:description>
+        <rdfs:comment xml:lang="en">Stores the high-level configuration describing whether the ocean model is fully coupled, prescribed, slab-only, or driven by climatological fields.</rdfs:comment>
+        <rdfs:label xml:lang="en">ocean representation mode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#rotated_north_pole -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#rotated_north_pole"/>
@@ -1369,6 +1863,54 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     <!-- https://metaclip.org/datasource/datasource.owl#rotated_zero_longitude -->
 
     <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#rotated_zero_longitude"/>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#simulationNotes -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#simulationNotes">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text notes about the simulation or experiment runs (e.g., re-runs, campaign-specific remarks, dataset release clarifications).</dc:description>
+        <rdfs:comment xml:lang="en">General miscellaneous information: can be used to distinguish simulation or run versions (e.g., v1/v2/v3 as re-runs) from actual model versioning, and to record experiment-level caveats, naming conventions, or other release notes. The property has no declared domain in order to allow its use with RCMs, GCMs, ModelComponents, and even Datasets.</rdfs:comment>
+        <rdfs:label xml:lang="en">simulation notes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#toaLevels -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#toaLevels">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#AtmosModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text description of the number of vertical levels up to the model top (top of atmosphere) as reported by the modelling group.</dc:description>
+        <rdfs:comment xml:lang="en">Used to capture user-provided textual information about the vertical grid, including number of levels, optional notes on layer distribution, and additional details such as model-top height in km or pressure. This property intentionally accepts heterogeneous text as metadata differ across modelling centres.</rdfs:comment>
+        <rdfs:label xml:lang="en">top-of-atmosphere levels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#urbanLsmRepresentation -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#urbanLsmRepresentation">
+        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#UrbanLandSurfaceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Free-text indication of how the urban surface is represented within the land-surface component of a climate model.</dc:description>
+        <rdfs:comment xml:lang="en">Captures heterogeneous descriptions of the urban modelling approach, ranging from simplified assumptions (e.g., urban areas treated as rock) to explicit urban land-surface model names or configurations (e.g., CLM4.5, UCM variants, or other scheme-specific labels).</rdfs:comment>
+        <rdfs:label xml:lang="en">urban land-surface model representation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#versionTag -->
+
+    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#versionTag">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">String identifier used to record the version of a software agent, dataset, model component, or any other entity represented in the ontology.</dc:description>
+        <dc:source xml:lang="en">Intended to store version labels from model documentation or metadata tables, including semantic versioning (e.g., &apos;v1.0&apos;, &apos;3.2.1&apos;) or descriptive strings.</dc:source>
+        <rdfs:comment xml:lang="en">Intended to store version labels from model documentation or metadata tables, including semantic versioning (e.g., &apos;v1.0&apos;, &apos;3.2.1&apos;) or descriptive strings.</rdfs:comment>
+        <rdfs:label xml:lang="en">version tag</rdfs:label>
+        <DRS_CMIP5>Version number</DRS_CMIP5>
+    </owl:DatatypeProperty>
     
 
 
@@ -1463,21 +2005,6 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
         <dc:description xml:lang="en">Units of a geophysical variable</dc:description>
         <rdfs:label xml:lang="en">withUnits</rdfs:label>
         <DRS_CMIP6>units</DRS_CMIP6>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://metaclip.org/datasource/datasource.owl#withVersionTag -->
-
-    <owl:DatatypeProperty rdf:about="https://metaclip.org/datasource/datasource.owl#withVersionTag">
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#DatasetSubset"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#GCM"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#RCM"/>
-        <rdfs:domain rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>withVersionTag</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version number</DRS_CMIP5>
     </owl:DatatypeProperty>
     
 
@@ -1589,7 +2116,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     <!-- https://metaclip.org/datasource/datasource.owl#AerosolModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#AerosolModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">An aerosol model within a GCM aims to quantify and describe how these particles interact with sunlight and clouds, affecting the Earth’s energy balance and climate. It takes into account various properties of aerosols, including their size distribution, chemical composition, and life cycle, which encompasses their emission, transportation, transformation, and removal processes from the atmosphere.</dc:description>
         <rdfs:comment xml:lang="en">Aerosols are tiny particles or droplets suspended in the air, which can originate from both natural sources, like dust storms and sea spray, and human activities, such as industrial emissions and vehicle exhaust. Aerosol models are crucial for understanding the indirect effects of aerosols on climate, such as their role in cloud formation and precipitation. They help in assessing the aerosol radiative forcing, which is a measure of the influence of aerosols on the balance of incoming and outgoing energy in the Earth’s atmosphere. These models are integrated with other components of GCMs to provide comprehensive simulations of the climate system and to predict future climate scenarios.</rdfs:comment>
         <rdfs:label>AerosolModel</rdfs:label>
@@ -1648,7 +2175,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     <!-- https://metaclip.org/datasource/datasource.owl#AtmosChemModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#AtmosChemModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">A chemical transport model (CTM) is a type of computer numerical model which typically simulates atmospheric chemistry and may give air pollution forecasting.</dc:description>
         <rdfs:comment xml:lang="en">The tendency, especially as the cost of computing declines over time, is for GCMs to incorporate CTMs for species of special interest to climate dynamics, especially shorter-lived species such as nitrogen oxides and volatile organic compounds; this allows feedbacks from the CTM to the GCM&apos;s radiation calculations, among other applications.</rdfs:comment>
         <rdfs:label>Atmospheric Chemistry Model</rdfs:label>
@@ -1660,7 +2187,7 @@ For example the two different ensemble members, r3i1p7 and r3i1p8, should both b
     <!-- https://metaclip.org/datasource/datasource.owl#AtmosModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#AtmosModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">An atmospheric model is a mathematical model constructed around the full set of primitive, dynamical equations which govern atmospheric motions. It can supplement these equations with parameterizations for turbulent diffusion, radiation, moist processes (clouds and precipitation), heat exchange, soil, vegetation, surface water, the kinematic effects of terrain, and convection</dc:description>
         <rdfs:label>Atmospheric Model</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Atmospheric_model</rdfs:seeAlso>
@@ -1768,7 +2295,7 @@ In addition, a set of &quot;Core variables&quot; have to be provided on a regula
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#Climatology">
         <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#Transformation"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climatology</rdfs:label>
+        <rdfs:label>Climatology</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.euporias.eu/taxonomy/term/16</rdfs:seeAlso>
         <prov:definition xml:lang="en">The normal state of climate such as a base line over the normal period. Climatology is often taken as the mean value for a given month over, for example, 1961-1990</prov:definition>
     </owl:Class>
@@ -1933,8 +2460,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:comment xml:lang="en">An :Experiment is an activity aimed at addressing a specific scientific problem. In the climate context, different datasets (particularly model simulations, but also observations etc...) can be adscribed to specific experiments. Several predefined :Experiment individuals can be instantiated (this is preferred), for instance :RCP45 or :Evaluation experiments.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiment</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiment</DRS_CMIP5>
+        <rdfs:label>Experiment</rdfs:label>
+        <DRS_CMIP5>Experiment</DRS_CMIP5>
     </owl:Class>
     
 
@@ -1947,7 +2474,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <dc:description xml:lang="en">Global Climate Models or General Circulation Models (GCMs) are global, three-dimensional computer models of the climate system, used to solve a set of mathematical equations describing the laws of physics relevant to the atmospheric and oceanic circulation, the distribution of heat and the interaction between electromagnetic radiation and atmospheric gases and aerosols. They consist of different modules describing the atmosphere, oceans, sea-ice/snow and the land surface, and represent the world in terms of boxes stacked next to and on top of each other. Evolution of the model circulation is computed by time integration of those equations starting from an initial condition.</dc:description>
         <rdfs:label>GCM</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/General_circulation_model</rdfs:seeAlso>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model</DRS_CMIP5>
+        <DRS_CMIP5>Model</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2007,10 +2534,21 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#LakeModel -->
+
+    <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#LakeModel">
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <dc:description xml:lang="en">Model component used to represent inland water bodies (lakes) within a regional or global climate model.</dc:description>
+        <rdfs:comment xml:lang="en">Lake models simulate thermal stratification, vertical mixing, heat storage, and lake ice formation/decay. They provide physically-based surface fluxes for inland water surfaces. Examples include FLake, Hostetler, and other prognostic or mixed-layer schemes used in RCMs and ESMs.</rdfs:comment>
+        <rdfs:label xml:lang="en">lake model</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#LandIceModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#LandIceModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">A land-ice model is a computational tool used to simulate the behavior of ice sheets and glaciers on land.</dc:description>
         <rdfs:comment xml:lang="en">These models are used to understand and predict how ice sheets and glaciers respond to changes in climate and contribute to sea level rise. They take into account various factors such as ice dynamics, surface mass balance, and interactions with the atmosphere and oceans.</rdfs:comment>
         <rdfs:label>LandIceModel</rdfs:label>
@@ -2021,7 +2559,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <!-- https://metaclip.org/datasource/datasource.owl#LandSurfaceModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#LandSurfaceModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">Land surface models (LSMs) use quantitative methods to simulate the exchange of water and energy fluxes at the Earth surface–atmosphere interface. They are key component of climate models. Over the past two decades, they have evolved from oversimplified schemes, which described the surface boundary conditions for general circulation models (GCMs), to complex models that can be used alone or as part of GCMs to investigate the biogeochemical, hydrological, and energy cycles at the Earth&apos;s surface</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Land-Surface Model</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Land_surface_models_(climate)</rdfs:seeAlso>
@@ -2060,13 +2598,26 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#ModelComponent -->
+
+    <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#ModelComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <dc:description xml:lang="en">Generic category representing any subsystem or module that forms part of a climate model, responsible for simulating a specific physical, dynamical, or biogeochemical process.</dc:description>
+        <terms:description xml:lang="en">Editorial note: introduced as a parent category to organise all model components and support extensible domain and range definitions</terms:description>
+        <rdfs:comment xml:lang="en">This class groups all components that constitute the internal architecture of a climate model (e.g., land‑surface components, aerosol modules, radiation schemes, lake models, or convection parameterizations). It is used as the common range of the property hasModelComponent and as the superclass of more specific component types.</rdfs:comment>
+        <rdfs:label xml:lang="en">model component</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModelComponent"/>
+    </owl:Class>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#ModellingCenter -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#ModellingCenter">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Organization"/>
         <rdfs:comment xml:lang="en">The organization producing the Dataset, either by running and/or delivering the climate model simulations or carrying out any other type of data processing (interpolation, homogenization, assimilation, harmonization, distillation...) leading to a data product that is a primary source described by _ds:Dataset_.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institute</DRS_CMIP5>
+        <DRS_CMIP5>Institute</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2122,7 +2673,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <!-- https://metaclip.org/datasource/datasource.owl#OceanBgchemModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#OceanBgchemModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">An ocean biogeochemical model (ds:OceanBgchmeModel) with a climate model is a complex system that simulates the interactions between the ocean’s physical properties, circulation, and biogeochemical transformations. It describes the ocean’s temperature, salinity distributions, and circulation, which includes wind and density-driven currents, and wind, convective, and eddy-driven mixing. They also describe the transformations of biogeochemical constituents contained in seawater, typically nutrients, functional plankton groups, non-living organic matter, dissolved gases, and parameters of the inorganic carbon system</dc:description>
         <rdfs:comment xml:lang="en">These models can be regional or global in their geographical scope and can be a component of a larger model, such as Earth System Models (ESMs), where the OceanBgchemModel is coupled to a model of the atmosphere and land biosphere.</rdfs:comment>
         <rdfs:label>OceanBgchemModel</rdfs:label>
@@ -2134,7 +2685,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <!-- https://metaclip.org/datasource/datasource.owl#OceanModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#OceanModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">Ocean general circulation models (OGCMs) are a particular kind of general circulation model to describe physical and thermodynamical processes in oceans.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ocean Model</rdfs:label>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Ocean_general_circulation_model</rdfs:seeAlso>
@@ -2171,8 +2722,8 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <dc:description xml:lang="en">An (intercomparison) Project generating GCM/RCM simulations, observational datasets etc.</dc:description>
         <rdfs:comment xml:lang="en">This Class aims at recording the necessary information to unequivocally identify a given data simulation with a specific project. For instance, A MultiDecadalSImulationDataset may belong to CMIP5 or CMIP3. Similarly, a SeasonalHindcastDataset may be adscribed to DEMETER.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</DRS_CMIP5>
+        <rdfs:label>Project</rdfs:label>
+        <DRS_CMIP5>Project</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2245,7 +2796,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <!-- https://metaclip.org/datasource/datasource.owl#SeaIceModel -->
 
     <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#SeaIceModel">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
         <dc:description xml:lang="en">A sea-Ice model is a computer model that simulates the growth, melt and movement of sea ice. Sea-Ice models often integrate into coupled climate system models as well as global ocean and weather forecasting models and are often used as a tool in Arctic and Southern Ocean research.</dc:description>
         <rdfs:comment xml:lang="en">Much of the world&apos;s sea ice is enclosed within the polar ice packs in the Earth&apos;s polar regions: the Arctic ice pack of the Arctic Ocean and the Antarctic ice pack of the Southern Ocean. Polar packs undergo a significant yearly cycling in surface extent, a natural process upon which depends the Arctic ecology, including the ocean&apos;s ecosystems. Due to the action of winds, currents and temperature fluctuations, sea ice is very dynamic, leading to a wide variety of ice types and features. Sea ice may be contrasted with icebergs, which are chunks of ice shelves or glaciers that calve into the ocean. Depending on location, sea ice expanses may also incorporate icebergs.</rdfs:comment>
         <rdfs:label>Sea-Ice Model</rdfs:label>
@@ -2346,7 +2897,7 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <dc:description xml:lang="en">Describes the time resolution of the variable</dc:description>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org/datasource/datasource.owl</rdfs:isDefinedBy>
         <rdfs:label>TemporalResolution</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</DRS_CMIP5>
+        <DRS_CMIP5>Frequency</DRS_CMIP5>
     </owl:Class>
     
 
@@ -2361,6 +2912,17 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
         <rdfs:label xml:lang="en">Transformation</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Data_transformation</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Data_transformation_(statistics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#UrbanLandSurfaceModel -->
+
+    <owl:Class rdf:about="https://metaclip.org/datasource/datasource.owl#UrbanLandSurfaceModel">
+        <rdfs:subClassOf rdf:resource="https://metaclip.org/datasource/datasource.owl#ModelComponent"/>
+        <dc:description xml:lang="en">Urban land-surface model used to simulate the physical exchanges of momentum, heat, and moisture between the atmosphere and urban areas. It represents key features of the urban canopy—such as buildings, streets, roofs, pavements, and limited vegetation—and accounts for processes including radiative trapping in street canyons, heat storage in construction materials, anthropogenic heat emissions, and the modification of turbulent fluxes. This model improves the representation of urban microclimates and the urban heat island effect within regional climate simulations.</dc:description>
+        <rdfs:comment xml:lang="en">Urban land-surface models (ULSMs) extend general land-surface modelling approaches to represent the distinct physical processes occurring in built environments. They simulate the urban canopy layer, including radiative trapping in street canyons, heat storage in construction materials, modified turbulent exchanges, and anthropogenic heat emissions. By providing parameterisations tailored to densely built areas, ULSMs improve the representation of urban energy and water fluxes and the urban heat island effect within regional and global climate models.</rdfs:comment>
+        <rdfs:label xml:lang="en">Urban Model</rdfs:label>
     </owl:Class>
     
 
@@ -2411,16 +2973,17 @@ Specific :CombinationMethod approaches can be used to this aim</rdfs:comment>
     <!-- https://metaclip.org/datasource/datasource.owl#C3S -->
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#C3S">
-        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Project"/>
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#Copernicus"/>
         <dc:description xml:lang="en">The Copernicus Climate Change Service (C3S) supports scientists, policy makers and businesses by providing authoritative, quality-assured and up-to-date information about the past, current and future climate across Europe and worldwide.
 
-The service is implemented by the European Centre for Medium-Range Weather Forecasts (:ECMWF) on behalf of the European Commission.
+The service is implemented by the European Centre for Medium-Range Weather Forecasts (ECMWF) on behalf of the European Commission.
 
 C3S is one of six core thematic services of Copernicus, the European Union&apos;s flagship programme for monitoring Earth’s environment based on satellite and in-situ observations as well as modelling information.</dc:description>
         <rdfs:label xml:lang="en">C3S</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#ECMWF"/>
         <rdfs:seeAlso xml:lang="en">https://climate.copernicus.eu</rdfs:seeAlso>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#Copernicus"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/BAMS-D-21-0315.1</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -2494,6 +3057,17 @@ Sanna, A., A. Borrelli, P. Athanasiadis, S. Materia, A. Storto, S. Tibaldi, S. G
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#CORDEX-CORE -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#CORDEX-CORE">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">CORDEX‑CORE is a WCRP CORDEX initiative designed to provide a globally consistent set of high‑resolution (~25 km) regional climate projections. It employs multiple regional climate models to downscale selected CMIP5 global simulations under RCP2.6 and RCP8.5 across nine CORDEX domains, delivering homogeneous datasets for climate‑change assessment, impacts analysis, and contributions to future IPCC reports.</dc:description>
+        <rdfs:label>CORDEX-CORE</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/BAMS-D-21-0119.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#CSDI -->
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#CSDI">
@@ -2527,7 +3101,7 @@ Sanna, A., A. Borrelli, P. Athanasiadis, S. Materia, A. Storto, S. Tibaldi, S. G
     <!-- https://metaclip.org/datasource/datasource.owl#Copernicus -->
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#Copernicus">
-        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Project"/>
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
         <dc:description xml:lang="en">Copernicus is the European Union&apos;s Earth Observation Programme, looking at our planet and its environment. It offers information services based on satellite Earth Observation and in situ (non-space) data.
 
 The Programme is coordinated and managed by the European Commission. It is implemented in partnership with the Member States, the European Space Agency (ESA), the European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT), the European Centre for Medium-Range Weather Forecasts (ECMWF), EU Agencies and Mercator Océan.</dc:description>
@@ -2541,13 +3115,28 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#Copernicus-CMIP6">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
-        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#Copernicus"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-23</dc:date>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#C3S"/>
         <dc:title xml:lang="en">Copernicus CMIP6 Climate Projections</dc:title>
         <terms:description xml:lang="en">This catalogue entry provides daily and monthly global climate projections data from a large number of experiments, models and time periods computed in the framework of the sixth phase of the Coupled Model Intercomparison Project (CMIP6).</terms:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copernicus CMIP6</rdfs:label>
-        <license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
+        <rdfs:label>Copernicus CMIP6</rdfs:label>
+        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T00:00:00Z</prov:generatedAtTime>
+        <license>Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
         <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.c866074c</referenceURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#Copernicus-CORDEX-CMIP5 -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#Copernicus-CORDEX-CMIP5">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#C3S"/>
+        <dc:title xml:lang="en">Gridded CORDEX-CMIP5 dataset underpinning the Copernicus Interactive Climate Atlas</dc:title>
+        <terms:description xml:lang="en">The Copernicus CORDEX-CMIP5 dataset provides regional climate projections from the CORDEX initiative driven by CMIP5 global models, harmonized on a regular latitude-longitude grid. It includes monthly and annual time series under CMIP5 RCP scenarios.</terms:description>
+        <rdfs:label>Copernicus CORDEX-CMIP5</rdfs:label>
+        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-17T00:00:00Z</prov:generatedAtTime>
+        <license xml:lang="en">Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.h35hb680</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -2733,6 +3322,28 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:label>ESGF</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://journals.ametsoc.org/doi/10.1175/BAMS-D-15-00132.1</rdfs:seeAlso>
         <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.future.2013.07.002</referenceURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#EURO -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#EURO">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#CORDEXdomain"/>
+        <dc:description xml:lang="en">European domain for downscaling experiments within the CORDEX initiative</dc:description>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://euro-cordex.net/</rdfs:seeAlso>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cordex.org/domains/cordex-region-euro-cordex</referenceURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#EURO-CORDEX -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#EURO-CORDEX">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Project"/>
+        <dc:description xml:lang="en">EURO‑CORDEX is the European branch of the WCRP CORDEX initiative, producing coordinated ensembles of regional climate projections for Europe using multiple dynamical and empirical–statistical downscaling models forced by CMIP5 global climate simulations. It provides high‑resolution datasets at 0.44° (EUR‑44) and 0.11° (EUR‑11) for climate‑change assessment, impacts research, and adaptation planning.</dc:description>
+        <rdfs:label>EURO-CORDEX</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.euro-cordex.net/index.php.en</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -3616,12 +4227,12 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#loadeR.ECOMS">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Package"/>
+        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#loadeR"/>
         <dc:description xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</dc:description>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR.ECOMS</dc:source>
         <rdfs:label>loadeR.ECOMS</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://meteo.unican.es/ecoms-udg</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/science/article/pii/S2405880717300079?via%3Dihub</rdfs:seeAlso>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#loadeR"/>
     </owl:NamedIndividual>
     
 
@@ -3672,6 +4283,12 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#tos -->
+
+    <rdf:Description rdf:about="https://metaclip.org/datasource/datasource.owl#tos"/>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#ta -->
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#ta">
@@ -3689,9 +4306,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#tas">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Near-surface (typically 2m) air temperature. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</DRS_CMIP5>
-        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tas</DRS_CMIP6>
+        <rdfs:label>tas</rdfs:label>
+        <DRS_CMIP5>tas</DRS_CMIP5>
+        <DRS_CMIP6>tas</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
@@ -3701,9 +4318,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#tasmax">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Maximum near-surface daily temperature</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</DRS_CMIP5>
-        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmax</DRS_CMIP6>
+        <rdfs:label>tasmax</rdfs:label>
+        <DRS_CMIP5>tasmax</DRS_CMIP5>
+        <DRS_CMIP6>tasmax</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
@@ -3713,9 +4330,9 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#tasmin">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Variable"/>
         <dc:description xml:lang="en">Minimum near-surface daily temperature</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</rdfs:label>
-        <DRS_CMIP5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</DRS_CMIP5>
-        <DRS_CMIP6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasmin</DRS_CMIP6>
+        <rdfs:label>tasmin</rdfs:label>
+        <DRS_CMIP5>tasmin</DRS_CMIP5>
+        <DRS_CMIP6>tasmin</DRS_CMIP6>
     </owl:NamedIndividual>
     
 
@@ -3828,5 +4445,5 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

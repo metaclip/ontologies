@@ -143,4 +143,9 @@
 ## v0.30 (11 Apr 2025) 
  * Replace http by https in METACLIP ontology IRIs
  
+## v0.31 (in devel)
+ * New object property wasDevelopedBy, as a specialised attribution stating that the modelling center developed the climate model (RCM/GCM).
+ * New individual instances of ds:Project, namely ds:EURO-CORDEX and ds:CORDEX-CORE
+ * Other minor changes and annotation updates
+ 
 
