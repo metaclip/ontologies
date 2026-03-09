@@ -143,4 +143,64 @@
 ## v0.30 (11 Apr 2025) 
  * Replace http by https in METACLIP ontology IRIs
  
+## v1.0 (09 Mar 2026)
+ 
+### Added
+- Introduced top-level class `ModelComponent` to unify all model subsystem components (Atmos, LandSurface, Ocean, Lake, Aerosol, Urban…).
+- Added new component class `LakeModel` with full documentation and annotations.
+- Added object property `hasLakeModelComponent` and its inverse `isLakeModelComponentOf`, aligned with the model component hierarchy.
+
+### New Datatype Properties
+
+**AtmosModel**
+- `atmosDynamicsCore`
+- `atmosConvectionScheme`
+- `atmosMicrophysicsScheme`
+- `atmosPblScheme`
+- `atmosShortwaveRadiationScheme`
+- `atmosLongwaveRadiationScheme`
+- `atmosMisc`
+- `toaLevels` (free-text specification of vertical levels up to model top)
+
+**AerosolModel**
+- `aerosolParameterizationDescription`
+- `aerosolRepresentationMode`
+- `aerosolMisc`
+
+**LandSurfaceModel**
+- `lsmLevels`
+- `lsmMaxDepth`
+- `lsmComponentName`
+- `lsmMisc`
+
+**OceanModel**
+- `oceanRepresentationMode`
+- `oceanComponentReference`
+- `oceanMisc`
+
+**UrbanLandSurfaceModel**
+- `urbanLsmRepresentation`
+
+**LakeModel**
+- `lakeComponentName`
+- `lakeRepresentationMode`
+- `lakeMisc`
+
+**Cross-component / Global**
+- `modelMisc` (general-purpose free-text notes)
+
+### Improved
+- Normalized naming conventions across the ontology:
+  - Object properties use `hasXComponent` / `isXComponentOf`.
+  - Datatype properties use attribute-style camelCase names.
+  - Consistent use of `…Misc` for free-text metadata fields.
+- Unified annotation structure (`rdfs:label`, `dc:description`, `rdfs:comment`, `rdfs:range`).
+- Replace prov-like participles by present in object properties
+- Improved semantic alignment of all model components and their metadata.
+
+### Clean-up
+- Removed inconsistencies in inverse object property declarations.
+- Eliminated misleading temporal-sounding names (`hadX`) except when originating from PROV-O vocabulary.
+
+ 
 
