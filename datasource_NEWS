@@ -143,7 +143,7 @@
 ## v0.30 (11 Apr 2025) 
  * Replace http by https in METACLIP ontology IRIs
  
-## v1.0 (in devel)
+## v1.0 (09 Mar 2026)
  
 ### Added
 - Introduced top-level class `ModelComponent` to unify all model subsystem components (Atmos, LandSurface, Ocean, Lake, Aerosol, Urban…).
@@ -195,6 +195,7 @@
   - Datatype properties use attribute-style camelCase names.
   - Consistent use of `…Misc` for free-text metadata fields.
 - Unified annotation structure (`rdfs:label`, `dc:description`, `rdfs:comment`, `rdfs:range`).
+- Replace prov-like participles by present in object properties
 - Improved semantic alignment of all model components and their metadata.
 
 ### Clean-up
