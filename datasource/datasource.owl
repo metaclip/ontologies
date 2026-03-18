@@ -103,39 +103,9 @@
     
 
 
-    <!-- http://www.w3.org/ns/prov#endedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#generatedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#generatedAtTime"/>
-    
-
-
     <!-- http://www.w3.org/ns/prov#inverse -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#inverse"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#specializationOf -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#specializationOf"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#startedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf"/>
     
 
 
@@ -3057,7 +3027,6 @@ In addition, a set of &quot;Core variables&quot; have to be provided on a regula
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#C3S">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#Copernicus"/>
         <dc:description xml:lang="en">The Copernicus Climate Change Service (C3S) supports scientists, policy makers and businesses by providing authoritative, quality-assured and up-to-date information about the past, current and future climate across Europe and worldwide.
 
 The service is implemented by the European Centre for Medium-Range Weather Forecasts (ECMWF) on behalf of the European Commission.
@@ -4330,7 +4299,6 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#loadeR.ECOMS">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Package"/>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#loadeR"/>
         <dc:description xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</dc:description>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR.ECOMS</dc:source>
         <rdfs:label>loadeR.ECOMS</rdfs:label>
