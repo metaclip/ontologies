@@ -14,11 +14,11 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/metaclip/ontologies/refs/heads/master/archive/datasource/1.0.0/datasource.owl"/>
+        <owl:versionIRI rdf:resource="https://metaclip.org/vocab/metaclip/datasource/1.0.0/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <dc:date>2026-03-09T09:16:12Z</dc:date>
+        <dc:date>2026-03-18T10:08:00Z</dc:date>
         <dc:title xml:lang="en">The Climate Data Source Ontology from METACLIP</dc:title>
         <terms:contributor>Daniel San-Martin &lt;https://orcid.org/0000-0002-2862-2704&gt;</terms:contributor>
         <terms:contributor>Joaquin Bedia &lt;https://orcid.org/0000-0001-6219-4312&gt;</terms:contributor>
