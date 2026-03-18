@@ -14,11 +14,11 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/metaclip/ontologies/refs/heads/master/archive/datasource/1.0.0/datasource.owl"/>
+        <owl:versionIRI rdf:resource="https://metaclip.org/vocab/metaclip/datasource/1.0.0/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <dc:date>2026-03-09T09:16:12Z</dc:date>
+        <dc:date>2026-03-18T10:08:00Z</dc:date>
         <dc:title xml:lang="en">The Climate Data Source Ontology from METACLIP</dc:title>
         <terms:contributor>Daniel San-Martin &lt;https://orcid.org/0000-0002-2862-2704&gt;</terms:contributor>
         <terms:contributor>Joaquin Bedia &lt;https://orcid.org/0000-0001-6219-4312&gt;</terms:contributor>
@@ -103,39 +103,9 @@
     
 
 
-    <!-- http://www.w3.org/ns/prov#endedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#generatedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#generatedAtTime"/>
-    
-
-
     <!-- http://www.w3.org/ns/prov#inverse -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#inverse"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#specializationOf -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#specializationOf"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#startedAtTime -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf"/>
     
 
 
@@ -3057,7 +3027,6 @@ In addition, a set of &quot;Core variables&quot; have to be provided on a regula
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#C3S">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#Copernicus"/>
         <dc:description xml:lang="en">The Copernicus Climate Change Service (C3S) supports scientists, policy makers and businesses by providing authoritative, quality-assured and up-to-date information about the past, current and future climate across Europe and worldwide.
 
 The service is implemented by the European Centre for Medium-Range Weather Forecasts (ECMWF) on behalf of the European Commission.
@@ -4330,7 +4299,6 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#loadeR.ECOMS">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Package"/>
-        <prov:specializationOf rdf:resource="https://metaclip.org/datasource/datasource.owl#loadeR"/>
         <dc:description xml:lang="en">An extension of the R package loadeR for accessing seasonal forecast datasets</dc:description>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/SantanderMetGroup/loadeR.ECOMS</dc:source>
         <rdfs:label>loadeR.ECOMS</rdfs:label>
