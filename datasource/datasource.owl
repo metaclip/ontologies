@@ -4492,8 +4492,73 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
     <rdf:Description>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
     </rdf:Description>
-    
 
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#ERA5-Land -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#ERA5-Land">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Reanalysis"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#ECMWF"/>
+        <dc:description xml:lang="en">ERA5-Land is a global reanalysis dataset for land surface variables, providing a physically consistent and historically complete view of the terrestrial water and energy cycles. Produced by replaying the land component of the ERA5 climate reanalysis at a resolution of 9 km, ERA5-Land offers hourly data from 1950 to present.</dc:description>
+        <rdfs:comment xml:lang="en">ERA5-Land uses ERA5 atmospheric fields as forcing for the land surface model</rdfs:comment>
+        <rdfs:label xml:lang="en">ERA5-Land</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5-land</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/essd-13-4349-2021</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
+    <!-- https://metaclip.org/datasource/datasource.owl#ORAS5 -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#ORAS5">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Reanalysis"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#ECMWF"/>
+        <dc:description xml:lang="en">ORAS5 (Ocean Reanalysis System 5) is a global ocean and sea-ice reanalysis produced using the OCEAN5 system based on the NEMO ocean model and the NEMOVAR ocean assimilation system. It is an ensemble reanalysis system producing 5 ensemble members with a horizontal resolution of approximately 0.25 degrees. ORAS5 covers the period from 1958 to present, assimilating subsurface temperature, salinity, sea-ice concentration, and sea-level anomalies using 3D-Var FGAT data assimilation.</dc:description>
+        <rdfs:comment xml:lang="en">ORAS5 is primarily designed to provide initial conditions for ECMWF coupled weather/ocean forecasting systems and climate monitoring</rdfs:comment>
+        <rdfs:label xml:lang="en">ORAS5</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ecmwf.int/en/research/climate-reanalysis/ocean-reanalysis</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/os-15-779-2019</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
+    <!-- https://metaclip.org/datasource/datasource.owl#CERRA -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#CERRA">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Reanalysis"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#C3S"/>
+        <dc:description xml:lang="en">CERRA (Copernicus European Regional Reanalysis) is a high-resolution regional reanalysis dataset for Europe based on the HARMONIE-ALADIN weather prediction and data assimilation system. It provides spatially and temporally consistent historical reconstructions of meteorological variables at 5.5 km horizontal resolution (deterministic) and 11 km resolution (10-member ensemble CERRA-EDA). The dataset covers the period from September 1984 to present with sub-daily output, offering improved representation of local climate features in complex terrain compared to global reanalyses.</dc:description>
+        <rdfs:comment xml:lang="en">CERRA includes three main datasets: CERRA (deterministic at 5.5 km), CERRA-EDA (ensemble at 11 km), and CERRA-Land (land-surface reanalysis at 5.5 km)</rdfs:comment>
+        <rdfs:label xml:lang="en">CERRA</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://confluence.ecmwf.int/display/CKB/CERRA</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
+    <!-- https://metaclip.org/datasource/datasource.owl#BERKEARTH -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#BERKEARTH">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:description xml:lang="en">Berkeley Earth Surface Temperature (BEST) is a comprehensive global temperature observational dataset that consolidates approximately 39,000 land station records from 16 major archives. It provides monthly, daily, and annual temperature anomalies and averages for land and ocean surfaces. The dataset covers the period from 1850 to present (land and ocean merged) with some land-only regions extending back to 1750. Data is available on high-resolution grids (0.25x0.25 degrees and 1x1 degrees) covering over 99.9 percent of Earth's surface by 2015.</dc:description>
+        <dc:source xml:lang="en">https://berkeleyearth.org/data/</dc:source>
+        <dc:title xml:lang="en">Berkeley Earth Surface Temperature Dataset</dc:title>
+        <rdfs:label xml:lang="en">BERKEARTH</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.5194/essd-12-3469-2020</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
+    <!-- https://metaclip.org/datasource/datasource.owl#CPC -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#CPC">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#NOAA"/>
+        <dc:description xml:lang="en">CPC (Climate Prediction Center) produces multiple global observational datasets for climate monitoring and analysis. The CPC Global Unified Gauge-Based Analysis provides daily land precipitation from 1979 to present at 0.5-degree resolution using optimal interpolation of thousands of rain gauges. CPC also provides global land surface air temperature analysis at monthly resolution from 1948 to present, merging records from GHCN and CAMS. Additional products include CMORPH precipitation derived from satellite observations with high temporal and spatial resolution.</dc:description>
+        <dc:source xml:lang="en">https://www.cpc.ncep.noaa.gov/products/monitoring_and_data/</dc:source>
+        <dc:title xml:lang="en">Climate Prediction Center Global Observational Datasets</dc:title>
+        <rdfs:label xml:lang="en">CPC</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.psl.noaa.gov/data/gridded/data.cpc.globalprecip.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
+    <!-- https://metaclip.org/datasource/datasource.owl#SST-CCI -->
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#SST-CCI">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ObservationalDataset"/>
+        <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#ESA"/>
+        <dc:description xml:lang="en">The ESA Sea Surface Temperature Climate Change Initiative (SST-CCI) provides a long, stable, and accurate Climate Data Record of global sea surface temperatures derived from multiple satellite sensors including AVHRRs, ATSRs, SLSTRs, and AMSR. The dataset spans from 1980 to 2021 with an ongoing Interim Climate Data Record updated daily. Data is presented on a global 0.05-degree latitude-longitude grid with full uncertainty estimates for each value. Level 4 products provide gap-free daily global analysis combining all sensors, including both surface skin temperature and estimates at 20 cm depth.</dc:description>
+        <dc:source xml:lang="en">https://climate.esa.int/en/projects/sea-surface-temperature/data/</dc:source>
+        <dc:title xml:lang="en">ESA Sea Surface Temperature Climate Change Initiative</dc:title>
+        <rdfs:label xml:lang="en">SST-CCI</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1038/s41597-024-03147-w</rdfs:seeAlso>
+    </owl:NamedIndividual>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
