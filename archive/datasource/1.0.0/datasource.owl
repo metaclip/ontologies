@@ -589,6 +589,36 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#hadDataProvider -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadDataProvider">
+        <rdfs:comment xml:lang="en">
+			Deprecated in datasource.owl version 1.0.
+			Replaced by ds:hasDataProvider after a revision 
+			of provenance-related attributions.
+			Not equivalent due to semantic and hierarchical updates.
+		</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasDataProvider"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#hadDatasetSubset -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadDatasetSubset">
+        <rdfs:comment xml:lang="en">
+			Deprecated in datasource.owl version 1.0.
+			The property structure for dataset derivation was revised,
+			and ds:hasDatasetSubset supersedes this name.
+			Semantic changes prevent declaring equivalence.
+		</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasDatasetSubset"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#hadInterpolation -->
 
     <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadInterpolation">
@@ -610,6 +640,21 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#InterpolationMethod"/>
         <rdfs:comment xml:lang="en">This object property related an interpolation :Step with a specific :InterpolationMethod</rdfs:comment>
         <rdfs:label>hadInterpolationMethod</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#hadModellingCenter -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadModellingCenter">
+        <rdfs:comment xml:lang="en">
+			Deprecated in datasource.owl version 1.0.
+			This property was removed after semantic restructuring
+			and replaced by ds:hasModellingCenter.
+			Due to semantic and hierarchical changes, this is NOT an equivalent property.
+		</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModellingCenter"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -638,6 +683,21 @@ For example, a near-surface variable might have dimensions like &quot;longitude,
         <rdfs:range rdf:resource="https://metaclip.org/datasource/datasource.owl#SeasonalForecastingSystem"/>
         <rdfs:comment xml:lang="en">A data property linking a seasonal forecast dataset (either a hindcast or an operational forecast) with its forecasting system</rdfs:comment>
         <rdfs:label>hadSeasonalForecastingSystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#hadSimulationModel -->
+
+    <owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadSimulationModel">
+        <rdfs:comment xml:lang="en">
+			Deprecated in datasource.owl version 1.0.
+			This property was removed during a semantic reorganization
+			of model attribution statements, and replaced by ds:hasSimulationModel.
+			Not equivalent due to semantic changes.
+		</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasSimulationModel"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -3054,7 +3114,8 @@ The dataset is publicly available through the Copernicus Climate Data Store (CDS
         <rdfs:comment xml:lang="en">A GrandEnsemble aggregating CORDEX regional climate model simulations across the 14 CORDEX continental-scale domains to provide near-global coverage. 
 This ensemble was assembled within the Copernicus Climate Change Service (C3S) to support the IPCC AR6 Working Group I regional assessment and the Interactive Atlas. 
 It integrates heterogeneous CORDEX–ESGF data, performs quality screening, and harmonises simulations to produce a consistent worldwide ensemble suitable for regional climate projections.</rdfs:comment>
-        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/BAMS-D-22-0111.1</referenceURL>
+        <rdfs:seeAlso>https://doi.org/10.1175/BAMS-D-22-0111.1</rdfs:seeAlso>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.bc91edc3</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3186,11 +3247,11 @@ The Programme is coordinated and managed by the European Commission. It is imple
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#Copernicus-CMIP6">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
+        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T00:00:00Z</prov:generatedAtTime>
         <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#C3S"/>
         <dc:title xml:lang="en">Copernicus CMIP6 Climate Projections</dc:title>
         <terms:description xml:lang="en">This catalogue entry provides daily and monthly global climate projections data from a large number of experiments, models and time periods computed in the framework of the sixth phase of the Coupled Model Intercomparison Project (CMIP6).</terms:description>
         <rdfs:label>Copernicus CMIP6</rdfs:label>
-        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T00:00:00Z</prov:generatedAtTime>
         <license>Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
         <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.c866074c</referenceURL>
     </owl:NamedIndividual>
@@ -3202,11 +3263,11 @@ The Programme is coordinated and managed by the European Commission. It is imple
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#Copernicus-CORDEX-CMIP5">
         <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#Dataset"/>
         <prov:hadPrimarySource rdf:resource="https://metaclip.org/datasource/datasource.owl#ESGF"/>
+        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-17T00:00:00Z</prov:generatedAtTime>
         <dc:creator rdf:resource="https://metaclip.org/datasource/datasource.owl#C3S"/>
         <dc:title xml:lang="en">Gridded CORDEX-CMIP5 dataset underpinning the Copernicus Interactive Climate Atlas</dc:title>
         <terms:description xml:lang="en">The Copernicus CORDEX-CMIP5 dataset provides regional climate projections from the CORDEX initiative driven by CMIP5 global models, harmonized on a regular latitude-longitude grid. It includes monthly and annual time series under CMIP5 RCP scenarios.</terms:description>
         <rdfs:label>Copernicus CORDEX-CMIP5</rdfs:label>
-        <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-17T00:00:00Z</prov:generatedAtTime>
         <license xml:lang="en">Creative Commons Attribution-ShareAlike 4.0 International License &lt;https://creativecommons.org/licenses/&gt;</license>
         <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.24381/cds.h35hb680</referenceURL>
     </owl:NamedIndividual>
@@ -4493,65 +4554,6 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
         <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon((-170 -5, -120 -5, -120 5, -170 5, -170 -5))</geosparql:asWKT>
     </rdf:Description>
     
-    
-    
-    <!-- =========================================================================== -->
-	<!-- Deprecated Properties from METACLIP datasource                              -->
-	<!-- Transition: versions 0.x  →  1.0 (semantic changes may apply in some cases) -->
-	<!-- =========================================================================== -->
-	
-	<!-- Deprecated: hadModellingCenter  (replaced by hasModellingCenter) -->
-	<owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadModellingCenter">
-		<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-		<rdfs:comment xml:lang="en">
-			Deprecated in datasource.owl version 1.0.
-			This property was removed after semantic restructuring
-			and replaced by ds:hasModellingCenter.
-			Due to semantic and hierarchical changes, this is NOT an equivalent property.
-		</rdfs:comment>
-		<rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasModellingCenter"/>
-	</owl:ObjectProperty>
-	
-	
-	<!-- Deprecated: hadSimulationModel  (replaced by hasSimulationModel) -->
-	<owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadSimulationModel">
-		<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-		<rdfs:comment xml:lang="en">
-			Deprecated in datasource.owl version 1.0.
-			This property was removed during a semantic reorganization
-			of model attribution statements, and replaced by ds:hasSimulationModel.
-			Not equivalent due to semantic changes.
-		</rdfs:comment>
-		<rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasSimulationModel"/>
-	</owl:ObjectProperty>
-	
-	
-	<!-- Deprecated: hadDatasetSubset  (replaced by hasDatasetSubset) -->
-	<owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadDatasetSubset">
-		<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-		<rdfs:comment xml:lang="en">
-			Deprecated in datasource.owl version 1.0.
-			The property structure for dataset derivation was revised,
-			and ds:hasDatasetSubset supersedes this name.
-			Semantic changes prevent declaring equivalence.
-		</rdfs:comment>
-		<rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasDatasetSubset"/>
-	</owl:ObjectProperty>
-	
-	
-	<!-- Deprecated: hadDataProvider  (replaced by hasDataProvider) -->
-	<owl:ObjectProperty rdf:about="https://metaclip.org/datasource/datasource.owl#hadDataProvider">
-		<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-		<rdfs:comment xml:lang="en">
-			Deprecated in datasource.owl version 1.0.
-			Replaced by ds:hasDataProvider after a revision 
-			of provenance-related attributions.
-			Not equivalent due to semantic and hierarchical updates.
-		</rdfs:comment>
-		<rdfs:seeAlso rdf:resource="https://metaclip.org/datasource/datasource.owl#hasDataProvider"/>
-	</owl:ObjectProperty>
-	
-	<!-- ============================================== -->
 
 
     <!-- 
@@ -4574,9 +4576,6 @@ The hindcast uses only the latter date (15 members)</rdfs:comment>
 </rdf:RDF>
 
 
-
-
-<!-- ============================================== -->
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
