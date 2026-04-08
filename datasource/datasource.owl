@@ -14,11 +14,11 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://metaclip.org/datasource/datasource.owl">
-        <owl:versionIRI rdf:resource="https://metaclip.org/vocab/metaclip/datasource/1.0.0/datasource.owl"/>
+        <owl:versionIRI rdf:resource="https://metaclip.org/vocab/metaclip/datasource/1.0.1/datasource.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
-        <dc:date>2026-03-18T10:08:00Z</dc:date>
+        <dc:date>2026-04-08T18:07:00Z</dc:date>
         <dc:title xml:lang="en">The Climate Data Source Ontology from METACLIP</dc:title>
         <terms:contributor>Daniel San-Martin &lt;https://orcid.org/0000-0002-2862-2704&gt;</terms:contributor>
         <terms:contributor>Joaquin Bedia &lt;https://orcid.org/0000-0001-6219-4312&gt;</terms:contributor>
@@ -27,7 +27,7 @@
         <terms:description xml:lang="en">The datasource ontology provides a core semantic framework for describing the provenance of climate datasets (e.g., observations, operational and retrospective forecasts, reanalyses, climate projections) and the subsequent processing steps applied to them. It captures transformations performed within a workflow that modify or derive new views of a dataset—such as temporal or spatial aggregation, ensemble summarization, regridding, or the computation of climate indices and anomalies—even when these operations do not produce a distinct dataset but rather a subset or transformed representation of the original. The ontology also supports the description of the source code and computational procedures involved in generating these products.</terms:description>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.metaclip.org</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1016/j.envsoft.2019.07.005</rdfs:seeAlso>
-        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionInfo>1.0.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -3083,6 +3083,19 @@ In addition, a set of &quot;Core variables&quot; have to be provided on a regula
     
 
 
+    <!-- https://metaclip.org/datasource/datasource.owl#BERKELEY-EARTH -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#BERKELEY-EARTH">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <terms:description xml:lang="en">Independent non-profit scientific organization focused on the analysis and production of global climate datasets, particularly surface temperature reconstructions, using transparent and reproducible methodologies.</terms:description>
+        <rdfs:label>Berkeley Earth</rdfs:label>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"></referenceURL>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://berkeleyearth.org</referenceURL>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://metaclip.org/datasource/datasource.owl#C3S -->
 
     <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#C3S">
@@ -3196,6 +3209,17 @@ Sanna, A., A. Borrelli, P. Athanasiadis, S. Materia, A. Storto, S. Tibaldi, S. G
         <dc:description xml:lang="en">CORDEX‑CORE is a WCRP CORDEX initiative designed to provide a globally consistent set of high‑resolution (~25 km) regional climate projections. It employs multiple regional climate models to downscale selected CMIP5 global simulations under RCP2.6 and RCP8.5 across nine CORDEX domains, delivering homogeneous datasets for climate‑change assessment, impacts analysis, and contributions to future IPCC reports.</dc:description>
         <rdfs:label>CORDEX-CORE</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1175/BAMS-D-21-0119.1</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#CPC -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#CPC">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">NOAA Climate Prediction Center (CPC)</dc:title>
+        <terms:description xml:lang="en">Operational climate prediction center of NOAA&apos;s National Centers for Environmental Prediction, responsible for producing subseasonal to seasonal climate outlooks, climate monitoring products, and gridded observational and analysis datasets such as CPC Unified Precipitation and CMAP.</terms:description>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cpc.ncep.noaa.gov/</referenceURL>
     </owl:NamedIndividual>
     
 
@@ -3442,6 +3466,19 @@ The Programme is coordinated and managed by the European Commission. It is imple
         <rdfs:comment xml:lang="en">ERA5 will eventually replace the ERA-Interim reanalysis</rdfs:comment>
         <rdfs:label>ERA5</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.ecmwf.int/en/forecasts/datasets/archive-datasets/reanalysis-datasets/era5</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://metaclip.org/datasource/datasource.owl#ESA -->
+
+    <owl:NamedIndividual rdf:about="https://metaclip.org/datasource/datasource.owl#ESA">
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#DataProvider"/>
+        <rdf:type rdf:resource="https://metaclip.org/datasource/datasource.owl#ModellingCenter"/>
+        <dc:title xml:lang="en">European Space Agency (ESA)</dc:title>
+        <terms:description xml:lang="en">Intergovernmental European agency coordinating the development and operation of Earth observation missions and space infrastructure. ESA is a key partner in the Copernicus programme and produces and disseminates satellite-based climate data records, including Essential Climate Variables developed under the Climate Change Initiative (CCI).</terms:description>
+        <rdfs:label xml:lang="en">European Space Agency</rdfs:label>
+        <referenceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.esa.int/</referenceURL>
     </owl:NamedIndividual>
     
 
